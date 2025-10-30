@@ -1,0 +1,37 @@
+- name: Generate cache-busting versions
+  shell: bash
+  run: |
+    cat > build.js <<'JS'
+// build.js — bump ?v=... for local /js/*.js and /css/*.css in HTML files
+const fs = require('fs');
+const path = require('path');
+
+const ROOT   = process.cwd();
+const STAMP  = (process.env.GITHUB_SHA || Date.now().toString()).slice(0, 8);
+
+function walk(dir, out=[]) {
+  for (const name of fs.readdirSync(dir)) {
+    const p = path.join(dir, name);
+    const s = fs.statSync(p);
+    if (s.isDirectory()) walk(p, out);
+    else out.push(p);
+  }
+  return out;
+}
+
+const htmlFiles = walk(ROOT).filter(f => f.endsWith('.html'));
+
+// (href|src)="/(js|css)/... .(js|css)" with optional ?v=...
+const re = /(href|src)=(["'])(\/(?:js|css)\/[^"']+\.(?:js|css))(?:\?v=[^"']*)?\2/gi;
+
+for (const file of htmlFiles) {
+  const s = fs.readFileSync(file, 'utf8');
+  const next = s.replace(re, (_m, attr, q, pth) => `${attr}=${q}${pth}?v=${STAMP}${q}`);
+  if (next !== s) {
+    fs.writeFileSync(file, next);
+    console.log('busted:', path.relative(ROOT, file));
+  }
+}
+console.log('stamp:', STAMP);
+JS
+    node build.js

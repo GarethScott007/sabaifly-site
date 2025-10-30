@@ -1,0 +1,20 @@
+[
+  {
+    "label": "London → Bangkok",
+    "origin": "LON",
+    "destination": "BKK",
+    "slug": "/routes/lon-bkk.html"
+  },
+  {
+    "label": "Bangkok → Phuket",
+    "origin": "BKK",
+    "destination": "HKT",
+    "slug": "/routes/bkk-hkt.html"
+  },
+  {
+    "label": "New York → London",
+    "origin": "NYC",
+    "destination": "LON",
+    "slug": "/routes/nyc-lon.html"
+  }
+]

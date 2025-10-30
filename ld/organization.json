@@ -1,0 +1,8 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SabaiFly",
+  "url": "https://sabaifly.com/",
+  "logo": "https://sabaifly.com/img/og/logo-512.png",
+  "sameAs": []
+}

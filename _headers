@@ -1,0 +1,12 @@
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Content-Security-Policy: default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com;
+    img-src 'self' data: https:;
+    style-src 'self';
+    font-src 'self' data:;
+    frame-ancestors 'none';

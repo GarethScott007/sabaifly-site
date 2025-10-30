@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "include": ["/api/*"],
+  "exclude": [
+    "/favicon.ico",
+    "/robots.txt",
+    "/css/*",
+    "/js/*",
+    "/img/*",
+    "/fonts/*",
+    "/static/*"
+  ]
+}

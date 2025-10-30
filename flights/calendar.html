@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" data-i18n-title="price_calendar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Price calendar — SabaiFly</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/home-hero.css">
+  <link rel="stylesheet" href="/css/ux-tweaks.css">
+
+  <!-- SEO meta -->
+  <meta name="description" content="Monthly price calendar to find the cheapest days to fly. View and book with trusted partners."/>
+  <link rel="canonical" href="https://sabaifly.com/flights/calendar.html"/>
+  <meta property="og:title" content="Price calendar — SabaiFly"/>
+  <meta property="og:description" content="See the cheapest days to fly and book with trusted partners."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://SabaiFly.com/img/hero-temple.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <link rel="alternate" hreflang="en" href="https://SabaiFly.com/flights/calendar.html"/>
+  <link rel="alternate" hreflang="th" href="https://SabaiFly.com/flights/calendar.html?lang=th"/>
+  <link rel="alternate" hreflang="x-default" href="https://SabaiFly.com/flights/calendar.html"/>
+
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+
+  
+  <link rel="stylesheet" href="/css/inlined.css">
+  <script src="/js/inlined.js" defer></script>
+  <script src="/js/ga4.js" defer></script>
+  <meta name="theme-color" content="#6A00FF">
+</head>
+<body>
+<header class="topbar">
+  <div class="container row spread">
+    <a class="brand" href="/" data-keep-lang="1">SabaiFly</a>
+    <nav class="row gap">
+      <a class="pill gradient" href="/" data-keep-lang="1" data-i18n="nav_home">Home</a>
+      <a class="pill gradient" href="/flights/" data-keep-lang="1" data-i18n="nav_flights">Flights</a>
+
+      <!-- Direct-only toggle -->
+      <a id="toggle-direct" class="pill ghost pill-toggle" href="#" aria-pressed="false" title="Show only direct flights">Direct only</a>
+
+      <div class="lang-switch row gap ml-8">
+        <a id="lang-en" class="pill flag" data-lang="en" data-keep-lang="1" aria-label="English">
+          <img class="flag-img" src="/img/flags/gb.svg" alt="EN"> EN
+        </a>
+        <a id="lang-th" class="pill flag" data-lang="th" data-keep-lang="1" aria-label="Thai">
+          <img class="flag-img" src="/img/flags/th.svg" alt="TH"> TH
+        </a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero card">
+    <h1 data-i18n="price_calendar">Price calendar</h1>
+    <p class="muted" id="cal-title">Loading…</p>
+    <div class="row gap">
+      <a class="btn gradient" id="back-results" data-i18n="actions_back_to_results">Back to results</a>
+      <a class="btn" href="/flights/" data-keep-lang="1" data-i18n="actions_back_to_search">Back to search</a>
+    </div>
+  </section>
+
+  <section class="card" mt-6>
+    <div class="row spread" pad-12>
+      <div class="row gap">
+        <button class="btn" id="prev-month">← Prev month</button>
+        <button class="btn" id="next-month">Next month →</button>
+      </div>
+      <div id="legend" class="small muted"></div>
+    </div>
+
+    <div id="cal-status" class="muted" pad-12-b>Loading prices…</div>
+    <div id="cal-grid"></div>
+  </section>
+</main>
+
+<footer class="container foot small">
+  <nav class="row gap small mb-8">
+    <a href="/legal/terms.html" data-keep-lang="1" data-i18n="legal_terms">Terms</a>
+    <a href="/legal/privacy.html" data-keep-lang="1" data-i18n="legal_privacy">Privacy</a>
+    <a href="/legal/cookies.html" data-keep-lang="1" data-i18n="legal_cookies">Cookies</a>
+  </nav>
+  © <span id="y"></span> SabaiFly
+  <section class="container foot card" aria-labelledby="proutes-title">
+    <h2 id="proutes-title" class="h5">Popular routes</h2>
+    <nav id="popular-routes-footer" class="chip-group" aria-label="Popular routes"></nav>
+  </section>
+</footer>
+
+<!-- Language + cookies + calendar logic -->
+<script type="module" src="/js/i18n.js?v=6"></script>
+<script src="/js/cookie-consent.js?v=4" defer></script>
+<script src="/js/calendar-page.js?v=3" defer></script>
+
+<!-- Year stamp + direct-only toggle + back-to-results link -->
+
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}'></script>
+<script src="/js/routes-wire.js?v=2" defer></script>
+</body>
+</html>

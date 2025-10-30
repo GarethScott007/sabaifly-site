@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="https://sabaifly.com/schemas/sitemap/0.9"
+  xmlns:xhtml="https://sabaifly.com/1999/xhtml">
+  <!-- Core pages -->
+  <url>
+    <loc>https://sabaifly.com/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/"/>
+  </url>
+
+  <url>
+    <loc>https://sabaifly.com/flights/</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/flights/"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/flights/?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/flights/"/>
+  </url>
+
+  <url>
+    <loc>https://sabaifly.com/flights/results.html</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>hourly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/flights/results.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/flights/results.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/flights/results.html"/>
+  </url>
+
+  <url>
+    <loc>https://sabaifly.com/flights/calendar.html</loc>
+    <lastmod>2025-10-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/flights/calendar.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/flights/calendar.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/flights/calendar.html"/>
+  </url>
+
+  <!-- Route pages (match your repo) -->
+  <!-- LON-* -->
+  <url><loc>https://sabaifly.com/routes/lon-bkk.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-bkk.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-bkk.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-bkk.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-nyc.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-nyc.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-nyc.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-nyc.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-dxb.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-dxb.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-dxb.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-dxb.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-sin.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-sin.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-sin.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-sin.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-tyo.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-tyo.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-tyo.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-tyo.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-lax.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-lax.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-lax.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-lax.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-syd.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-syd.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-syd.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-syd.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-del.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-del.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-del.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-del.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-hkt.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-hkt.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-hkt.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-hkt.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-hkg.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-hkg.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-hkg.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-hkg.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-kul.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-kul.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-kul.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-kul.html"/>
+  </url>
+  <url><loc>https://sabaifly.com/routes/lon-bom.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/lon-bom.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/lon-bom.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/lon-bom.html"/>
+  </url>
+
+  <!-- Non-London route present -->
+  <url><loc>https://sabaifly.com/routes/bkk-hkt.html</loc><lastmod>2025-10-25</lastmod><changefreq>weekly</changefreq><priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sabaifly.com/routes/bkk-hkt.html"/>
+    <xhtml:link rel="alternate" hreflang="th" href="https://sabaifly.com/routes/bkk-hkt.html?lang=th"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sabaifly.com/routes/bkk-hkt.html"/>
+  </url>
+</urlset>
