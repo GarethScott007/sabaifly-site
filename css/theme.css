@@ -269,6 +269,57 @@ a{text-decoration:none;color:inherit}
   .btn, .pill, .chip, .card, .hero, .field input, .field select {
     transition:none !important; transform:none !important;
   }
+   /* === SabaiFly — Calm Purple Skin (drop at END of theme.css) === */
+:root{
+  --brand:#5B3CC4;      /* deep royal purple */
+  --brand-2:#7C5CDB;    /* lighter purple for hovers */
+  --bg:#F6F3FF;         /* soft lavender page */
+  --card:#FFFFFF;
+  --text:#10121A;
+  --muted:#6B6F76;
+  --br:#E7E4EF;
+  --btn:#2B2D42;
+  --btn-text:#FFFFFF;
+}
+
+/* Page background + default text */
+body{ background:var(--bg); color:var(--text); }
+
+/* Topbar → solid brand (no rainbow) */
+.topbar{
+  background:var(--brand);
+  box-shadow:0 1px 0 rgba(0,0,0,.05);
+}
+
+/* Pills + buttons → simple, confident */
+.pill, .btn{ border-radius:14px; }
+.pill.gradient, .btn.gradient{
+  background:var(--brand);
+  color:#fff; border:0; box-shadow:none;
+}
+.pill.gradient:hover, .btn.gradient:hover{ filter:brightness(1.05); }
+
+/* Cards/Hero calm down */
+.card, .hero{
+  background:var(--card);
+  border:1px solid var(--br);
+  box-shadow:0 6px 16px rgba(0,0,0,.06);
+}
+
+/* Form fields stay readable */
+.form-grid input, .form-grid select, .search-panel input, .search-panel select{
+  height:44px; border-radius:12px; border:1px solid var(--br);
+  color:var(--text); background:#fff;
+}
+.search-panel .go, .form-actions .btn{
+  background:var(--brand); color:#fff; border:0;
+}
+
+/* Subtle chips for summary/filters (we’ll use next pass) */
+.summary-chip{
+  padding:6px 10px; border-radius:999px;
+  background:#F0ECFF; color:#3A2C87; font-weight:600;
+}
 }
 
 /* CSP-safe flag guard */
