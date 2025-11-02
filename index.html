@@ -4,8 +4,9 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>SabaiFly</title>
-<link rel="canonical" href="https://www.sabaifly.com/">
 
+  <!-- Canonical (single, consistent) -->
+  <link rel="canonical" href="https://www.sabaifly.com/"/>
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/theme.css">
@@ -18,22 +19,21 @@
 
   <!-- SEO -->
   <meta name="description" content="Find flights the easy way — clean results and trusted partners."/>
-  <link rel="canonical" href="https://sabaifly.com/"/>
   <meta property="og:title" content="SabaiFly"/>
   <meta property="og:description" content="Find flights the easy way — clean results and trusted partners."/>
   <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://SabaiFly.com/img/hero-temple.jpg"/>
+  <meta property="og:image" content="https://www.sabaifly.com/img/hero-temple.jpg"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="alternate" hreflang="en" href="https://SabaiFly.com/"/>
-  <link rel="alternate" hreflang="th" href="https://SabaiFly.com/?lang=th"/>
-  <link rel="alternate" hreflang="x-default" href="https://SabaiFly.com/"/>
+  <link rel="alternate" hreflang="en" href="https://www.sabaifly.com/"/>
+  <link rel="alternate" hreflang="th" href="https://www.sabaifly.com/?lang=th"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.sabaifly.com/"/>
   <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
 
   <!-- Small helper styles for the horizontal route grid -->
-  
   <link rel="stylesheet" href="/css/inlined.css">
-  <script src="/js/ga4.js" defer></script>
 
+  <script src="/js/ga4.js" defer></script>
+  <!-- (JSON-LD files are currently linked by src; we’ll inline them in a later pass) -->
   <script type="application/ld+json" src="/ld/organization.json"></script>
   <script type="application/ld+json" src="/ld/website.json"></script>
   <meta name="theme-color" content="#6A00FF">
@@ -46,7 +46,8 @@
     <nav class="row gap">
       <a class="pill gradient" href="/" data-keep-lang="1">Home</a>
       <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-      <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener" data-keep-lang="1">Hotels</a>
+      <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank"
+         rel="sponsored nofollow noopener" data-keep-lang="1">Hotels (partner)</a>
       <a class="pill badge ghost" href="/groups/" data-keep-lang="1">Group Trips<small>soon</small></a>
       <span class="pill dim">Patent pending</span>
 
@@ -69,40 +70,40 @@
       <h1 class="gold">Wat Arun, Temple of Dawn (Bangkok)</h1>
       <p class="muted">Fast search, clean results, and booking handled by trusted partners.</p>
 
-      <!-- Main CTAs -->
-      <div class="row gap">
-        <a class="pill-unified" href="/flights/" data-keep-lang="1">Flights</a>
-        <a class="pill-unified" href="/api/afflink?provider=kiwi" target="_blank" rel="nofollow noopener">Kiwi</a>
-        <a class="pill-unified" href="/api/afflink?provider=rentacar" target="_blank" rel="nofollow noopener">GetRentACar</a>
-        <a class="pill-unified" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener">Hotels</a>
-      </div>
-<form class="search-panel" action="/flights/" method="GET">
-  <div>
-    <label><small>From</small></label>
-    <input name="from" placeholder="London (LON)">
-  </div>
-  <div>
-    <label><small>To</small></label>
-    <input name="to" placeholder="Bangkok (BKK)">
-  </div>
-  <div>
-    <label><small>Depart</small></label>
-    <input type="date" name="depart">
-  </div>
-  <div>
-    <label><small>Return</small></label>
-    <input type="date" name="return">
-  </div>
-  <button class="go">Search</button>
-</form>
+      <!-- Unified search → goes straight to results -->
+      <form id="home-search" class="card" action="/flights/results.html" method="GET"
+            style="padding:12px; border-radius:22px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+        <div class="field" style="flex:1; min-width:220px">
+          <label for="hs-from" class="small muted">From</label>
+          <input id="hs-from" name="from" placeholder="London (LON)" autocomplete="off">
+        </div>
+        <div class="field" style="flex:1; min-width:220px">
+          <label for="hs-to" class="small muted">To</label>
+          <input id="hs-to" name="to" placeholder="Bangkok (BKK)" autocomplete="off">
+        </div>
+        <div class="field" style="width:160px">
+          <label for="hs-depart" class="small muted">Depart</label>
+          <input id="hs-depart" name="depart" type="date">
+        </div>
+        <div class="field" style="width:160px">
+          <label for="hs-return" class="small muted">Return</label>
+          <input id="hs-return" name="return" type="date">
+        </div>
+        <button class="btn" type="submit" style="height:44px; padding:0 20px;">Search</button>
+      </form>
 
-      <div class="chips">
-  <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-  <a class="pill gradient" href="/api/afflink?provider=kiwi" target="_blank" rel="nofollow noopener">Kiwi</a>
-  <a class="pill gradient" href="/api/afflink?provider=rentacar" target="_blank" rel="nofollow noopener">GetRentACar</a>
-  <a class="pill gradient" href="/api/afflink?provider=kiwitaxi" target="_blank" rel="nofollow noopener">KiwiTaxi</a>
-  <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener">Hotels</a>
-</div>
+      <!-- Clear partner chips (one row, no duplicates) -->
+      <div class="chips" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+        <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
+        <a class="pill gradient" href="/api/afflink?provider=kiwi" target="_blank"
+           rel="sponsored nofollow noopener">Kiwi Flights</a>
+        <a class="pill gradient" href="/api/afflink?provider=rentacar" target="_blank"
+           rel="sponsored nofollow noopener">Car hire by GetRentACar</a>
+        <a class="pill gradient" href="/api/afflink?provider=kiwitaxi" target="_blank"
+           rel="sponsored nofollow noopener">Airport transfers (KiwiTaxi)</a>
+        <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank"
+           rel="sponsored nofollow noopener">Hotels (partner)</a>
+      </div>
     </div>
   </section>
 
@@ -120,11 +121,10 @@
     </ol>
   </section>
 
-  <!-- Route spotlights grid (reflects /routes/ files) -->
+  <!-- Route spotlights grid -->
   <section class="container foot card" aria-labelledby="route-grid-title">
     <h2 id="route-grid-title" class="h5">Route spotlights</h2>
     <div class="route-grid">
-      <!-- Core (existing) -->
       <a class="pill gradient" href="/routes/lon-bkk.html" data-keep-lang="1">LON → BKK</a>
       <a class="pill gradient" href="/routes/lon-nyc.html" data-keep-lang="1">LON → NYC</a>
       <a class="pill gradient" href="/routes/lon-dxb.html" data-keep-lang="1">LON → DXB</a>
@@ -134,11 +134,9 @@
       <a class="pill gradient" href="/routes/lon-syd.html" data-keep-lang="1">LON → SYD</a>
       <a class="pill gradient" href="/routes/lon-del.html" data-keep-lang="1">LON → DEL</a>
       <a class="pill gradient" href="/routes/lon-hkt.html" data-keep-lang="1">LON → HKT</a>
-      <!-- Newly present in repo -->
       <a class="pill gradient" href="/routes/lon-hkg.html" data-keep-lang="1">LON → HKG</a>
       <a class="pill gradient" href="/routes/lon-kul.html" data-keep-lang="1">LON → KUL</a>
       <a class="pill gradient" href="/routes/lon-bom.html" data-keep-lang="1">LON → BOM</a>
-      <!-- Non-London bonus route present in repo -->
       <a class="pill gradient" href="/routes/bkk-hkt.html" data-keep-lang="1">BKK → HKT</a>
     </div>
   </section>
@@ -160,5 +158,6 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
   data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}'></script>
 <script src="/js/routes-wire.js?v=3" defer></script>
+<!-- Next pass we can wire /js/home-search.js to normalize IATA and dates -->
 </body>
 </html>
