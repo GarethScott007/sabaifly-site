@@ -76,13 +76,33 @@
         <a class="pill-unified" href="/api/afflink?provider=rentacar" target="_blank" rel="nofollow noopener">GetRentACar</a>
         <a class="pill-unified" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener">Hotels</a>
       </div>
+<form class="search-panel" action="/flights/" method="GET">
+  <div>
+    <label><small>From</small></label>
+    <input name="from" placeholder="London (LON)">
+  </div>
+  <div>
+    <label><small>To</small></label>
+    <input name="to" placeholder="Bangkok (BKK)">
+  </div>
+  <div>
+    <label><small>Depart</small></label>
+    <input type="date" name="depart">
+  </div>
+  <div>
+    <label><small>Return</small></label>
+    <input type="date" name="return">
+  </div>
+  <button class="go">Search</button>
+</form>
 
-      <!-- Exactly three deal pills in hero -->
       <div class="chips">
-        <a class="pill gradient" id="deal-lon-bkk" href="/flights/results.html" data-keep-lang="1">LON→BKK deals</a>
-        <a class="pill gradient" id="deal-lon-nyc" href="/flights/results.html" data-keep-lang="1">LON→NYC deals</a>
-        <a class="pill gradient" id="deal-lon-dxb" href="/flights/results.html" data-keep-lang="1">LON→DXB deals</a>
-      </div>
+  <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
+  <a class="pill gradient" href="/api/afflink?provider=kiwi" target="_blank" rel="nofollow noopener">Kiwi</a>
+  <a class="pill gradient" href="/api/afflink?provider=rentacar" target="_blank" rel="nofollow noopener">GetRentACar</a>
+  <a class="pill gradient" href="/api/afflink?provider=kiwitaxi" target="_blank" rel="nofollow noopener">KiwiTaxi</a>
+  <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener">Hotels</a>
+</div>
     </div>
   </section>
 
