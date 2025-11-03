@@ -17,5 +17,5 @@
       else if(/^[A-Za-z]{3}$/.test(v)) input.value=v.toUpperCase();
     });
   }
-  onReady(function(){ install('origin'); install('destination'); });
+onReady(function(){ install('hs-from'); install('hs-to'); });
 })();
