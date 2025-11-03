@@ -1,67 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Flight Search — Test Harness</title>
-   <!-- CSS PRELOADING - REPLACE EXISTING PRELOAD/LINKS -->
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/ux-tweaks.css">
-  <noscript>
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/ux-tweaks.css">
-  </noscript>
-  
-<link rel="canonical" href="https://sabaifly.com/flights/test.html">
-  <link rel="stylesheet" href="/css/inlined.css">
-  <script src="/js/ga4.js" defer></script>
-  <meta name="theme-color" content="#6A00FF">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Flight Search — Test Harness</title>
+<!-- CSS PRELOADING - REPLACE EXISTING PRELOAD/LINKS -->
+
+<link href="/css/ux-tweaks.css" rel="stylesheet"/>
+<noscript>
+
+
+</noscript>
+<link href="https://sabaifly.com/flights/test.html" rel="canonical"/>
+<link href="/css/inlined.css" rel="stylesheet"/>
+<script defer="" src="/js/ga4.js"></script>
+<meta content="#6A00FF" name="theme-color"/>
+<link href="/css/theme.css" rel="stylesheet"/></head>
 <body>
-  <h1>Test search (staging)</h1>
-  <p>This page bypasses all your other scripts. If this works, wiring and API are fine.</p>
-
-  <form id="flight-search" class="card" method="GET" action="/flights/results.html">
-    <div class="row">
-      <div>
-        <label for="origin">From</label>
-        <input id="origin" name="origin" placeholder="BKK" autocomplete="off" required>
-      </div>
-      <div>
-        <label for="destination">To</label>
-        <input id="destination" name="destination" placeholder="HKT" autocomplete="off" required>
-      </div>
-      <div>
-        <label for="departure_at">Depart</label>
-        <input id="departure_at" name="departure_at" type="date" required>
-      </div>
-      <div>
-        <label for="return_at">Return</label>
-        <input id="return_at" name="return_at" type="date">
-      </div>
-      <div>
-        <label for="currency">Currency</label>
-        <select id="currency" name="currency">
-          <option value="GBP" selected>GBP (£)</option>
-          <option value="USD">USD ($)</option>
-          <option value="EUR">EUR (€)</option>
-          <option value="THB">THB (฿)</option>
-        </select>
-      </div>
-      <div>
-        <label for="adults">Adults</label>
-        <input id="adults" name="adults" type="number" min="1" value="1">
-      </div>
-      <div class="wide">
-        <label><input id="direct" name="direct" type="checkbox" value="true"> Direct only</label>
-      </div>
-    </div>
-    <div class="wide" style="margin-top:12px">
-      <button type="submit">Search</button>
-    </div>
-  </form>
-
-  <!-- Only needed for autocomplete; form GET goes straight to /flights/results.html -->
-  <script src="/js/search-launch.js?v=8" defer></script>
+<h1>Test search (staging)</h1>
+<p>This page bypasses all your other scripts. If this works, wiring and API are fine.</p>
+<form action="/flights/results.html" class="card" id="flight-search" method="GET">
+<div class="row">
+<div>
+<label for="origin">From</label>
+<input autocomplete="off" id="origin" name="origin" placeholder="BKK" required=""/>
+</div>
+<div>
+<label for="destination">To</label>
+<input autocomplete="off" id="destination" name="destination" placeholder="HKT" required=""/>
+</div>
+<div>
+<label for="departure_at">Depart</label>
+<input id="departure_at" name="departure_at" required="" type="date"/>
+</div>
+<div>
+<label for="return_at">Return</label>
+<input id="return_at" name="return_at" type="date"/>
+</div>
+<div>
+<label for="currency">Currency</label>
+<select id="currency" name="currency">
+<option selected="" value="GBP">GBP (£)</option>
+<option value="USD">USD ($)</option>
+<option value="EUR">EUR (€)</option>
+<option value="THB">THB (฿)</option>
+</select>
+</div>
+<div>
+<label for="adults">Adults</label>
+<input id="adults" min="1" name="adults" type="number" value="1"/>
+</div>
+<div class="wide">
+<label><input id="direct" name="direct" type="checkbox" value="true"/> Direct only</label>
+</div>
+</div>
+<div class="wide" style="margin-top:12px">
+<button type="submit">Search</button>
+</div>
+</form>
+<!-- Only needed for autocomplete; form GET goes straight to /flights/results.html -->
+<script defer="" src="/js/search-launch.js?v=8"></script>
 </body>
 </html>

@@ -18,6 +18,22 @@ export async function onRequest(context) {
 
   // Get the origin response
   const res = await context.next();
+  // Canonical Link header (prod HTML 2xx only)
+  try {
+    const ct = (res.headers.get('content-type') || '').toLowerCase();
+    const isHtml = ct.includes('text/html');
+    const is2xx  = res.status >= 200 && res.status < 300;
+    if (isProd && isHtml && is2xx) {
+      const canonical = new URL(url.toString());
+      canonical.protocol = 'https:';
+      canonical.hostname = 'www.sabaifly.com';
+      const allow = new Set(['origin','destination','departure_at','return_at','adults','children','infants','direct','lang','currency','calendar','month']);
+      for (const [k] of canonical.searchParams) { if (!allow.has(k)) canonical.searchParams.delete(k); }
+      const existing = res.headers.get('Link') || '';
+      if (!/rel="?canonical"?/i.test(existing)) res.headers.append('Link', `<${canonical.toString()}>; rel="canonical"`);
+    }
+  } catch(e) {}
+
 
   // Env marker
   res.headers.set("X-Env-Mode", isProd ? "prod" : "staging");

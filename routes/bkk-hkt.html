@@ -1,153 +1,137 @@
-<!doctype html>
-<html lang="en" data-i18n-title="brand">
+<!DOCTYPE html>
+
+<html data-i18n-title="brand" lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Bangkok (BKK) → Phuket (HKT) flights — SabaiFly</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>Bangkok (BKK) → Phuket (HKT) flights — SabaiFly</title>
 
-  <link rel="stylesheet" href="/css/theme.css"/>
-  <link rel="stylesheet" href="/css/ux-tweaks.css"/>
-
-  <meta name="description" content="Short-hop favourites: compare times, airlines, and see the cheapest weeks between Bangkok and Phuket — book with trusted partners."/>
-  <link rel="canonical" href="https://sabaifly.com/routes/bkk-hkt.html"/>
-
-  <meta property="og:title" content="Bangkok (BKK) → Phuket (HKT) flights"/>
-  <meta property="og:description" content="See cheapest days on a calendar and book fast."/>
-  <meta property="og:type" content="article"/>
-  <meta property="og:image" content="https://SabaiFly.com/img/hero-temple.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-
-  <link rel="alternate" hreflang="en" href="https://SabaiFly.com/routes/bkk-hkt.html"/>
-  <link rel="alternate" hreflang="th" href="https://SabaiFly.com/routes/bkk-hkt.html?lang=th"/>
-  <link rel="alternate" hreflang="x-default" href="https://SabaiFly.com/routes/bkk-hkt.html"/>
-
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-  <script src="/js/ga4.js" defer></script>
-  <meta name="theme-color" content="#6A00FF">
-</head>
-
-<body data-origin="BKK" data-destination="HKT">
+<link href="/css/ux-tweaks.css" rel="stylesheet"/>
+<meta content="Short-hop favourites: compare times, airlines, and see the cheapest weeks between Bangkok and Phuket — book with trusted partners." name="description"/>
+<link href="https://sabaifly.com/routes/bkk-hkt.html" rel="canonical"/>
+<meta content="Bangkok (BKK) → Phuket (HKT) flights" property="og:title"/>
+<meta content="See cheapest days on a calendar and book fast." property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://SabaiFly.com/img/hero-temple.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://SabaiFly.com/routes/bkk-hkt.html" hreflang="en" rel="alternate"/>
+<link href="https://SabaiFly.com/routes/bkk-hkt.html?lang=th" hreflang="th" rel="alternate"/>
+<link href="https://SabaiFly.com/routes/bkk-hkt.html" hreflang="x-default" rel="alternate"/>
+<link crossorigin="" href="https://static.cloudflareinsights.com" rel="preconnect"/>
+<script defer="" src="/js/ga4.js"></script>
+<meta content="#6A00FF" name="theme-color"/>
+<link href="/css/theme.css" rel="stylesheet"/></head>
+<body data-destination="HKT" data-origin="BKK">
 <header class="topbar">
-  <div class="container row spread">
-    <a class="brand" href="/" data-keep-lang="1">SabaiFly</a>
-    <nav class="row gap">
-      <a class="pill gradient" href="/" data-keep-lang="1">Home</a>
-      <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-      <div class="lang-switch row gap ml-8">
-        <a id="lang-en" class="pill flag" data-lang="en" data-keep-lang="1" aria-label="English">
-          <img class="flag-img" src="/img/flags/gb.svg" alt="EN"> EN
+<div class="container row spread">
+<a class="brand" data-keep-lang="1" href="/">SabaiFly</a>
+<nav class="row gap">
+<a class="pill gradient" data-keep-lang="1" href="/">Home</a>
+<a class="pill gradient" data-keep-lang="1" href="/flights/">Flights</a>
+<div class="lang-switch row gap ml-8">
+<a aria-label="English" class="pill flag" data-keep-lang="1" data-lang="en" id="lang-en">
+<img alt="EN" class="flag-img" src="/img/flags/gb.svg"/> EN
         </a>
-        <a id="lang-th" class="pill flag" data-lang="th" data-keep-lang="1" aria-label="Thai">
-          <img class="flag-img" src="/img/flags/th.svg" alt="TH"> TH
+<a aria-label="Thai" class="pill flag" data-keep-lang="1" data-lang="th" id="lang-th">
+<img alt="TH" class="flag-img" src="/img/flags/th.svg"/> TH
         </a>
-      </div>
-    </nav>
-  </div>
+</div>
+</nav>
+</div>
 </header>
-
 <main class="container">
-  <section class="hero card">
-    <h1>Bangkok (BKK) → Phuket (HKT) flights</h1>
-    <p class="muted">See the cheapest days to fly and book with trusted partners.</p>
-
-    <div class="row gap">
-      <a id="cta-calendar" class="btn gradient js-view-calendar" href="#">See cheapest days (calendar)</a>
-      <a id="cta-results" class="btn" href="#">Search flights</a>
-    </div>
-
-    <div class="row gap small cta-subrow">
-      <a class="pill ghost" id="cta-direct" href="#">Direct only</a>
-      <a class="pill ghost" href="/api/afflink?provider=hotels" target="_blank" rel="nofollow noopener">Hotels</a>
-      <a class="pill ghost" href="/api/afflink?provider=rentacar" target="_blank" rel="nofollow noopener">Rent a car</a>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Quick facts</h2>
-    <ul>
-      <li><strong>Airports:</strong> Bangkok (BKK/DMK) → Phuket (HKT)</li>
-      <li><strong>Typical duration:</strong> ~1h15–1h30 direct; frequent daily flights</li>
-      <li><strong>Best months:</strong> Nov–Apr for calmer seas</li>
-      <li><strong>Tip:</strong> Early morning &amp; late evening flights are often cheapest.</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Price tips for BKK → HKT</h2>
-    <ul>
-      <li>Travel off-peak (Tue/Wed) for better prices.</li>
-      <li>Budget carriers can be great value; watch add-ons for bags &amp; seats.</li>
-      <li>Consider nearby dates in the calendar to spot dips.</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>Local highlights</h2>
-    <div class="grid-2">
-      <div>
-        <h3 class="h5">In Bangkok</h3>
-        <ul>
-          <li>Wat Pho &amp; Grand Palace area</li>
-          <li>Canal (khlong) boat rides</li>
-          <li>Chinatown food crawl</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="h5">In Phuket</h3>
-        <ul>
-          <li>Promthep Cape &amp; Big Buddha</li>
-          <li>Island hops: Phi Phi / Similan (seasonal)</li>
-          <li>Old Town cafés &amp; Sunday market</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Festivals &amp; events</h2>
-    <div class="grid-2">
-      <div>
-        <h3 class="h6">Bangkok</h3>
-        <ul>
-          <li>Songkran (Thai New Year, Apr)</li>
-          <li>Loy Krathong (Nov)</li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="h6">Phuket</h3>
-        <ul>
-          <li>Vegetarian Festival (Sep/Oct)</li>
-          <li>Loy Krathong (Nov)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2>Related routes</h2>
-    <nav class="chip-group">
-      <a class="pill ghost" href="/routes/lon-bkk.html" data-keep-lang="1">London → Bangkok</a>
-      <a class="pill ghost" href="/routes/lon-sin.html" data-keep-lang="1">London → Singapore</a>
-      <a class="pill ghost" href="/routes/lon-hkg.html" data-keep-lang="1">London → Hong Kong</a>
-    </nav>
-  </section>
+<section class="hero card">
+<h1>Bangkok (BKK) → Phuket (HKT) flights</h1>
+<p class="muted">See the cheapest days to fly and book with trusted partners.</p>
+<div class="row gap">
+<a class="btn gradient js-view-calendar" href="#" id="cta-calendar">See cheapest days (calendar)</a>
+<a class="btn" href="#" id="cta-results">Search flights</a>
+</div>
+<div class="row gap small cta-subrow">
+<a class="pill ghost" href="#" id="cta-direct">Direct only</a>
+<a class="pill ghost" href="/api/afflink?provider=hotels" rel="nofollow noopener" target="_blank">Hotels</a>
+<a class="pill ghost" href="/api/afflink?provider=rentacar" rel="nofollow noopener" target="_blank">Rent a car</a>
+</div>
+</section>
+<section class="card">
+<h2>Quick facts</h2>
+<ul>
+<li><strong>Airports:</strong> Bangkok (BKK/DMK) → Phuket (HKT)</li>
+<li><strong>Typical duration:</strong> ~1h15–1h30 direct; frequent daily flights</li>
+<li><strong>Best months:</strong> Nov–Apr for calmer seas</li>
+<li><strong>Tip:</strong> Early morning &amp; late evening flights are often cheapest.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Price tips for BKK → HKT</h2>
+<ul>
+<li>Travel off-peak (Tue/Wed) for better prices.</li>
+<li>Budget carriers can be great value; watch add-ons for bags &amp; seats.</li>
+<li>Consider nearby dates in the calendar to spot dips.</li>
+</ul>
+</section>
+<section class="card">
+<h2>Local highlights</h2>
+<div class="grid-2">
+<div>
+<h3 class="h5">In Bangkok</h3>
+<ul>
+<li>Wat Pho &amp; Grand Palace area</li>
+<li>Canal (khlong) boat rides</li>
+<li>Chinatown food crawl</li>
+</ul>
+</div>
+<div>
+<h3 class="h5">In Phuket</h3>
+<ul>
+<li>Promthep Cape &amp; Big Buddha</li>
+<li>Island hops: Phi Phi / Similan (seasonal)</li>
+<li>Old Town cafés &amp; Sunday market</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Festivals &amp; events</h2>
+<div class="grid-2">
+<div>
+<h3 class="h6">Bangkok</h3>
+<ul>
+<li>Songkran (Thai New Year, Apr)</li>
+<li>Loy Krathong (Nov)</li>
+</ul>
+</div>
+<div>
+<h3 class="h6">Phuket</h3>
+<ul>
+<li>Vegetarian Festival (Sep/Oct)</li>
+<li>Loy Krathong (Nov)</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="card">
+<h2>Related routes</h2>
+<nav class="chip-group">
+<a class="pill ghost" data-keep-lang="1" href="/routes/lon-bkk.html">London → Bangkok</a>
+<a class="pill ghost" data-keep-lang="1" href="/routes/lon-sin.html">London → Singapore</a>
+<a class="pill ghost" data-keep-lang="1" href="/routes/lon-hkg.html">London → Hong Kong</a>
+</nav>
+</section>
 </main>
-
 <footer class="container foot small">
-  <nav class="row gap small mb-8">
-    <a href="/" data-keep-lang="1">Home</a>
-    <a href="/flights/" data-keep-lang="1">Flights</a>
-    <a href="/legal/terms.html" data-keep-lang="1">Terms</a>
-    <a href="/legal/privacy.html" data-keep-lang="1">Privacy</a>
-    <a href="/legal/cookies.html" data-keep-lang="1">Cookies</a>
-  </nav>
+<nav class="row gap small mb-8">
+<a data-keep-lang="1" href="/">Home</a>
+<a data-keep-lang="1" href="/flights/">Flights</a>
+<a data-keep-lang="1" href="/legal/terms.html">Terms</a>
+<a data-keep-lang="1" href="/legal/privacy.html">Privacy</a>
+<a data-keep-lang="1" href="/legal/cookies.html">Cookies</a>
+</nav>
   © <span id="y"></span> SabaiFly
 </footer>
-
-<script type="module" src="/js/i18n.js?v=6"></script>
-<script src="/js/cookie-consent.js?v=4" defer></script>
-<script src="/js/route-cta.js?v=2" defer></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-  data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}'></script>
+<script src="/js/i18n.js?v=6" type="module"></script>
+<script defer="" src="/js/cookie-consent.js?v=4"></script>
+<script defer="" src="/js/route-cta.js?v=2"></script>
+<script data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
 </body>
 </html>

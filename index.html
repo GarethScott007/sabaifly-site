@@ -1,163 +1,143 @@
-<!doctype html>
-<html lang="en" data-i18n-title="brand">
+<!DOCTYPE html>
+
+<html data-i18n-title="brand" lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>SabaiFly</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>SabaiFly</title>
+<!-- Canonical (single, consistent) -->
+<link href="https://www.sabaifly.com/" rel="canonical"/>
+<!-- CSS -->
 
-  <!-- Canonical (single, consistent) -->
-  <link rel="canonical" href="https://www.sabaifly.com/"/>
+<link href="/css/home-hero.css" rel="stylesheet"/>
+<link href="/css/ux-tweaks.css" rel="stylesheet"/>
+<noscript>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/home-hero.css">
-  <link rel="stylesheet" href="/css/ux-tweaks.css">
-  <noscript>
-    <link rel="stylesheet" href="/css/theme.css">
-    <link rel="stylesheet" href="/css/ux-tweaks.css">
-  </noscript>
 
-  <!-- SEO -->
-  <meta name="description" content="Find flights the easy way — clean results and trusted partners."/>
-  <meta property="og:title" content="SabaiFly"/>
-  <meta property="og:description" content="Find flights the easy way — clean results and trusted partners."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://www.sabaifly.com/img/hero-temple.jpg"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <link rel="alternate" hreflang="en" href="https://www.sabaifly.com/"/>
-  <link rel="alternate" hreflang="th" href="https://www.sabaifly.com/?lang=th"/>
-  <link rel="alternate" hreflang="x-default" href="https://www.sabaifly.com/"/>
-  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
-
-  <!-- Small helper styles for the horizontal route grid -->
-  <link rel="stylesheet" href="/css/inlined.css">
-
-  <script src="/js/ga4.js" defer></script>
-  <!-- (JSON-LD files are currently linked by src; we’ll inline them in a later pass) -->
-  <script type="application/ld+json" src="/ld/organization.json"></script>
-  <script type="application/ld+json" src="/ld/website.json"></script>
-  <meta name="theme-color" content="#6A00FF">
-</head>
-
+</noscript>
+<!-- SEO -->
+<meta content="Find flights the easy way — clean results and trusted partners." name="description"/>
+<meta content="SabaiFly" property="og:title"/>
+<meta content="Find flights the easy way — clean results and trusted partners." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://www.sabaifly.com/img/hero-temple.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://www.sabaifly.com/" hreflang="en" rel="alternate">
+<link href="https://www.sabaifly.com/?lang=th" hreflang="th" rel="alternate">
+<link href="https://www.sabaifly.com/" hreflang="x-default" rel="alternate">
+<link crossorigin="" href="https://static.cloudflareinsights.com" rel="preconnect"/>
+<!-- Small helper styles for the horizontal route grid -->
+<link href="/css/inlined.css" rel="stylesheet"/>
+<script defer="" src="/js/ga4.js"></script>
+<!-- (JSON-LD files are currently linked by src; we’ll inline them in a later pass) -->
+<script src="/ld/organization.json" type="application/ld+json"></script>
+<script src="/ld/website.json" type="application/ld+json"></script>
+<meta content="#6A00FF" name="theme-color"/>
+</link></link></link><link href="/css/theme.css" rel="stylesheet"/></head>
 <body>
 <header class="topbar">
-  <div class="container row spread">
-    <a class="brand" href="/" data-keep-lang="1">SabaiFly</a>
-    <nav class="row gap">
-      <a class="pill gradient" href="/" data-keep-lang="1">Home</a>
-      <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-      <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank"
-         rel="sponsored nofollow noopener" data-keep-lang="1">Hotels (partner)</a>
-      <a class="pill badge ghost" href="/groups/" data-keep-lang="1">Group Trips<small>soon</small></a>
-      <span class="pill dim">Patent pending</span>
-
-      <div class="lang-switch row gap ml-8">
-        <a id="lang-en" class="pill flag" data-lang="en" data-keep-lang="1" aria-label="English">
-          <img class="flag-img" src="/img/flags/gb.svg" alt="EN"> EN
+<div class="container row spread">
+<a class="brand" data-keep-lang="1" href="/">SabaiFly</a>
+<nav class="row gap">
+<a class="pill gradient" data-keep-lang="1" href="/">Home</a>
+<a class="pill gradient" data-keep-lang="1" href="/flights/">Flights</a>
+<a class="pill gradient" data-keep-lang="1" href="/api/afflink?provider=hotels" rel="sponsored nofollow noopener" target="_blank">Hotels (partner)</a>
+<a class="pill badge ghost" data-keep-lang="1" href="/groups/">Group Trips<small>soon</small></a>
+<span class="pill dim">Patent pending</span>
+<div class="lang-switch row gap ml-8">
+<a aria-label="English" class="pill flag" data-keep-lang="1" data-lang="en" id="lang-en">
+<img alt="EN" class="flag-img" src="/img/flags/gb.svg"/> EN
         </a>
-        <a id="lang-th" class="pill flag" data-lang="th" data-keep-lang="1" aria-label="Thai">
-          <img class="flag-img" src="/img/flags/th.svg" alt="TH"> TH
+<a aria-label="Thai" class="pill flag" data-keep-lang="1" data-lang="th" id="lang-th">
+<img alt="TH" class="flag-img" src="/img/flags/th.svg"/> TH
         </a>
-      </div>
-    </nav>
-  </div>
+</div>
+</nav>
+</div>
 </header>
-
 <main class="container">
-  <!-- Hero -->
-  <section class="hero card hero-photo" aria-label="Wat Arun, Bangkok">
-    <div class="content">
-      <h1 class="gold">Wat Arun, Temple of Dawn (Bangkok)</h1>
-      <p class="muted">Fast search, clean results, and booking handled by trusted partners.</p>
-
-      <!-- Unified search → goes straight to results -->
-      <form id="home-search" class="card" action="/flights/results.html" method="GET"
-            style="padding:12px; border-radius:22px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
-        <div class="field" style="flex:1; min-width:220px">
-          <label for="hs-from" class="small muted">From</label>
-          <input id="hs-from" name="from" placeholder="London (LON)" autocomplete="off">
-        </div>
-        <div class="field" style="flex:1; min-width:220px">
-          <label for="hs-to" class="small muted">To</label>
-          <input id="hs-to" name="to" placeholder="Bangkok (BKK)" autocomplete="off">
-        </div>
-        <div class="field" style="width:160px">
-          <label for="hs-depart" class="small muted">Depart</label>
-          <input id="hs-depart" name="depart" type="date">
-        </div>
-        <div class="field" style="width:160px">
-          <label for="hs-return" class="small muted">Return</label>
-          <input id="hs-return" name="return" type="date">
-        </div>
-        <button class="btn" type="submit" style="height:44px; padding:0 20px;">Search</button>
-      </form>
-
-      <!-- Clear partner chips (one row, no duplicates) -->
-      <div class="chips" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
-        <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-        <a class="pill gradient" href="/api/afflink?provider=kiwi" target="_blank"
-           rel="sponsored nofollow noopener">Kiwi Flights</a>
-        <a class="pill gradient" href="/api/afflink?provider=rentacar" target="_blank"
-           rel="sponsored nofollow noopener">Car hire by GetRentACar</a>
-        <a class="pill gradient" href="/api/afflink?provider=kiwitaxi" target="_blank"
-           rel="sponsored nofollow noopener">Airport transfers (KiwiTaxi)</a>
-        <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank"
-           rel="sponsored nofollow noopener">Hotels (partner)</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Our mission</h2>
-    <p>Fast search. Clean results. Booking handled by trusted partners.</p>
-  </section>
-
-  <section class="section">
-    <h2>How it works</h2>
-    <ol>
-      <li>Pick your route &amp; dates. We search multiple sources and show the lowest fares.</li>
-      <li>Use quick filters or the monthly price calendar to pick smarter.</li>
-      <li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are just a click away.</li>
-    </ol>
-  </section>
-
-  <!-- Route spotlights grid -->
-  <section class="container foot card" aria-labelledby="route-grid-title">
-    <h2 id="route-grid-title" class="h5">Route spotlights</h2>
-    <div class="route-grid">
-      <a class="pill gradient" href="/routes/lon-bkk.html" data-keep-lang="1">LON → BKK</a>
-      <a class="pill gradient" href="/routes/lon-nyc.html" data-keep-lang="1">LON → NYC</a>
-      <a class="pill gradient" href="/routes/lon-dxb.html" data-keep-lang="1">LON → DXB</a>
-      <a class="pill gradient" href="/routes/lon-sin.html" data-keep-lang="1">LON → SIN</a>
-      <a class="pill gradient" href="/routes/lon-tyo.html" data-keep-lang="1">LON → TYO</a>
-      <a class="pill gradient" href="/routes/lon-lax.html" data-keep-lang="1">LON → LAX</a>
-      <a class="pill gradient" href="/routes/lon-syd.html" data-keep-lang="1">LON → SYD</a>
-      <a class="pill gradient" href="/routes/lon-del.html" data-keep-lang="1">LON → DEL</a>
-      <a class="pill gradient" href="/routes/lon-hkt.html" data-keep-lang="1">LON → HKT</a>
-      <a class="pill gradient" href="/routes/lon-hkg.html" data-keep-lang="1">LON → HKG</a>
-      <a class="pill gradient" href="/routes/lon-kul.html" data-keep-lang="1">LON → KUL</a>
-      <a class="pill gradient" href="/routes/lon-bom.html" data-keep-lang="1">LON → BOM</a>
-      <a class="pill gradient" href="/routes/bkk-hkt.html" data-keep-lang="1">BKK → HKT</a>
-    </div>
-  </section>
+<!-- Hero -->
+<section aria-label="Wat Arun, Bangkok" class="hero card hero-photo">
+<div class="content">
+<h1 class="gold">Wat Arun, Temple of Dawn (Bangkok)</h1>
+<p class="muted">Fast search, clean results, and booking handled by trusted partners.</p>
+<!-- Unified search → goes straight to results -->
+<form action="/flights/results.html" class="card" id="home-search" method="GET" style="padding:12px; border-radius:22px; display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+<div class="field" style="flex:1; min-width:220px">
+<label class="small muted" for="hs-from">From</label>
+<input autocomplete="off" id="hs-from" name="from" placeholder="London (LON)"/>
+</div>
+<div class="field" style="flex:1; min-width:220px">
+<label class="small muted" for="hs-to">To</label>
+<input autocomplete="off" id="hs-to" name="to" placeholder="Bangkok (BKK)"/>
+</div>
+<div class="field" style="width:160px">
+<label class="small muted" for="hs-depart">Depart</label>
+<input id="hs-depart" name="depart" type="date"/>
+</div>
+<div class="field" style="width:160px">
+<label class="small muted" for="hs-return">Return</label>
+<input id="hs-return" name="return" type="date"/>
+</div>
+<button class="btn" style="height:44px; padding:0 20px;" type="submit">Search</button>
+</form>
+<!-- Clear partner chips (one row, no duplicates) -->
+<div class="chips" style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+<a class="pill gradient" data-keep-lang="1" href="/flights/">Flights</a>
+<a class="pill gradient" href="/api/afflink?provider=kiwi" rel="sponsored nofollow noopener" target="_blank">Kiwi Flights</a>
+<a class="pill gradient" href="/api/afflink?provider=rentacar" rel="sponsored nofollow noopener" target="_blank">Car hire by GetRentACar</a>
+<a class="pill gradient" href="/api/afflink?provider=kiwitaxi" rel="sponsored nofollow noopener" target="_blank">Airport transfers (KiwiTaxi)</a>
+<a class="pill gradient" href="/api/afflink?provider=hotels" rel="sponsored nofollow noopener" target="_blank">Hotels (partner)</a>
+</div>
+</div>
+</section>
+<section class="section">
+<h2>Our mission</h2>
+<p>Fast search. Clean results. Booking handled by trusted partners.</p>
+</section>
+<section class="section">
+<h2>How it works</h2>
+<ol>
+<li>Pick your route &amp; dates. We search multiple sources and show the lowest fares.</li>
+<li>Use quick filters or the monthly price calendar to pick smarter.</li>
+<li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are just a click away.</li>
+</ol>
+</section>
+<!-- Route spotlights grid -->
+<section aria-labelledby="route-grid-title" class="container foot card">
+<h2 class="h5" id="route-grid-title">Route spotlights</h2>
+<div class="route-grid">
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-bkk.html">LON → BKK</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-nyc.html">LON → NYC</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-dxb.html">LON → DXB</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-sin.html">LON → SIN</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-tyo.html">LON → TYO</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-lax.html">LON → LAX</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-syd.html">LON → SYD</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-del.html">LON → DEL</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-hkt.html">LON → HKT</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-hkg.html">LON → HKG</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-kul.html">LON → KUL</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/lon-bom.html">LON → BOM</a>
+<a class="pill gradient" data-keep-lang="1" href="/routes/bkk-hkt.html">BKK → HKT</a>
+</div>
+</section>
 </main>
-
 <footer class="container foot small">
-  <nav class="row gap small mb-8">
-    <a href="/legal/terms.html" data-keep-lang="1">Terms</a>
-    <a href="/legal/privacy.html" data-keep-lang="1">Privacy</a>
-    <a href="/legal/cookies.html" data-keep-lang="1">Cookies</a>
-  </nav>
+<nav class="row gap small mb-8">
+<a data-keep-lang="1" href="/legal/terms.html">Terms</a>
+<a data-keep-lang="1" href="/legal/privacy.html">Privacy</a>
+<a data-keep-lang="1" href="/legal/cookies.html">Cookies</a>
+</nav>
   © <span id="y"></span> SabaiFly
 </footer>
-
 <!-- JS -->
-<script type="module" src="/js/i18n.js?v=5"></script>
-<script src="/js/cookie-consent.js?v=4" defer></script>
-<script src="/js/home-init.js?v=1" defer></script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
-  data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}'></script>
-<script src="/js/routes-wire.js?v=3" defer></script>
+<script src="/js/i18n.js?v=5" type="module"></script>
+<script defer="" src="/js/cookie-consent.js?v=4"></script>
+<script defer="" src="/js/home-init.js?v=1"></script>
+<script data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
+<script defer="" src="/js/routes-wire.js?v=3"></script>
 <!-- Next pass we can wire /js/home-search.js to normalize IATA and dates -->
+  <script src="/js/iata-autocomplete.js" defer></script>
 </body>
 </html>
