@@ -22,3 +22,27 @@ body{ background:var(--bg); color:var(--text); }
 .search-panel input:focus, .search-panel select:focus{ border-color:#C7B5FF; box-shadow:0 0 0 3px rgba(106,0,255,.12); }
 .search-panel .form-actions .btn{ height:50px; padding:0 22px; border-radius:14px; font-weight:700; }
 @media (max-width:960px){ .search-panel .form-grid{ grid-template-columns:1fr 1fr; } .search-panel .form-actions{ grid-column:1 / -1; } }
+/* === SabaiFly — Palette (from screenshots) === */
+:root{
+  --brand:#693AAE;    /* top bar */
+  --bg:#EBD9FF;       /* page background */
+  --card:#FDFDFF;     /* cards/hero panels */
+
+  /* keep existing neutrals unless you want to change them too */
+  --text:#10121A;
+  --muted:#6B6F76;
+
+  /* border tint that matches the new bg (slightly darker than bg) */
+  --br:#E1D2FF;
+}
+
+/* Apply the palette */
+body{ background:var(--bg); color:var(--text); }
+.topbar{ background:var(--brand); }
+.card, .hero{ background:var(--card); border:1px solid var(--br); }
+
+/* Keep buttons/pills solid brand (no gradients) */
+.pill.gradient, .btn.gradient{
+  background:var(--brand);
+  color:#fff; border:0; box-shadow:none;
+}
