@@ -5,7 +5,9 @@
 # OS cruft
 .DS_Store
 Thumbs.db
-
 # build/temp
 dist/
 .cache/
+*.zip
+*.log
+
