@@ -68,4 +68,9 @@ body{ background:var(--bg); color:var(--text); }
     grid-template-columns: 1fr 1fr;
   }
   .search-panel .form-actions { grid-column: 1 / -1; }
+  /* Home hero: use the photo as-is (no overlay) */
+.hero.hero-photo{
+  background: url('/img/hero-home.jpg') center 60% / cover no-repeat;
+}
+
 }
