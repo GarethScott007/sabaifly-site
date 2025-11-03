@@ -1,4 +1,4 @@
-/* === SabaiFly — Calm Purple Skin (override) === */
+/* === SabaiFly — Calm Purple Skin (site-wide) === */
 :root{
   --brand:#5B3CC4; --brand-2:#7C5CDB;
   --bg:#F6F3FF; --card:#FFFFFF; --text:#10121A; --muted:#6B6F76; --br:#E7E4EF;
@@ -10,67 +10,15 @@ body{ background:var(--bg); color:var(--text); }
 .pill.gradient, .btn.gradient{ background:var(--brand); color:#fff; border:0; box-shadow:none; }
 .pill.gradient:hover, .btn.gradient:hover{ filter:brightness(1.05); }
 .card, .hero{ background:var(--card); border:1px solid var(--br); box-shadow:0 6px 16px rgba(0,0,0,.06); }
-.form-grid input, .form-grid select, .search-panel input, .search-panel select{
-  height:44px; border-radius:12px; border:1px solid var(--br); color:var(--text); background:#fff;
-}
-.search-panel .go, .form-actions .btn{ background:var(--brand); color:#fff; border:0; }
-
-/* === Pro search panel polish (Skyscanner-style rhythm) === */
-.search-panel {
-  padding: 16px;
-  border: 1px solid var(--br);
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 6px 18px rgba(0,0,0,.06);
-}
-
-.search-panel .form-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1.2fr 0.9fr 0.9fr auto; /* From | To | Depart | Return | CTA */
-  gap: 12px;
-  align-items: end;
-}
-
-.search-panel .field label {
-  font-size: 12px;
-  color: var(--muted);
-  display: block;
-  margin: 0 0 6px;
-}
-
-.search-panel input,
-.search-panel select {
-  height: 50px;
-  padding: 12px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--br);
-  background: #fff;
-  color: var(--text);
-  outline: none;
-  transition: box-shadow .15s ease, border-color .15s ease;
-}
-
-.search-panel input:focus,
-.search-panel select:focus {
-  border-color: #C7B5FF;
-  box-shadow: 0 0 0 3px rgba(106,0,255,.12);
-}
-
-.search-panel .form-actions .btn {
-  height: 50px;
-  padding: 0 22px;
-  border-radius: 14px;
-  font-weight: 700;
-}
-
-@media (max-width: 960px){
-  .search-panel .form-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .search-panel .form-actions { grid-column: 1 / -1; }
-  /* Home hero: use the photo as-is (no overlay) */
-.hero.hero-photo{
-  background: url('/img/hero-home.jpg') center 60% / cover no-repeat;
-}
-
-}
+/* widen */
+.container{ max-width:1240px; }
+/* hero photo */
+.hero.hero-photo{ background: url('/img/hero-home.jpg') center 60% / cover no-repeat; }
+/* pro search */
+.search-panel{ padding:16px; border:1px solid var(--br); background:#fff; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.06); }
+.search-panel .form-grid{ display:grid; grid-template-columns:1.2fr 1.2fr 0.9fr 0.9fr auto; gap:12px; align-items:end; }
+.search-panel .field label{ font-size:12px; color:var(--muted); display:block; margin:0 0 6px; }
+.search-panel input, .search-panel select{ height:50px; padding:12px 14px; border-radius:12px; border:1px solid var(--br); background:#fff; color:var(--text); outline:none; transition: box-shadow .15s ease, border-color .15s ease; }
+.search-panel input:focus, .search-panel select:focus{ border-color:#C7B5FF; box-shadow:0 0 0 3px rgba(106,0,255,.12); }
+.search-panel .form-actions .btn{ height:50px; padding:0 22px; border-radius:14px; font-weight:700; }
+@media (max-width:960px){ .search-panel .form-grid{ grid-template-columns:1fr 1fr; } .search-panel .form-actions{ grid-column:1 / -1; } }
