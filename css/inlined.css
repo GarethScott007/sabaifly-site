@@ -36,9 +36,9 @@ body { padding: 20px; }
 
 
 /* img/index.html */
-
-    
-    
+.hero-photo{position:relative;border-radius:var(--r-card);overflow:hidden;background:linear-gradient(135deg,rgba(106,0,255,.65),rgba(212,175,55,.45));min-height:260px}
+    .hero-photo::before{content:"";position:absolute;inset:0;background:url('/img/hero-temple.jpg') center/cover no-repeat;filter:saturate(1.08) contrast(1.05) hue-rotate(8deg);opacity:.58}
+    .hero-photo>.content{position:relative}
     .gold { color: var(--gold-classic); text-shadow: 0 2px 8px rgba(0,0,0,.18); }
     .pill-unified { display:inline-block; padding:10px 16px; border:none; border-radius:var(--r-pill); color:#fff;
       background:linear-gradient(135deg,var(--purple) 0%, var(--gold) 100%); box-shadow:0 8px 18px rgba(106,0,255,.25),0 4px 10px rgba(212,175,55,.25); text-decoration:none }
@@ -63,7 +63,12 @@ body { padding: 20px; }
 
 /* img/routes/bkk-hkt.html */
 .hero { position: relative; border-radius: var(--r-card); overflow: hidden; }
-    
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: url('/img/hero-temple.jpg') center/cover no-repeat;
+      filter: saturate(1.05) contrast(1.05) hue-rotate(8deg);
+      opacity: .45;
+    }
     .hero .overlay {
       position: relative; padding: 28px;
       background: linear-gradient(135deg, rgba(106,0,255,.35), rgba(212,175,55,.25));
@@ -80,7 +85,12 @@ body { padding: 20px; }
 
 /* img/routes/lon-bkk.html */
 .hero { position: relative; border-radius: var(--r-card); overflow: hidden; }
-    
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: url('/img/hero-temple.jpg') center/cover no-repeat;
+      filter: saturate(1.05) contrast(1.05) hue-rotate(8deg);
+      opacity: .45;
+    }
     .hero .overlay {
       position: relative; padding: 28px;
       background: linear-gradient(135deg, rgba(106,0,255,.35), rgba(212,175,55,.25));
@@ -97,7 +107,12 @@ body { padding: 20px; }
 
 /* img/routes/nyc-lon.html */
 .hero { position: relative; border-radius: var(--r-card); overflow: hidden; }
-    
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: url('/img/hero-temple.jpg') center/cover no-repeat;
+      filter: saturate(1.05) contrast(1.05) hue-rotate(8deg);
+      opacity: .45;
+    }
     .hero .overlay {
       position: relative; padding: 28px;
       background: linear-gradient(135deg, rgba(106,0,255,.35), rgba(212,175,55,.25));
