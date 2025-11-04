@@ -326,3 +326,9 @@ body{ background:var(--bg); color:var(--text); }
 }
 
 .search-panel .form-actions .btn{ height:42px !important; line-height:42px !important; padding:0 16px !important; }
+
+/* Force hero width to container */
+.hero.hero-photo{ width: min(var(--page-max), calc(100% - 48px)); margin-inline:auto; }
+
+/* Lock Search button placement */
+@media (min-width: 961px){ .search-panel .form-actions{ grid-column:5 !important; justify-self:end; align-self:end; }}
