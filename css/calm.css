@@ -185,3 +185,51 @@ body{ background:var(--bg); color:var(--text); }
 .trip-group .chip.active{ background:var(--brand); color:#fff; border-color:var(--brand); }
 .checkbox{ display:flex; gap:10px; align-items:center; height:50px; }
 .checkbox input{ width:18px; height:18px; }
+
+
+/* === Landing tidy pass v2 === */
+
+/* Wider panel, but still with side breathing room */
+.hero .search-panel{
+  width: min(1240px, calc(100% - 64px));
+  margin-inline: auto;
+}
+
+/* Compact controls without cramping */
+.search-panel input,
+.search-panel select,
+.search-panel .checkbox,
+.search-panel .chip{
+  height: 46px;
+  line-height: 46px;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.search-panel label.small{
+  font-size: 12px;
+}
+
+/* Adjust grid gap a touch */
+.search-panel .form-grid{
+  gap: 10px;
+}
+
+/* Chips slightly leaner */
+.trip-group .chip{ padding: 8px 12px; }
+.trip-group .chip.active{ box-shadow: 0 0 0 2px rgba(0,0,0,0.04) inset; }
+
+/* "Partner" pills slimmer so they don't crowd the hero */
+.hero .chips .pill {
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+/* Keep button height consistent with inputs */
+.search-panel .form-actions .btn{
+  height: 46px;
+  line-height: 46px;
+  padding: 0 18px;
+  border-radius: 12px;
+}
