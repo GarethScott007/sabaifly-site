@@ -1,19 +1,15 @@
 
-/* === SabaiFly — Micro Patch (redlines) === */
-/* Guardrails + exact alignment + slimmer, longer search */
+/* === SabaiFly — Fill-the-row Patch (slim + full width) === */
 :root{ --page-max:1240px; --brand:#693AAE; --bg:#EBD9FF; --card:#FDFDFF; --text:#10121A; --muted:#6B6F76; --br:#E1D2FF; }
 
-/* 1) Solid brand header + bigger brand text */
+/* Keep the header solid + no gradients (guardrails) */
 .topbar{ background:var(--brand) !important; backdrop-filter:none !important; box-shadow:0 1px 0 rgba(0,0,0,.05); }
-.topbar .brand{ font-size:26px !important; font-weight:800 !important; letter-spacing:.2px; color:#fff; }
+.pill.gradient, .btn.gradient, .pill-unified{ background:var(--brand) !important; color:#fff !important; border:0 !important; box-shadow:none !important; }
 
-/* 2) No gradients anywhere */
-.pill.gradient, .btn.gradient, .pill-unified{
-  background:var(--brand) !important; color:#fff !important; border:0 !important; box-shadow:none !important;
-}
+/* Container rhythm */
+.container{ max-width: var(--page-max); margin-inline:auto; padding-inline:16px; }
 
-/* 3) Hero: clean photo, no overlays; width aligns to container */
-.container{ max-width:var(--page-max); margin-inline:auto; padding-inline:16px; }
+/* Hero aligned to container, no overlays */
 .hero.hero-photo{
   background:url('/img/hero-home.jpg') center 60%/cover no-repeat !important;
   border:0 !important; box-shadow:none !important; border-radius:22px;
@@ -25,43 +21,45 @@
 .hero.hero-photo::before, .hero.hero-photo::after{ content:none !important; background:none !important; }
 .hero .content h1, .hero .content p{ display:none !important; }
 
-/* 4) Child sections (chips/cards) fill the same width */
+/* Children sections same width */
 .hero .search-panel, .hero .chips, .section, .cards-grid, .popular-grid, .route-cards{
   width:100% !important; margin-inline:0 !important;
 }
 
-/* 5) Search panel: remove legacy width caps; make longer + slimmer */
-.search-panel{
-  padding:14px; border:1px solid var(--br); background:#fff; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.06);
-  max-width:none !important;
-}
+/* Search: longer and slimmer; make one long desktop row by moving pax fields up */
+.search-panel{ padding:14px; border:1px solid var(--br); background:#fff; border-radius:18px; box-shadow:0 6px 18px rgba(0,0,0,.06); max-width:none !important; }
 .search-panel .form-grid{
   display:grid;
-  grid-template-columns: 1.45fr 1.45fr 1fr 1fr auto; /* give From/To more room */
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr .9fr .9fr .9fr auto; /* From To Depart Return Adults Children Infants Search */
   gap:6px; align-items:end;
+  grid-auto-rows:auto;
 }
 .search-panel label.small{ font-size:12px; color:var(--muted); margin:0 0 4px; }
 
+/* Slimmer controls */
 .search-panel input, .search-panel select, .search-panel .checkbox, .search-panel .chip{
   height:36px; line-height:36px; font-size:13px; border-radius:10px;
 }
-.search-panel input, .search-panel select{
-  padding:8px 10px; border:1px solid var(--br); background:#fff; color:var(--text); outline:none;
-  transition: box-shadow .15s ease, border-color .15s ease;
-}
+.search-panel input, .search-panel select{ padding:8px 10px; border:1px solid var(--br); background:#fff; color:var(--text); outline:none; transition: box-shadow .15s ease, border-color .15s ease; }
 .search-panel input:focus, .search-panel select:focus{ border-color:#C7B5FF; box-shadow:0 0 0 3px rgba(106,0,255,.12); }
 
-.trip-group{ display:flex; gap:6px; }
-.trip-group .chip{ padding:6px 9px; font-size:13px; border-radius:10px; border:1px solid var(--br); background:#fff; cursor:pointer; }
-.trip-group .chip.active{ background:var(--brand); color:#fff; border-color:var(--brand); }
-.checkbox{ display:flex; gap:8px; align-items:center; }
+/* Place pax fields into row 1 columns 5-7; Search button to last column */
+.search-panel .pax-a{ grid-column:5; grid-row:1; }
+.search-panel .pax-c{ grid-column:6; grid-row:1; }
+.search-panel .pax-i{ grid-column:7; grid-row:1; }
+.search-panel .form-actions{ grid-column:8; grid-row:1; justify-self:end; align-self:end; }
 
-/* Search button stays at the far right on desktop; stacks on mobile */
-@media (min-width:961px){
-  .search-panel .form-actions{ grid-column:5; justify-self:end; align-self:end; }
-}
+/* Keep trip/direct/currency on row 2 (left side) */
+.search-panel .trip{ grid-column:1; grid-row:2; }
+.search-panel .direct{ grid-column:2; grid-row:2; }
+.search-panel .currency{ grid-column:3; grid-row:2; }
+
+/* Mobile stacks cleanly */
 @media (max-width:960px){
   .search-panel .form-grid{ grid-template-columns: 1fr 1fr; }
-  .search-panel .form-actions{ grid-column: 1 / -1; }
+  .search-panel .pax-a, .search-panel .pax-c, .search-panel .pax-i,
+  .search-panel .trip, .search-panel .direct, .search-panel .currency,
+  .search-panel .form-actions{ grid-column:auto; grid-row:auto; }
+  .search-panel .form-actions{ grid-column:1 / -1; }
 }
 .search-panel .form-actions .btn{ height:36px; line-height:36px; padding:0 14px; border-radius:10px; }
