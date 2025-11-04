@@ -155,3 +155,33 @@ body{ background:var(--bg); color:var(--text); }
 @media (max-width:1024px){ .cards-grid,.popular-grid,.route-cards{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media (max-width:640px){ .cards-grid,.popular-grid,.route-cards{ grid-template-columns:1fr; } }
 /* === /GUARDRAILS === */
+
+
+
+/* Hero depth + bottom-aligned content */
+.hero.hero-photo{ min-height: 640px; display:flex; flex-direction:column; justify-content:flex-end; padding-bottom: 28px; }
+@media (min-width:1200px){
+  .hero.hero-photo{ min-height: 720px; }
+}
+/* Form grid: two tidy rows on desktop */
+.search-panel .form-grid{
+  display:grid;
+  grid-template-columns: 1.25fr 1.25fr 1fr 1fr auto;
+  grid-auto-rows: auto;
+  gap: 12px;
+  align-items:end;
+}
+@media (min-width: 1024px){
+  .search-panel .form-grid .trip   { grid-column: 1 / span 1; }
+  .search-panel .form-grid .direct { grid-column: 2 / span 1; }
+  .search-panel .form-grid .pax-a  { grid-column: 3 / span 1; }
+  .search-panel .form-grid .pax-c  { grid-column: 4 / span 1; }
+  .search-panel .form-grid .pax-i  { grid-column: 5 / span 1; }
+  .search-panel .form-grid .currency { grid-column: 5 / span 1; display:none; } /* hidden unless needed */
+}
+/* Chips styling aligns with pills */
+.trip-group{ display:flex; gap:10px; }
+.trip-group .chip{ padding:10px 12px; border-radius:12px; border:1px solid var(--br); background:#fff; cursor:pointer; }
+.trip-group .chip.active{ background:var(--brand); color:#fff; border-color:var(--brand); }
+.checkbox{ display:flex; gap:10px; align-items:center; height:50px; }
+.checkbox input{ width:18px; height:18px; }
