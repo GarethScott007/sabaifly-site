@@ -233,3 +233,76 @@ body{ background:var(--bg); color:var(--text); }
   padding: 0 18px;
   border-radius: 12px;
 }
+
+
+/* === Landing: align with header & lighten density (v3) === */
+:root{ --page-max: 1280px; }
+
+/* Global content widths that should follow the header rhythm */
+.container, .wrap, .page-inner, .section, .section-inner, .hero, .route-cards, .popular-grid {
+  max-width: var(--page-max);
+  margin-inline: auto;
+}
+
+/* Hero shallower and bottom-aligned for scan→search */
+.hero.hero-photo{
+  min-height: 520px;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding-bottom: 24px;
+}
+@media (max-width: 1199px){
+  .hero.hero-photo{ min-height: 460px; }
+}
+@media (max-width: 640px){
+  .hero.hero-photo{ min-height: 360px; }
+}
+
+/* Search panel width aligns with header edges */
+.hero .search-panel,
+.hero .chips{
+  width: min(var(--page-max), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+/* Dense but touchable controls */
+.search-panel input,
+.search-panel select,
+.search-panel .checkbox,
+.search-panel .chip{
+  height: 42px;
+  line-height: 42px;
+  font-size: 14.5px;
+  border-radius: 10px;
+}
+.search-panel label.small{ font-size: 12px; }
+
+.search-panel .form-grid{ gap: 8px; }
+
+/* Row 1 grid weighting */
+.search-panel .form-grid{
+  grid-template-columns: 1.35fr 1.35fr 1fr 1fr auto;
+  align-items: end;
+}
+
+/* Trip chips and partner pills toned down one notch */
+.trip-group{ gap: 8px; }
+.trip-group .chip{ padding: 7px 10px; }
+.trip-group .chip.active{ box-shadow: 0 0 0 2px rgba(0,0,0,0.03) inset; }
+
+.hero .chips .pill{
+  font-size: 13.5px;
+  padding: 7px 10px;
+  border-radius: 12px;
+}
+
+/* Search button keeps same height */
+.search-panel .form-actions .btn{
+  height: 42px; line-height: 42px; padding: 0 16px; border-radius: 12px;
+}
+
+/* Below-hero cards align to header width */
+.cards-grid, .popular-grid, .route-cards{
+  width: min(var(--page-max), calc(100% - 48px));
+  margin-inline: auto;
+}
+
