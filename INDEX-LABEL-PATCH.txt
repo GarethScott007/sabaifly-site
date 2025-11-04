@@ -1,0 +1,4 @@
+Find in index.html:
+  <label class="small muted" for="direct">Stops</label>
+Replace with:
+  <label class="small muted" for="direct">Direct only</label>
