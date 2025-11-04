@@ -1,149 +1,129 @@
 <!DOCTYPE html>
-
 <html data-i18n-title="results_title" lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Flight results — SabaiFly</title>
-<!-- CSS -->
-
-<link href="/css/airlines.css" rel="stylesheet"/><!-- must be last -->
-       
-
-        
-<!-- SEO -->
-<meta content="Flight results from SabaiFly. Filter by stops or airline and book with trusted partners." name="description"/>
-<link href="https://sabaifly.com/flights/results.html" rel="canonical">
-<!-- Social -->
-<meta content="Flight results — SabaiFly" property="og:title"/>
-<meta content="Fast results, clear filters, trusted booking partners." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="https://SabaiFly.com/img/hero-temple.jpg" property="og:image"/>
-<meta content="summary_large_image" name="twitter:card"/>
-<link href="https://SabaiFly.com/flights/results.html" hreflang="en" rel="alternate">
-<link href="https://SabaiFly.com/flights/results.html?lang=th" hreflang="th" rel="alternate">
-<link href="https://SabaiFly.com/flights/results.html" hreflang="x-default" rel="alternate"/>
-<link crossorigin="" href="https://static.cloudflareinsights.com" rel="preconnect"/>
-<link crossorigin="" href="https://pics.avs.io" rel="preconnect"/>
-<script defer="" src="/js/inlined.js"></script>
-<script defer="" src="/js/ga4.js"></script>
-<meta name="theme-color" content="#693AAE">
-</link></link></link>
-<link rel="stylesheet" href="/css/home-hero.css">
-<link rel="stylesheet" href="/css/ux-tweaks.css">
-<link rel="stylesheet" href="/css/inlined.css">
-<link rel="stylesheet" href="/css/theme.css">
-<link rel="stylesheet" href="/css/calm.css">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Flight results — SabaiFly</title>
+  <link rel="stylesheet" href="/css/home-hero.css">
+  <link rel="stylesheet" href="/css/ux-tweaks.css">
+  <link rel="stylesheet" href="/css/inlined.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/calm.css">
+  <link rel="stylesheet" href="/css/airlines.css">
   <link rel="preload" as="image" href="/img/hero-home.jpg">
+  <meta name="description" content="Flight results from SabaiFly. Filter by stops or airline and book with trusted partners.">
+  <link rel="canonical" href="https://sabaifly.com/flights/results.html">
+  <meta property="og:title" content="Flight results — SabaiFly">
+  <meta property="og:description" content="Fast results, clear filters, trusted booking partners.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://SabaiFly.com/img/hero-temple.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://SabaiFly.com/flights/results.html">
+  <link rel="alternate" hreflang="th" href="https://SabaiFly.com/flights/results.html?lang=th">
+  <link rel="alternate" hreflang="x-default" href="https://SabaiFly.com/flights/results.html">
+  <link rel="preconnect" href="https://static.cloudflareinsights.com" crossorigin>
+  <link rel="preconnect" href="https://pics.avs.io" crossorigin>
+  <script defer src="/js/inlined.js"></script>
+  <script defer src="/js/ga4.js"></script>
+  <meta name="theme-color" content="#693AAE">
 </head>
-<body>
-<header class="topbar">
-<div class="container row spread">
-<a class="brand" data-keep-lang="1" href="/">SabaiFly</a>
-<nav class="row gap">
-<a class="pill gradient" data-i18n="nav_home" data-keep-lang="1" href="/">Home</a>
-<a class="pill gradient" data-i18n="nav_flights" data-keep-lang="1" href="/flights/">Flights</a>
-<div class="lang-switch row gap ml-8">
-<a aria-label="English" class="pill flag" data-keep-lang="1" data-lang="en" id="lang-en">
-<img alt="EN" class="flag-img" src="/img/flags/gb.svg"/> EN
-        </a>
-<a aria-label="Thai" class="pill flag" data-keep-lang="1" data-lang="th" id="lang-th">
-<img alt="TH" class="flag-img" src="/img/flags/th.svg"/> TH
-        </a>
-</div>
-</nav>
-</div>
-</header>
-<main class="container">
-<section class="hero hero-photo">
-<h1 data-i18n="results_title">Flight results</h1>
-<p class="muted" data-i18n-html="results_subtitle">Fast search. Clean results. Booking handled by trusted partners.</p>
-<div class="row gap">
-<a class="btn gradient" data-i18n="actions_back_to_search" data-keep-lang="1" href="/flights/">Back to search</a>
-<!-- Fallback href keeps working without JS (no params) -->
-<a class="btn js-view-calendar" data-i18n="actions_view_calendar" href="/flights/calendar.html">View calendar</a>
-</div>
-</section>
-<!-- Controls (compact, inline Filters) -->
-<section class="card sticky-controls" style="margin-top:0.75rem">
-<div class="controls">
-<!-- Sort -->
-<div class="control-block">
-<span class="small muted">Sort</span>
-<div aria-label="Sort" class="chip-group" id="sort-group" role="radiogroup">
-<button aria-pressed="true" class="chip active" data-sort="price">Cheapest</button>
-<button aria-pressed="false" class="chip" data-sort="duration">Quickest</button>
-</div>
-</div>
-<!-- Stops -->
-<div class="control-block">
-<span class="small muted">Stops</span>
-<div aria-label="Stops" class="chip-group" id="stops-group" role="radiogroup">
-<button aria-pressed="true" class="chip active" data-stops="any">Any</button>
-<button aria-pressed="false" class="chip" data-stops="0">Direct</button>
-<button aria-pressed="false" class="chip" data-stops="2">2+ stops</button>
-</div>
-</div>
-<!-- Inline Filters -->
-<div class="control-block">
-<span class="small muted">Filters</span>
-<button aria-controls="filters-drawer" aria-expanded="false" class="chip" id="btn-filters">Open</button>
-</div>
-</div>
-<!-- Hidden drawer -->
-<div class="card" id="filters-drawer" style="display:none; margin-top:8px">
-<div class="control-block">
-<span class="small muted">Airline</span>
-<select class="select-inline" id="filter-airline">
-<option value="any">Any</option>
-</select>
-</div>
-<div id="airline-chips-card" style="display:none; margin-top:8px">
-<div class="control-block">
-<span class="small muted">Airline</span>
-<div class="chip-group" id="airline-chips"></div>
-</div>
-</div>
-</div>
-</section>
-<!-- Date ribbons -->
-<section class="card" id="date-ribbon-wrap" style="margin-top:.75rem;padding:12px">
-<div class="date-ribbon" id="depart-ribbon">
-<div class="row-title">Depart</div>
-<div class="date-chips" id="depart-chips"></div>
-</div>
-<div class="date-ribbon" id="return-ribbon" style="display:none">
-<div class="row-title">Return</div>
-<div class="date-chips" id="return-chips"></div>
-</div>
-</section>
-<section class="card" style="margin-top:1rem">
-<div class="status" id="results-status" style="margin-bottom:0.75rem;"></div>
-<div class="results" id="results-list"></div>
-</section>
-</main>
-<footer class="container foot small">
-<nav class="row gap small mb-8">
-<a data-i18n="legal_terms" data-keep-lang="1" href="/legal/terms.html">Terms</a>
-<a data-i18n="legal_privacy" data-keep-lang="1" href="/legal/privacy.html">Privacy</a>
-<a data-i18n="legal_cookies" data-keep-lang="1" href="/legal/cookies.html">Cookies</a>
-</nav>
-  © <span id="y"></span> SabaiFly
-  <section aria-labelledby="proutes-title" class="container foot card">
-<h2 class="h5" id="proutes-title">Popular routes</h2>
-<nav aria-label="Popular routes" class="chip-group" id="popular-routes-footer"></nav>
-</section>
-</footer>
-<script src="/js/i18n.js?v=6" type="module"></script>
-<script defer="" src="/js/cookie-consent.js?v=4"></script>
-<script defer="" src="/js/results-page.js?v=44"></script>
-<script defer="" src="/js/provider-override.js?v=4"></script>
-<!-- Drawer toggle -->
-<!-- Sticky offset -->
-<!-- Universal wiring for ALL "View calendar" buttons -->
-<script defer="" src="/js/results-wire.js?v=3"></script>
-<script data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script>
-<!-- Keep if you need popular routes -->
-<script defer="" src="/js/routes-wire.js?v=2"></script>
+<body class="flights">
+  <header class="topbar">
+    <div class="container row spread">
+      <a class="brand" href="/" data-keep-lang="1">SabaiFly</a>
+      <nav class="row gap">
+        <a class="pill gradient" href="/" data-keep-lang="1" data-i18n="nav_home">Home</a>
+        <a class="pill gradient" href="/flights/" data-keep-lang="1" data-i18n="nav_flights">Flights</a>
+        <div class="lang-switch row gap ml-8">
+          <a id="lang-en" class="pill flag" data-lang="en" data-keep-lang="1" aria-label="English">
+            <img class="flag-img" src="/img/flags/gb.svg" alt="EN"> EN
+          </a>
+          <a id="lang-th" class="pill flag" data-lang="th" data-keep-lang="1" aria-label="Thai">
+            <img class="flag-img" src="/img/flags/th.svg" alt="TH"> TH
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero hero-photo">
+      <h1 data-i18n="results_title">Flight results</h1>
+      <p class="muted" data-i18n-html="results_subtitle">Fast search. Clean results. Booking handled by trusted partners.</p>
+      <div class="row gap">
+        <a class="btn gradient" href="/flights/" data-keep-lang="1" data-i18n="actions_back_to_search">Back to search</a>
+        <a class="btn js-view-calendar" href="/flights/calendar.html" data-i18n="actions_view_calendar">View calendar</a>
+      </div>
+    </section>
+    <section class="card sticky-controls" style="margin-top:0.75rem">
+      <div class="controls">
+        <div class="control-block">
+          <span class="small muted">Sort</span>
+          <div id="sort-group" class="chip-group" role="radiogroup" aria-label="Sort">
+            <button class="chip active" data-sort="price" aria-pressed="true">Cheapest</button>
+            <button class="chip" data-sort="duration" aria-pressed="false">Quickest</button>
+          </div>
+        </div>
+        <div class="control-block">
+          <span class="small muted">Stops</span>
+          <div id="stops-group" class="chip-group" role="radiogroup" aria-label="Stops">
+            <button class="chip active" data-stops="any" aria-pressed="true">Any</button>
+            <button class="chip" data-stops="0" aria-pressed="false">Direct</button>
+            <button class="chip" data-stops="2" aria-pressed="false">2+ stops</button>
+          </div>
+        </div>
+        <div class="control-block">
+          <span class="small muted">Filters</span>
+          <button id="btn-filters" class="chip" aria-controls="filters-drawer" aria-expanded="false">Open</button>
+        </div>
+      </div>
+      <div id="filters-drawer" class="card" style="display:none; margin-top:8px">
+        <div class="control-block">
+          <span class="small muted">Airline</span>
+          <select id="filter-airline" class="select-inline">
+            <option value="any">Any</option>
+          </select>
+        </div>
+        <div id="airline-chips-card" style="display:none; margin-top:8px">
+          <div class="control-block">
+            <span class="small muted">Airline</span>
+            <div id="airline-chips" class="chip-group"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="date-ribbon-wrap" class="card" style="margin-top:.75rem;padding:12px">
+      <div id="depart-ribbon" class="date-ribbon">
+        <div class="row-title">Depart</div>
+        <div id="depart-chips" class="date-chips"></div>
+      </div>
+      <div id="return-ribbon" class="date-ribbon" style="display:none">
+        <div class="row-title">Return</div>
+        <div id="return-chips" class="date-chips"></div>
+      </div>
+    </section>
+    <section class="card" style="margin-top:1rem">
+      <div id="results-status" class="status" style="margin-bottom:0.75rem;"></div>
+      <div id="results-list" class="results"></div>
+    </section>
+  </main>
+  <footer class="container foot small">
+    <nav class="row gap small mb-8">
+      <a href="/legal/terms.html" data-keep-lang="1" data-i18n="legal_terms">Terms</a>
+      <a href="/legal/privacy.html" data-keep-lang="1" data-i18n="legal_privacy">Privacy</a>
+      <a href="/legal/cookies.html" data-keep-lang="1" data-i18n="legal_cookies">Cookies</a>
+    </nav>
+    © <span id="y"></span> SabaiFly
+    <section class="container foot card" aria-labelledby="proutes-title">
+      <h2 class="h5" id="proutes-title">Popular routes</h2>
+      <nav id="popular-routes-footer" class="chip-group" aria-label="Popular routes"></nav>
+    </section>
+  </footer>
+  <script type="module" src="/js/i18n.js?v=6"></script>
+  <script defer src="/js/cookie-consent.js?v=4"></script>
+  <script defer src="/js/results-page.js?v=44"></script>
+  <script defer src="/js/provider-override.js?v=4"></script>
+  <script defer src="/js/results-wire.js?v=3"></script>
+  <script defer src="/js/routes-wire.js?v=2"></script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"4d63204d26834ffbb54e4622ba7d15a0"}'></script>
 </body>
 </html>
