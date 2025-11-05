@@ -1,22 +1,21 @@
-SabaiFly Patch Bundle — drop-in overlay
+SabaiFly overlay — FINAL index + sitemap safety + /img cleanup
 
-CONTENTS (top-level)
-- css/ux-tweaks.css
-- functions/_middleware.js
-- functions/sitemap.xml.js
-- _headers
-- index.patched.html
-- docs/*
-- patches/*
+Included:
+- index.html — merged with Guardrails CSS order + photo-only hero.
+- css/ux-tweaks.css — current + curated additions (no gradients).
+- functions/_middleware.js — canonical Link header; param allowlist.
+- functions/sitemap.xml.js — correct namespaces + www host.
+- _headers — security + caching.
+- .cfignore + rename-sitemap.* — prevents static sitemap.xml from overshadowing the function.
+- img-duplicates-found.txt + cleanup scripts (cmd/ps1/sh) — SAFE cleanup: move duplicates from /img to a timestamped backup folder inside the repo. Review, then commit. Optional delete-backup.sh to remove later.
 
-HOW TO APPLY
-1) Copy these into your repo root (allow overwrite).
-2) Commit & push. Cloudflare Pages deploys automatically.
-3) Keep CSS order on every page:
-   /css/home-hero.css
-   /css/ux-tweaks.css
-   /css/inlined.css
-   /css/theme.css
-   /css/calm.css   (LAST)
-4) Delete duplicate site content under /img/ listed in docs/remove-these-from-img-duplicates.txt
-5) Run docs/verify-commands.txt and disable the temp-noindex header rule in Cloudflare before launch.
+How to apply (staging branch):
+1) Copy everything to the repo root (allow overwrite).
+2) (Optional) Run rename-sitemap.cmd to rename sitemap.xml → sitemap.static.xml.
+3) Run one of the cleanup scripts to move /img duplicates into a backup folder (Windows: .cmd; macOS/Linux: .sh).
+4) Commit & push. Cloudflare Pages deploys.
+5) Visit /sitemap.xml → should be served by the function. Verify Guardrails (hero + CSS order) and Runbook headers.
+
+Notes:
+- The cleanup scripts **move** files into img-dup-backup-YYYYMMDD-HHMMSS (they do NOT delete), so it's safe.
+- If you want to revert any file, just move it back from the backup folder.

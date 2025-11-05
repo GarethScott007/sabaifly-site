@@ -32,6 +32,8 @@
   <script defer src="/js/ga4.js"></script>
   <script type="application/ld+json" src="/ld/organization.json"></script>
   <script type="application/ld+json" src="/ld/website.json"></script>
+
+  <!-- Guardrails CSS order -->
   <link rel="stylesheet" href="/css/home-hero.css">
   <link rel="stylesheet" href="/css/ux-tweaks.css">
   <link rel="stylesheet" href="/css/inlined.css">
@@ -63,98 +65,15 @@
 
   <main class="container">
     <!-- Hero -->
-    <section class="hero hero-photo" aria-label="Wat Arun, Bangkok">
-      <div class="content">
-        <h1 class="gold">Wat Arun, Temple of Dawn (Bangkok)</h1>
-        <p class="muted">Fast search, clean results, and booking handled by trusted partners.</p>
-
-        <!-- Search → goes straight to results -->
-        <form id="flight-search" class="card search-panel" action="/flights/results.html" method="GET" novalidate>
-  <div class="form-grid">
-    <!-- From -->
-    <div class="field">
-      <label class="small muted" for="origin">From</label>
-      <input id="origin" name="origin" placeholder="London (LON)" autocomplete="off" inputmode="latin" maxlength="16" list="origin-list">
-      <datalist id="origin-list"></datalist>
-    </div>
-
-    <!-- To -->
-    <div class="field">
-      <label class="small muted" for="destination">To</label>
-      <input id="destination" name="destination" placeholder="Bangkok (BKK)" autocomplete="off" inputmode="latin" maxlength="16" list="destination-list">
-      <datalist id="destination-list"></datalist>
-    </div>
-
-    <!-- Dates -->
-    <div class="field">
-      <label class="small muted" for="departure_at">Depart</label>
-      <input id="departure_at" name="departure_at" type="date">
-    </div>
-    <div class="field" id="return-block">
-      <label class="small muted" for="return_at">Return</label>
-      <input id="return_at" name="return_at" type="date">
-    </div>
-
-    <!-- Search button -->
-    <div class="form-actions">
-      <button class="btn gradient" type="submit">Search</button>
-    </div>
-
-    <!-- Row 2: options -->
-    <div class="field trip" id="trip-field">
-      <label class="small muted">Trip</label>
-      <div id="trip-type" class="trip-group" role="radiogroup" aria-label="Trip type">
-        <button type="button" class="chip active" data-trip="return" aria-checked="true" role="radio">Return</button>
-        <button type="button" class="chip" data-trip="oneway" aria-checked="false" role="radio">One way</button>
+    <section class="hero hero-photo">
+  <div class="container">
+    <form class="search-panel" id="flight-search" action="/flights/results.html">
+      <div class="form-grid">
+        <!-- origin, destination, depart, return, submit -->
       </div>
-    </div>
-
-    <div class="field direct">
-      <label class="small muted" for="direct">Stops</label>
-      <label class="checkbox">
-        <input id="direct" name="direct" type="checkbox" value="true">
-        <span>Direct only</span>
-      </label>
-    </div>
-
-    <div class="field pax-a">
-      <label class="small muted" for="adults">Adults</label>
-      <input id="adults" name="adults" type="number" min="1" max="9" step="1" value="1" inputmode="numeric" pattern="[0-9]*">
-    </div>
-
-    <div class="field pax-c">
-      <label class="small muted" for="children">Children</label>
-      <input id="children" name="children" type="number" min="0" max="8" step="1" value="0" inputmode="numeric" pattern="[0-9]*">
-    </div>
-
-    <div class="field pax-i">
-      <label class="small muted" for="infants">Infants</label>
-      <input id="infants" name="infants" type="number" min="0" max="4" step="1" value="0" inputmode="numeric" pattern="[0-9]*">
-    </div>
-
-    <div class="field currency">
-      <label class="small muted" for="currency">Currency</label>
-      <select id="currency" name="currency">
-        <option value="GBP" selected>GBP £</option>
-        <option value="EUR">EUR €</option>
-        <option value="USD">USD $</option>
-        <option value="THB">THB ฿</option>
-        <option value="AUD">AUD $</option>
-      </select>
-    </div>
+    </form>
   </div>
-</form>
-
-        <!-- Partner shortcuts -->
-        <div class="chips">
-          <a class="pill gradient" href="/flights/" data-keep-lang="1">Flights</a>
-          <a class="pill gradient" href="/api/afflink?provider=kiwi" target="_blank" rel="sponsored nofollow noopener">Kiwi Flights</a>
-          <a class="pill gradient" href="/api/afflink?provider=rentacar" target="_blank" rel="sponsored nofollow noopener">Car hire by GetRentACar</a>
-          <a class="pill gradient" href="/api/afflink?provider=kiwitaxi" target="_blank" rel="sponsored nofollow noopener">Airport transfers (KiwiTaxi)</a>
-          <a class="pill gradient" href="/api/afflink?provider=hotels" target="_blank" rel="sponsored nofollow noopener">Hotels (partner)</a>
-        </div>
-      </div>
-    </section>
+</section>
 
     <!-- Content -->
     <section class="section">
