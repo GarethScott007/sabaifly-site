@@ -1,11 +1,5 @@
-# secrets (never commit)
-.env
-.dev.vars
-
-# OS cruft
-.DS_Store
-Thumbs.db
-
-# build/temp
-dist/
-.cache/
+# archives / exports
+*.zip
+*.7z
+*.tar.gz
+*.tar

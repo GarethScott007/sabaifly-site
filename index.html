@@ -67,9 +67,32 @@
     <!-- Hero -->
     <section class="hero hero-photo">
   <div class="container">
-    <form class="search-panel" id="flight-search" action="/flights/results.html">
+    <form class="search-panel" id="flight-search" action="/flights/results.html" method="get" novalidate>
       <div class="form-grid">
-        <!-- origin, destination, depart, return, submit -->
+        <div class="field">
+          <label for="origin" class="sr-only">From (city or airport code)</label>
+          <input id="origin" name="origin" inputmode="uppercase" autocomplete="off" placeholder="LON" maxlength="3" required>
+        </div>
+        <div class="field">
+          <label for="destination" class="sr-only">To (city or airport code)</label>
+          <input id="destination" name="destination" inputmode="uppercase" autocomplete="off" placeholder="BKK" maxlength="3" required>
+        </div>
+        <div class="field">
+          <label for="departure_at" class="sr-only">Depart</label>
+          <input id="departure_at" name="departure_at" type="date" required>
+        </div>
+        <div class="field">
+          <label for="return_at" class="sr-only">Return</label>
+          <input id="return_at" name="return_at" type="date">
+        </div>
+        <div class="actions">
+          <button class="btn" type="submit" aria-label="Search flights">Search</button>
+        </div>
+      </div>
+      <div class="helpers" aria-hidden="true">
+        <label class="chip" for="direct-only">
+          <input id="direct-only" name="direct" type="checkbox" value="true"> Direct only
+        </label>
       </div>
     </form>
   </div>
