@@ -1,0 +1,105 @@
+/* Shared rail: header, hero, and cards use the same rails */
+:root{
+  /* Feel free to change this single value to tighten/loosen width sitewide */
+  --rail-width: 1280px;  /* was 1240 — expanded to satisfy strict alignment */
+  --rail-pad:   24px;
+  --hero-radius: 24px;
+  --card-radius: 16px;
+}
+
+/* Rails: identical for header, hero, sections, footer */
+.rail{
+  max-width: var(--rail-width);
+  margin: 0 auto;
+  padding: 0 var(--rail-pad);
+}
+
+/* Topbar */
+.topbar{ background:#693AAE; color:#fff; }
+.topbar .bar{ display:flex; align-items:center; justify-content:space-between; height:72px; }
+.topbar .brand{ font-weight:700; color:#fff; text-decoration:none; }
+.topbar .mainnav{ display:flex; gap:24px; }
+.topbar .mainnav a{ color:#fff; text-decoration:none; }
+
+/* Hero */
+.hero.hero-photo{ margin: 24px 0 12px; }
+.hero .hero-frame{
+  position: relative;
+  border-radius: var(--hero-radius);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+.hero .hero-frame > img{
+  display:block; width:100%; height:auto;
+}
+
+/* Search panel sits *inside* the same rail, not floating outside */
+.search-panel{
+  position: absolute;
+  left: var(--rail-pad);
+  right: var(--rail-pad);
+  bottom: 18px;
+  margin: 0; /* remove negative overlays */
+  background: #fff;
+  border: 1px solid var(--br, #E1D2FF);
+  border-radius: 18px;
+  padding: 14px 16px 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+}
+
+/* Form grid (Guardrails) */
+.search-panel .form-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 1.2fr 1fr 1fr auto;
+  gap:12px; align-items:end;
+}
+.search-panel .row2{
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  margin-top:10px;
+}
+.search-panel input,
+.search-panel select,
+.search-panel button{ height:50px; border-radius:12px; }
+
+/* Labels & micro */
+.tiny{ font-size:12px; }
+.muted{ color: var(--muted, #6B6F76); }
+.align-middle{ align-self:center; }
+
+/* Chips (trip type & direct only) */
+.chip-group{ display:inline-flex; gap:8px; }
+.chip{
+  display:inline-flex; align-items:center;
+  height:36px; padding:0 12px;
+  border-radius:999px; border:1px solid var(--br, #E1D2FF);
+  background: var(--card, #FDFDFF); color: var(--text, #10121A);
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.chip.active{ background: var(--brand, #693AAE); color:#fff; border-color: var(--brand, #693AAE); }
+.chip input{ margin-right:6px; }
+
+/* Cards & sections using same rails */
+.section{ margin: 12px 0 24px; }
+.card{
+  background: var(--card, #FDFDFF);
+  border: 1px solid var(--br, #E1D2FF);
+  border-radius: var(--card-radius);
+  padding: 20px 20px 18px;
+}
+
+/* Route spotlight grid */
+.pill-grid{
+  display:grid; gap:18px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 960px){
+  .search-panel{ position: static; margin-top: 12px; }
+  .hero .hero-frame{ border-radius: 0; }
+  .pill-grid{ grid-template-columns: 1fr; }
+  .search-panel .form-grid, .search-panel .row2{ grid-template-columns: 1fr; }
+}
+
+/* Focus rings for accessibility */
+:where(a,button,input,select,textarea):focus-visible{
+  outline:3px solid var(--brand, #693AAE); outline-offset:2px;
+}
