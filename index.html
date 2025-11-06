@@ -8,11 +8,15 @@
   <!-- Canonical (www is canonical host) -->
   <link rel="canonical" href="https://www.sabaifly.com/"/>
 
-  <!-- CSS (order matters: base → tweaks → theme → calm override) --><!-- solid purple skin -->
+  <!-- CSS (order matters: base → tweaks → theme → calm override) -->
+  <link rel="stylesheet" href="/css/home-hero.css">
+  <link rel="stylesheet" href="/css/ux-tweaks.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/calm.css"><!-- solid purple skin -->
   <link rel="preload" as="image" href="/img/hero-home.jpg">
   <meta name="theme-color" content="#693AAE">
 
-
+}
 
 
   <!-- SEO -->
@@ -28,17 +32,12 @@
   <meta name="theme-color" content="#693AAE">
 
   <!-- Optional small helpers (route grid) -->
-<!-- JS (all external; CSP-safe) -->
+  <link rel="stylesheet" href="/css/inlined.css">
+
+  <!-- JS (all external; CSP-safe) -->
   <script defer src="/js/ga4.js"></script>
   <script type="application/ld+json" src="/ld/organization.json"></script>
   <script type="application/ld+json" src="/ld/website.json"></script>
-
-  <!-- Guardrails CSS order -->
-  <link rel="stylesheet" href="/css/home-hero.css">
-  <link rel="stylesheet" href="/css/ux-tweaks.css">
-  <link rel="stylesheet" href="/css/inlined.css">
-  <link rel="stylesheet" href="/css/theme.css">
-  <link rel="stylesheet" href="/css/calm.css">
 </head>
 <body>
   <!-- Top navigation -->
@@ -65,53 +64,92 @@
 
   <main class="container">
     <!-- Hero -->
-    <section class="hero hero-photo">
-  <div class="container">
-    <form class="search-panel" id="flight-search" action="/flights/results.html" method="get" novalidate>
-      <div class="form-grid">
-        <div class="field">
-          <label for="origin" class="sr-only">From (city or airport code)</label>
-          <input id="origin" name="origin" inputmode="uppercase" autocomplete="off" placeholder="LON" maxlength="3" required>
-        </div>
-        <div class="field">
-          <label for="destination" class="sr-only">To (city or airport code)</label>
-          <input id="destination" name="destination" inputmode="uppercase" autocomplete="off" placeholder="BKK" maxlength="3" required>
-        </div>
-        <div class="field">
-          <label for="departure_at" class="sr-only">Depart</label>
-          <input id="departure_at" name="departure_at" type="date" required>
-        </div>
-        <div class="field">
-          <label for="return_at" class="sr-only">Return</label>
-          <input id="return_at" name="return_at" type="date">
-        </div>
-        <div class="actions">
-          <button class="btn" type="submit" aria-label="Search flights">Search</button>
-        </div>
+    
+    <!-- Hero -->
+    <section class="hero card hero-photo" aria-label="Home hero">
+      <div class="content">
+        <h1 class="gold">Find flights the calm way</h1>
+        <p class="muted">Fast search. Clean results. Booking handled by trusted partners.</p>
+
+        <form id="flight-search" class="search-panel" action="/flights/results.html" method="GET" aria-label="Search flights">
+          <!-- Trip type -->
+          <div class="control-block" style="margin-bottom:12px">
+            <span class="small muted">Trip type</span>
+            <div id="trip-type" class="chip-group" role="radiogroup" aria-label="Trip type">
+              <button type="button" class="chip active" aria-pressed="true" data-trip="return">Return</button>
+              <button type="button" class="chip" aria-pressed="false" data-trip="oneway">One-way</button>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="origin" class="small muted">From</label>
+              <input id="origin" name="origin" placeholder="LON" inputmode="latin" maxlength="4" minlength="2" required autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="destination" class="small muted">To</label>
+              <input id="destination" name="destination" placeholder="BKK" inputmode="latin" maxlength="4" minlength="2" required autocomplete="off">
+            </div>
+            <div class="field">
+              <label for="departure_at" class="small muted">Depart</label>
+              <input id="departure_at" name="departure_at" type="date" required>
+            </div>
+            <div class="field" id="return-block">
+              <label for="return_at" class="small muted">Return</label>
+              <input id="return_at" name="return_at" type="date">
+            </div>
+            <div class="form-actions">
+              <button class="btn" type="submit">Search</button>
+            </div>
+          </div>
+
+          <div class="form-grid" style="grid-template-columns: 1fr 1fr 1fr 1fr auto;">
+            <div class="field">
+              <label class="small muted" for="adults">Adults</label>
+              <input id="adults" name="adults" type="number" min="1" max="9" value="1" required>
+            </div>
+            <div class="field">
+              <label class="small muted" for="children">Children</label>
+              <input id="children" name="children" type="number" min="0" max="8" value="0">
+            </div>
+            <div class="field">
+              <label class="small muted" for="infants">Infants</label>
+              <input id="infants" name="infants" type="number" min="0" max="4" value="0">
+            </div>
+            <div class="field">
+              <label class="small muted" for="currency">Currency</label>
+              <select id="currency" name="currency">
+                <option value="GBP">GBP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="THB">THB</option>
+              </select>
+            </div>
+            <label class="chip" style="align-self:center;">
+              <input id="direct" name="direct" type="checkbox" value="true"> Direct only
+            </label>
+          </div>
+        </form>
+
       </div>
-      <div class="helpers" aria-hidden="true">
-        <label class="chip" for="direct-only">
-          <input id="direct-only" name="direct" type="checkbox" value="true"> Direct only
-        </label>
-      </div>
-    </form>
-  </div>
-</section>
+    </section>
+    
 
     <!-- Content -->
-    <section class="section">
-      <h2>Our mission</h2>
-      <p>Fast search. Clean results. Booking handled by trusted partners.</p>
-    </section>
+    
 
-    <section class="section">
-      <h2>How it works</h2>
-      <ol>
-        <li>Pick your route &amp; dates. We search multiple sources and show the lowest fares.</li>
-        <li>Use quick filters or the monthly price calendar to pick smarter.</li>
-        <li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are just a click away.</li>
+    
+    <section class="card section" aria-labelledby="mission-how">
+      <h2 id="mission-how">What we do & how it works</h2>
+      <p>We show you fast, clean flight results. When you click through and book, our partners pay us a commission.</p>
+      <p><strong>We never add fees to your ticket price.</strong> You always pay the airline or travel partner directly.</p>
+      <ol class="muted">
+        <li>Pick your route & dates. We search multiple sources to find low fares.</li>
+        <li>Use quick filters or the monthly price calendar to compare smarter.</li>
+        <li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are a click away.</li>
       </ol>
     </section>
+
 
     <!-- Route spotlights -->
     <section class="container foot card" aria-labelledby="route-grid-title">
@@ -149,12 +187,8 @@
   <script defer src="/js/home-init.js?v=1"></script>
   <script defer src="/js/routes-wire.js?v=3"></script>
   <!-- Autocomplete (targets #hs-from / #hs-to) -->
-  
-  
+  <script defer src="/js/iata-autocomplete.js"></script>
   <!-- Optionally add /js/form-enhance.js later for swap/one-way behaviour -->
-  
-  
-  <script defer src="/js/lib/autocomplete.js"></script>
-  <script defer src="/js/search-launch.js"></script>
+  <script defer src="/js/search-launch.js?v=8"></script>
 </body>
 </html>
