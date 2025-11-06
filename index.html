@@ -7,6 +7,177 @@
 
   <!-- Canonical (www is canonical host) -->
   <link rel="canonical" href="https://www.sabaifly.com/"/>
+<!doctype html>
+<html lang="en" data-i18n-title="brand">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>SabaiFly</title>
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://www.sabaifly.com/"/>
+
+  <!-- Preload hero -->
+  <link rel="preload" as="image" href="/img/hero-home.jpg">
+
+  <!-- CSS (Calm LAST) -->
+  <link rel="stylesheet" href="/css/home-hero.css">
+  <link rel="stylesheet" href="/css/ux-tweaks.css">
+  <link rel="stylesheet" href="/css/inlined.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <!-- NEW: exact-rail alignment overrides -->
+  <link rel="stylesheet" href="/css/align.css">
+  <link rel="stylesheet" href="/css/calm.css">
+
+  <meta name="theme-color" content="#693AAE">
+  <meta name="description" content="Fast, clean flight search. Partners pay us a commission when you book. We never add fees to your ticket price.">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="rail">
+      <div class="bar">
+        <a class="brand" href="/" aria-label="SabaiFly home">SabaiFly</a>
+        <nav class="mainnav" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/flights/">Flights</a>
+          <a href="/hotels/">Hotels (partner)</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO: photo-only; same rails as header -->
+    <section class="hero hero-photo">
+      <div class="rail">
+        <div class="hero-frame">
+          <img src="/img/hero-home.jpg" alt="" fetchpriority="high" width="1920" height="860">
+          <!-- Search panel sits inside the same rails -->
+          <form id="flight-search" class="search-panel" action="/flights/results.html" method="GET" novalidate>
+            <!-- Trip type chips -->
+            <div class="trip-type">
+              <span class="tiny muted">Trip type</span>
+              <div id="trip-type" class="chip-group" role="radiogroup" aria-label="Trip type">
+                <button type="button" class="chip active" aria-pressed="true" data-trip="return">Return</button>
+                <button type="button" class="chip" aria-pressed="false" data-trip="oneway">One-way</button>
+              </div>
+            </div>
+
+            <!-- Row 1 -->
+            <div class="form-grid">
+              <div class="field">
+                <label for="origin" class="tiny muted">From</label>
+                <input id="origin" name="origin" placeholder="LON" inputmode="latin" maxlength="4" minlength="2" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="destination" class="tiny muted">To</label>
+                <input id="destination" name="destination" placeholder="BKK" inputmode="latin" maxlength="4" minlength="2" autocomplete="off" required>
+              </div>
+              <div class="field">
+                <label for="departure_at" class="tiny muted">Depart</label>
+                <input id="departure_at" name="departure_at" type="date" required>
+              </div>
+              <div class="field" id="return-block">
+                <label for="return_at" class="tiny muted">Return</label>
+                <input id="return_at" name="return_at" type="date">
+              </div>
+              <div class="form-actions">
+                <button class="btn" type="submit">Search</button>
+              </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="form-grid row2">
+              <div class="field">
+                <label for="adults" class="tiny muted">Adults</label>
+                <input id="adults" name="adults" type="number" min="1" max="9" value="1" required>
+              </div>
+              <div class="field">
+                <label for="children" class="tiny muted">Children</label>
+                <input id="children" name="children" type="number" min="0" max="8" value="0">
+              </div>
+              <div class="field">
+                <label for="infants" class="tiny muted">Infants</label>
+                <input id="infants" name="infants" type="number" min="0" max="4" value="0">
+              </div>
+              <div class="field">
+                <label for="currency" class="tiny muted">Currency</label>
+                <select id="currency" name="currency">
+                  <option value="GBP">GBP</option>
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="THB">THB</option>
+                </select>
+              </div>
+              <label class="chip align-middle">
+                <input id="direct" name="direct" type="checkbox" value="true"> Direct only
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- MERGED CARD: Mission + How it works -->
+    <section class="section">
+      <div class="rail">
+        <div class="card">
+          <h2>What we do & how it works</h2>
+          <p>We show you fast, clean flight results. When you click through and book, our partners pay us a commission.</p>
+          <p><strong>We never add fees to your ticket price.</strong> You always pay the airline or travel partner directly.</p>
+          <ol class="muted">
+            <li>Pick your route & dates. We search multiple sources to find low fares.</li>
+            <li>Use quick filters or the monthly price calendar to compare smarter.</li>
+            <li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are a click away.</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ROUTE SPOTLIGHTS — 13 pills preserved -->
+    <section class="section">
+      <div class="rail">
+        <div class="card">
+          <h2>Route spotlights</h2>
+          <div class="pill-grid">
+            <a class="btn pill" href="/routes/lon-bkk.html">LON → BKK</a>
+            <a class="btn pill" href="/routes/lon-nyc.html">LON → NYC</a>
+            <a class="btn pill" href="/routes/lon-dxb.html">LON → DXB</a>
+            <a class="btn pill" href="/routes/lon-sin.html">LON → SIN</a>
+            <a class="btn pill" href="/routes/lon-tyo.html">LON → TYO</a>
+            <a class="btn pill" href="/routes/lon-lax.html">LON → LAX</a>
+            <a class="btn pill" href="/routes/lon-syd.html">LON → SYD</a>
+            <a class="btn pill" href="/routes/lon-del.html">LON → DEL</a>
+            <a class="btn pill" href="/routes/lon-hkt.html">LON → HKT</a>
+            <a class="btn pill" href="/routes/lon-hkg.html">LON → HKG</a>
+            <a class="btn pill" href="/routes/lon-kul.html">LON → KUL</a>
+            <a class="btn pill" href="/routes/lon-bom.html">LON → BOM</a>
+            <a class="btn pill" href="/routes/bkk-hkt.html">BKK → HKT</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="foot">
+    <div class="rail footbar">
+      <nav aria-label="Legal">
+        <a href="/legal/terms.html">Terms</a>
+        <a href="/legal/privacy.html">Privacy</a>
+        <a href="/legal/cookies.html">Cookies</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Behavior (already in your repo) -->
+  <script defer src="/js/search-launch.js?v=8"></script>
+  <script defer src="/js/ga4.js"></script>
+</body>
+</html>
 
   <!-- CSS (order matters: base → tweaks → theme → calm override) -->
   <link rel="stylesheet" href="/css/home-hero.css">
