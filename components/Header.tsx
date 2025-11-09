@@ -5,7 +5,7 @@ export default function Header() {
         <a href="/" className="font-semibold">SabaiFly</a>
         <nav className="flex gap-6">
           <a href="/" className="hover:underline">Home</a>
-          <a href="/flights/" className="hover:underline">Flights</a>
+          <a href="/flights/" className="hover:underline">Fl﻿ights</a>
           <a href="/hotels/" className="hover:underline">Hotels (partner)</a>
         </nav>
       </div>
