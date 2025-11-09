@@ -7,6 +7,7 @@ export default function HomePage() {
     <>
       <Hero />
       <SearchForm />
+
       <section className="section" aria-labelledby="mission-how">
         <div className="rail">
           <Card>
@@ -21,18 +22,19 @@ export default function HomePage() {
           </Card>
         </div>
       </section>
+
       <section className="section" aria-labelledby="spotlights">
         <div className="rail">
           <Card>
             <h2 id="spotlights">Route spotlights</h2>
             <div className="grid gap-4 grid-cols-3 max-md:grid-cols-1">
               {[
-                ["lon-bkk", "LON → BKK"], ["lon-nyc", "LON → NYC"], ["lon-dxb", "LON → DXB"],
-                ["lon-sin", "LON → SIN"], ["lon-tyo", "LON → TYO"], ["lon-lax", "LON → LAX"],
-                ["lon-syd", "LON → SYD"], ["lon-del", "LON → DEL"], ["lon-hkt", "LON → HKT"],
-                ["lon-hkg", "LON → HKG"], ["lon-kul", "LON → KUL"], ["lon-bom", "LON → BOM"],
-                ["bkk-hkt", "BKK → HKT"]
-              ].map(([slug, label]) => (
+                ["lon-bkk","LON → BKK"],["lon-nyc","LON → NYC"],["lon-dxb","LON → DXB"],
+                ["lon-sin","LON → SIN"],["lon-tyo","LON → TYO"],["lon-lax","LON → LAX"],
+                ["lon-syd","LON → SYD"],["lon-del","LON → DEL"],["lon-hkt","LON → HKT"],
+                ["lon-hkg","LON → HKG"],["lon-kul","LON → KUL"],["lon-bom","LON → BOM"],
+                ["bkk-hkt","BKK → HKT"]
+              ].map(([slug,label]) => (
                 <a key={slug} href={`/routes/${slug}.html`} className="btn pill">{label}</a>
               ))}
             </div>
