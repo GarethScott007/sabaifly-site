@@ -1,1 +1,0 @@
-$p = Join-Path $PSScriptRoot "sitemap.xml"; if (Test-Path $p) { Rename-Item -Path $p -NewName "sitemap.static.xml"; Write-Host "Renamed sitemap.xml -> sitemap.static.xml" } else { Write-Host "No sitemap.xml found." }
