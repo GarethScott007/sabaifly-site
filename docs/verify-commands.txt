@@ -1,7 +1,0 @@
-# Quick verification commands
-# Apex must 301 to www
-curl -I https://sabaifly.com/ | egrep -i 'HTTP/|location'
-# Production headers (after removing temporary noindex rule)
-curl -I https://www.sabaifly.com/ | egrep -i 'x-env-mode|x-robots-tag|link:'
-# Staging must always be noindex
-curl -I https://stage.sabaifly.com/ | egrep -i 'x-env-mode|x-robots-tag'
