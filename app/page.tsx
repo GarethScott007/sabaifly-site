@@ -30,9 +30,9 @@ export default function Home() {
           </h1>
 
           {/* Search Bar */}
-          <div className="w-full max-w-7xl bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-3 md:p-4 translate-y-[-80px]">
-            <SearchForm />
-          </div>
+         <div className="w-[92%] md:w-[88%] lg:w-[85%] bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-2 md:p-3 translate-y-[-120px]">
+  <SearchForm />
+</div>
         </div>
       </section>
 
