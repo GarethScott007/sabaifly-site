@@ -24,13 +24,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-10" />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-24 px-4">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
           <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-8 text-center">
             Find your next adventure
           </h1>
 
           {/* Search Bar */}
-          <div className="w-full max-w-7xl bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-3 md:p-4">
+          <div className="w-full max-w-7xl bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-3 md:p-4 translate-y-[-80px]">
             <SearchForm />
           </div>
         </div>
