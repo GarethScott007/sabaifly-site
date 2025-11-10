@@ -2,12 +2,12 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import Header from "@/components/Header";
-import GoogleAnalytics from "@/ga/GoogleAnalytics";
+import GoogleAnalytics from "@/app/ga/GoogleAnalytics";
 
 export const viewport: Viewport = {
   themeColor: "#693AAE",
   width: "device-width",
-  initialScale: 1
+  initialScale: 1,
 };
 
 export const metadata: Metadata = {
@@ -20,26 +20,38 @@ export const metadata: Metadata = {
     url: "https://www.sabaifly.com",
     title: "SabaiFly — Calm flight search",
     description:
-    "Find flights fast. Clean results. Book with trusted partners. No added fees.",
-    images: [{ url: "/img/hero-home.jpg", width: 1200, height: 630 }]
+      "Find flights fast. Clean results. Book with trusted partners. No added fees.",
+    images: [{ url: "/img/hero-home.jpg" }],
   },
-  alternates: { canonical: "https://www.sabaifly.com/" }
+  twitter: {
+    card: "summary_large_image",
+    title: "SabaiFly — Calm flight search",
+    description:
+      "Find flights fast. Clean results. Book with trusted partners. No added fees.",
+    images: ["/img/hero-home.jpg"],
+  },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Only run GA on the real production host
-  const host = (headers().get("host") || "").toLowerCase();
-  const isProdHost = host === "www.sabaifly.com" || host === "sabaifly.com";
+// Root layout wrapper
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  // Await the headers() promise to get the header list
+  const headerList = await headers();
+  const host = (headerList.get("host") || "").toLowerCase();
 
-  // Exposed via Vercel env. Keep this value out of source control.
-  const gaId = process.env.NEXT_PUBLIC_GA4_ID;
+  // Detect if we’re on the production domain
+  const isProdHost = host === "www.sabaifly.com" || host === "sabaifly.com";
+  const showGA = isProdHost;
 
   return (
     <html lang="en">
-      <body>
-        {isProdHost && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
+      <body className="bg-white text-neutral-900 antialiased">
         <Header />
-        {children}
+        {showGA && <GoogleAnalytics />}
+        <main>{children}</main>
       </body>
     </html>
   );
