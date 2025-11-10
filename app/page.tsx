@@ -6,10 +6,10 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center bg-white text-neutral-900">
       {/* Header */}
-      <Header className="h-24 shadow-sm" />
+      <Header className="h-28 shadow-md" />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden">
+      <section className="relative w-full h-[450px] overflow-hidden">
         {/* Background Image */}
         <Image
           src="/img/hero-home.jpg"
@@ -23,13 +23,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-10" />
 
         {/* Hero Content */}
-        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-20 px-4">
           <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-8">
             Find your next adventure
           </h1>
 
           {/* Search Bar */}
-          <div className="w-full max-w-6xl bg-white/95 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-5 flex flex-col md:flex-row gap-4">
+          <div className="w-full max-w-6xl bg-white/95 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-5">
             <SearchForm />
           </div>
         </div>
