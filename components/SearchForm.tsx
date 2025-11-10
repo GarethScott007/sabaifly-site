@@ -9,17 +9,23 @@ export default function SearchForm() {
     const form = formRef.current;
     if (!form) return;
 
-    const tripButtons = form.querySelectorAll("button[data-trip]");
+    // Explicitly type as HTMLButtonElement[]
+    const tripButtons = Array.from(
+      form.querySelectorAll<HTMLButtonElement>("button[data-trip]")
+    );
     const ret = form.querySelector<HTMLInputElement>("[name='return']");
 
     tripButtons.forEach((btn) => {
       btn.addEventListener("click", () => {
         // Remove active classes from all buttons
-        tripButtons.forEach((b) => b.classList.remove("bg-brand", "text-white"));
+        tripButtons.forEach((b) =>
+          b.classList.remove("bg-brand", "text-white")
+        );
+
         // Add active state to clicked button
         btn.classList.add("bg-brand", "text-white");
 
-        // Use TypeScript-safe dataset access
+        // TypeScript-safe dataset access
         const tripType = btn.dataset["trip"];
 
         if (tripType === "oneway") {
@@ -33,16 +39,21 @@ export default function SearchForm() {
       });
     });
 
-    // Cleanup
+    // Cleanup listeners on unmount
     return () => {
       tripButtons.forEach((btn) => {
-        btn.replaceWith(btn.cloneNode(true));
+        const clone = btn.cloneNode(true) as HTMLButtonElement;
+        btn.replaceWith(clone);
       });
     };
   }, []);
 
   return (
-    <form ref={formRef} className="flex flex-col sm:flex-row gap-3 items-center justify-center p-4">
+    <form
+      ref={formRef}
+      className="flex flex-col sm:flex-row gap-3 items-center justify-center p-4"
+    >
+      {/* Trip type toggle */}
       <div className="flex gap-2">
         <button
           type="button"
@@ -60,6 +71,7 @@ export default function SearchForm() {
         </button>
       </div>
 
+      {/* Inputs */}
       <div className="flex flex-col sm:flex-row gap-3 items-center w-full max-w-lg">
         <input
           type="text"
