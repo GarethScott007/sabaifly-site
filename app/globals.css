@@ -1,8 +1,6 @@
 /* ===============================================
-   SabaiFly Global Styles — Tailwind v4 baseline
+   SabaiFly Global Styles — Tailwind v3/v4 stable
    =============================================== */
-
-@import "@tailwindcss/postcss";
 
 /* Tailwind layers */
 @tailwind base;
@@ -40,7 +38,6 @@
     @apply text-brand-dark;
   }
 
-  /* Define CSS variables for brand colors */
   :root {
     --brand: theme(colors.brand.DEFAULT);
     --brand-light: theme(colors.brand.light);
@@ -49,7 +46,7 @@
 }
 
 /* ------------------------------
-   2. Components Layer – Buttons, Cards, Etc.
+   2. Components Layer
    ------------------------------ */
 @layer components {
   .btn {
@@ -69,7 +66,7 @@
 }
 
 /* ------------------------------
-   3. Utilities Layer – Custom Utilities
+   3. Utilities
    ------------------------------ */
 @layer utilities {
   .text-balance {
