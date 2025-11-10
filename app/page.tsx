@@ -1,16 +1,16 @@
 import Image from "next/image";
-import SearchForm from "@/components/SearchForm";
 import Header from "@/components/Header";
+import SearchForm from "@/components/SearchForm";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center bg-white text-neutral-900 min-h-screen">
       {/* Header */}
-      <Header className="h-32 shadow-md" />
+      <Header className="h-40 shadow-lg border-b border-brand/20" />
 
       {/* Hero Section */}
-      <section className="relative w-full h-[520px] md:h-[480px] lg:h-[520px] overflow-visible">
+      <section className="relative w-full h-[420px] md:h-[400px] overflow-visible">
         {/* Background Image */}
         <Image
           src="/img/hero-home.jpg"
@@ -20,17 +20,17 @@ export default function Home() {
           className="object-cover object-center z-0"
         />
 
-        {/* Gradient Overlay for contrast */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent z-10" />
+        {/* Gradient Overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-10" />
 
         {/* Hero Content */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-end pb-24 px-4">
-          <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-10 text-center">
+          <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-8 text-center">
             Find your next adventure
           </h1>
 
           {/* Search Bar */}
-          <div className="w-full max-w-6xl bg-white/95 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-5">
+          <div className="w-full max-w-7xl bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-3 md:p-4">
             <SearchForm />
           </div>
         </div>
@@ -48,11 +48,11 @@ export default function Home() {
 
         <p className="mt-4 leading-relaxed text-lg">
           Use smart filters or monthly price calendars to compare fares quickly.
-          Book confidently with our partners — Kiwi, Aviasales, and Travelpayouts.
+          Book confidently with partners like Kiwi, Aviasales, and Travelpayouts.
         </p>
       </section>
 
-      {/* Popular Routes Section */}
+      {/* Popular Routes */}
       <section className="w-full max-w-7xl mx-auto px-6 pb-16">
         <h2 className="text-2xl font-semibold mb-6">Popular routes</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
