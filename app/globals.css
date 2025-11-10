@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --rail-pad: 24px; }
+body { @apply bg-bg text-text; }
+
+:where(a,button,input,select,textarea):focus-visible {
+  outline: 3px solid theme(colors.brand);
+  outline-offset: 2px;
+}
+
+.rail { @apply max-w-rail mx-auto px-[var(--rail-pad)]; }
+
+.input { @apply h-[50px] rounded-xl border border-br px-3 w-full; }
+.btn { @apply h-[50px] rounded-xl bg-brand text-white px-5 hover:shadow-lg inline-flex items-center justify-center; }
+.chip { @apply inline-flex items-center h-9 px-3 rounded-full border border-br bg-card text-text; }
+
+.section { @apply my-6; }
+.text-muted { @apply text-muted; }

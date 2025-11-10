@@ -1,11 +1,34 @@
-# secrets (never commit)
-.env
-.dev.vars
+# Node / tooling
+node_modules/
+.pnpm-store/
+.pnp/
+npm-debug.log*
+yarn-*.log
+pnpm-debug.log*
 
-# OS cruft
+# Next.js
+.next/
+out/
+.vercel/
+
+# Env & secrets
+.env
+.env.*.local
+!.env.example
+
+# OS / editor noise
 .DS_Store
 Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
 
-# build/temp
+# Tests & builds
+coverage/
+.playwright/
+test-results/
 dist/
-.cache/
+*.tgz
+*.log
+logs/
