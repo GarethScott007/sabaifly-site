@@ -23,7 +23,6 @@
     "framer-motion": "^11.0.0",
     "postcss": "8.4.47",
     "postcss-import": "15.1.0",
-    "@tailwindcss/postcss": "4.0.0",
     "autoprefixer": "10.4.20",
     "tailwindcss": "4.0.0"
   },
