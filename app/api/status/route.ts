@@ -11,7 +11,8 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: "Missing flight_iata parameter" }, { status: 400 });
   }
 
-  const url = `http://api.aviationstack.com/v1/flights?access_key=${process.env.AVSTACK_KEY}&flight_iata=${flight_iata}`;
+ const url = `http://api.aviationstack.com/v1/flights?access_key=${process.env['AVSTACK_KEY']}&flight_iata=${flight_iata}`;
+
 
   try {
     const res = await fetch(url, { cache: fresh ? "no-store" : "force-cache" });
