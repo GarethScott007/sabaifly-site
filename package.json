@@ -3,9 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "packageManager": "pnpm@9",
-  "engines": {"node": "22.x"
-}
-
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
@@ -18,7 +18,8 @@
   "dependencies": {
     "next": "16.0.0",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "framer-motion": "^11.0.0"
   },
   "devDependencies": {
     "@playwright/test": "1.48.2",
