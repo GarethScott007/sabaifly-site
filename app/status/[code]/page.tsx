@@ -3,7 +3,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default async function FlightStatusPage({ params }: { params: { code: string } }) {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/status?flight_iata=${params.code}`, {
+  const res = await fetch(`${process.env["NEXT_PUBLIC_BASE_URL"]}/api/status?flight_iata=${params.code}`, {
     next: { revalidate: 600 },
   });
   const flight = await res.json();
@@ -20,8 +20,8 @@ export default async function FlightStatusPage({ params }: { params: { code: str
   const arr = flight.arrival?.iata || "";
   const route = dep && arr ? `${dep}-${arr}` : "";
   const travelpayoutsLink = route
-    ? `https://www.travelpayouts.com/flights/${route}?marker=${process.env.NEXT_PUBLIC_TP_MARKER}`
-    : `https://www.travelpayouts.com/?marker=${process.env.NEXT_PUBLIC_TP_MARKER}`;
+    ? `https://www.travelpayouts.com/flights/${route}?marker=${process.env["NEXT_PUBLIC_TP_MARKER"]}`
+    : `https://www.travelpayouts.com/?marker=${process.env["NEXT_PUBLIC_TP_MARKER"]}`;
 
   return (
     <main className="min-h-screen bg-white text-neutral-900 flex flex-col items-center">
@@ -72,6 +72,7 @@ export default async function FlightStatusPage({ params }: { params: { code: str
         </motion.div>
       </section>
 
+      {/* Sticky footer buttons */}
       <footer className="sticky bottom-0 w-full bg-white/80 backdrop-blur-md border-t border-neutral-200 p-4 flex gap-3 justify-center">
         <Link
           href="/search"
