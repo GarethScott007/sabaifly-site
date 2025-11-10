@@ -1,46 +1,47 @@
-import Hero from "@/components/Hero";
+import Image from "next/image";
 import SearchForm from "@/components/SearchForm";
-import { Card } from "@/components/Card";
+import Header from "@/components/Header";
 
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <Hero />
-      <SearchForm />
+    <main className="flex flex-col items-center bg-white text-neutral-900">
+      {/* Header */}
+      <Header className="h-24 shadow-sm" />
 
-      <section className="section" aria-labelledby="mission-how">
-        <div className="rail">
-          <Card>
-            <h2 id="mission-how">What we do & how it works</h2>
-            <p>We show you fast, clean flight results. When you click through and book, our partners pay us a commission.</p>
-            <p><strong>We never add fees to your ticket price.</strong> You always pay the airline or travel partner directly.</p>
-            <ol className="text-muted list-decimal pl-5">
-              <li>Pick your route & dates. We search multiple sources to find low fares.</li>
-              <li>Use quick filters or the monthly price calendar to compare smarter.</li>
-              <li>Book with our partners (Aviasales, Kiwi). Hotels and car rentals are a click away.</li>
-            </ol>
-          </Card>
+      {/* Hero Section */}
+      <section className="relative w-full max-w-7xl mx-auto h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-b-3xl">
+        <Image
+          src="/img/hero-home.jpg"
+          alt="SabaiFly hero"
+          fill
+          priority
+          className="object-cover object-center"
+        />
+
+        {/* Overlay gradient for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+
+        {/* Centered Search Form */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
+          <h1 className="text-white text-3xl sm:text-4xl font-semibold mb-6 drop-shadow-md">
+            Find your next adventure
+          </h1>
+
+          <div className="w-full max-w-6xl bg-white/90 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6">
+            <SearchForm />
+          </div>
         </div>
       </section>
 
-      <section className="section" aria-labelledby="spotlights">
-        <div className="rail">
-          <Card>
-            <h2 id="spotlights">Route spotlights</h2>
-            <div className="grid gap-4 grid-cols-3 max-md:grid-cols-1">
-              {[
-                ["lon-bkk","LON → BKK"],["lon-nyc","LON → NYC"],["lon-dxb","LON → DXB"],
-                ["lon-sin","LON → SIN"],["lon-tyo","LON → TYO"],["lon-lax","LON → LAX"],
-                ["lon-syd","LON → SYD"],["lon-del","LON → DEL"],["lon-hkt","LON → HKT"],
-                ["lon-hkg","LON → HKG"],["lon-kul","LON → KUL"],["lon-bom","LON → BOM"],
-                ["bkk-hkt","BKK → HKT"]
-              ].map(([slug,label]) => (
-                <a key={slug} href={`/routes/${slug}.html`} className="btn pill">{label}</a>
-              ))}
-            </div>
-          </Card>
-        </div>
+      {/* Optional content below hero */}
+      <section className="w-full max-w-7xl mx-auto px-6 py-12 text-neutral-700">
+        <h2 className="text-xl font-semibold mb-4">Our mission</h2>
+        <p className="leading-relaxed">
+          Fast search. Clean results. Booking handled by trusted partners. We
+          show you flights and fares from multiple sources, so you always get
+          the best options without hidden fees.
+        </p>
       </section>
-    </>
+    </main>
   );
 }
