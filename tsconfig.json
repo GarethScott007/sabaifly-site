@@ -15,8 +15,11 @@
     "types": ["@types/node"],
     "baseUrl": ".",
     "paths": {
+      "@/*": ["*"],
       "@/components/*": ["components/*"],
-      "@/lib/*": ["lib/*"]
+      "@/lib/*": ["lib/*"],
+      "@/app/*": ["app/*"],
+      "@/ga/*": ["app/ga/*"]
     }
   },
   "include": ["app", "components", "lib", "next-env.d.ts", "next.config.ts"]
