@@ -10,7 +10,7 @@ interface HeaderProps {
 export default function Header({ className = "" }: HeaderProps) {
   return (
     <header
-      className={`w-full bg-brand text-white flex items-center justify-between px-8 ${className}`}
+      className={`w-full bg-brand text-white flex items-center justify-between px-10 ${className}`}
     >
       {/* Left – Logo */}
       <div className="flex items-center gap-2">
@@ -23,7 +23,7 @@ export default function Header({ className = "" }: HeaderProps) {
       </div>
 
       {/* Center – Navigation */}
-      <nav className="hidden md:flex items-center gap-8 text-base font-medium">
+      <nav className="hidden md:flex items-center gap-10 text-base font-medium">
         <Link href="/" className="hover:underline underline-offset-4">
           Home
         </Link>
