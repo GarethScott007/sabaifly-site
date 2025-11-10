@@ -11,7 +11,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative w-full max-w-7xl mx-auto h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-b-3xl">
         <Image
-          src="/img/hero-home.jpg"
+          src="/img/hero-sabaifly.jpg"
           alt="SabaiFly hero"
           fill
           priority
