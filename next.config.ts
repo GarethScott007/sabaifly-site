@@ -1,12 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactCompiler: true, // moved from experimental
+  // Disable the new compiler until it's bundled by Next officially
   experimental: {
     optimizeCss: true,
   },
   images: {
-    domains: ["images.unsplash.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
   },
   headers: async () => [
     {
