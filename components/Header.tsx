@@ -1,13 +1,55 @@
-export default function Header() {
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import clsx from "clsx"; // optional, helps merge class names safely
+
+interface HeaderProps {
+  className?: string;
+}
+
+export default function Header({ className }: HeaderProps) {
   return (
-    <header className="bg-brand text-white">
-      <div className="rail h-18 flex items-center justify-between">
-        <a href="/" className="font-semibold">SabaiFly</a>
-        <nav className="flex gap-6">
-          <a href="/" className="hover:underline">Home</a>
-          <a href="/flights/" className="hover:underline">Fl﻿ights</a>
-          <a href="/hotels/" className="hover:underline">Hotels (partner)</a>
-        </nav>
+    <header
+      className={clsx(
+        "w-full bg-brand text-white flex items-center justify-between px-6",
+        className
+      )}
+    >
+      {/* Left Side - Logo */}
+      <div className="flex items-center gap-2">
+        <Link
+          href="/"
+          className="text-2xl font-semibold tracking-tight hover:opacity-90 transition-opacity"
+        >
+          SabaiFly
+        </Link>
+      </div>
+
+      {/* Center Navigation */}
+      <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <Link href="/" className="hover:underline underline-offset-4">
+          Home
+        </Link>
+        <Link href="/flights" className="hover:underline underline-offset-4">
+          Flights
+        </Link>
+        <Link href="/hotels" className="hover:underline underline-offset-4">
+          Hotels (partner)
+        </Link>
+        <Link href="/about" className="hover:underline underline-offset-4">
+          About
+        </Link>
+      </nav>
+
+      {/* Right Side - Actions */}
+      <div className="flex items-center gap-4">
+        <button className="px-3 py-1 rounded-full bg-white/20 text-white hover:bg-white/30 transition">
+          EN
+        </button>
+        <button className="px-3 py-1 rounded-full bg-white/20 text-white hover:bg-white/30 transition">
+          TH
+        </button>
       </div>
     </header>
   );
