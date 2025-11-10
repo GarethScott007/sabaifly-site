@@ -1,109 +1,71 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 export default function SearchForm() {
-  const formRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    const form = formRef.current;
-    if (!form) return;
-
-    // Explicitly type as HTMLButtonElement[]
-    const tripButtons = Array.from(
-      form.querySelectorAll<HTMLButtonElement>("button[data-trip]")
-    );
-    const ret = form.querySelector<HTMLInputElement>("[name='return']");
-
-    tripButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        // Remove active classes from all buttons
-        tripButtons.forEach((b) =>
-          b.classList.remove("bg-brand", "text-white")
-        );
-
-        // Add active state to clicked button
-        btn.classList.add("bg-brand", "text-white");
-
-        // TypeScript-safe dataset access
-        const tripType = btn.dataset["trip"];
-
-        if (tripType === "oneway") {
-          if (ret) {
-            ret.value = "";
-            ret.disabled = true;
-          }
-        } else if (ret) {
-          ret.disabled = false;
-        }
-      });
-    });
-
-    // Cleanup listeners on unmount
-    return () => {
-      tripButtons.forEach((btn) => {
-        const clone = btn.cloneNode(true) as HTMLButtonElement;
-        btn.replaceWith(clone);
-      });
-    };
-  }, []);
-
   return (
-    <form
-      ref={formRef}
-      className="flex flex-col sm:flex-row gap-3 items-center justify-center p-4"
-    >
-      {/* Trip type toggle */}
-      <div className="flex gap-2">
+    <form className="flex flex-wrap md:flex-nowrap items-center justify-between gap-2 md:gap-3 w-full">
+      {/* Trip Type */}
+      <div className="flex gap-2 shrink-0">
         <button
           type="button"
-          data-trip="round"
-          className="px-4 py-2 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
+          className="px-3 py-1.5 border border-brand text-brand rounded-full text-sm hover:bg-brand hover:text-white transition"
         >
           Round Trip
         </button>
         <button
           type="button"
-          data-trip="oneway"
-          className="px-4 py-2 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
+          className="px-3 py-1.5 border border-brand text-brand rounded-full text-sm hover:bg-brand hover:text-white transition"
         >
           One Way
         </button>
       </div>
 
-      {/* Inputs */}
-      <div className="flex flex-col sm:flex-row gap-3 items-center w-full max-w-lg">
-        <input
-          type="text"
-          name="from"
-          placeholder="From"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
-        <input
-          type="text"
-          name="to"
-          placeholder="To"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
-        <input
-          type="date"
-          name="depart"
-          placeholder="Departure"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
-        <input
-          type="date"
-          name="return"
-          placeholder="Return"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
-        <button
-          type="submit"
-          className="px-6 py-2 rounded-full bg-brand text-white hover:bg-brand-dark transition-colors"
-        >
-          Search
-        </button>
-      </div>
+      {/* From / To */}
+      <input
+        type="text"
+        name="from"
+        placeholder="From"
+        className="flex-1 px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+      />
+      <input
+        type="text"
+        name="to"
+        placeholder="To"
+        className="flex-1 px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+      />
+
+      {/* Dates */}
+      <input
+        type="date"
+        name="depart"
+        className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+      />
+      <input
+        type="date"
+        name="return"
+        className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+      />
+
+      {/* Travellers */}
+      <select
+        name="travellers"
+        className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+      >
+        <option>1 Adult</option>
+        <option>2 Adults</option>
+        <option>1 Adult, 1 Child</option>
+        <option>2 Adults, 1 Child, 1 Infant</option>
+        <option>Custom...</option>
+      </select>
+
+      {/* Search */}
+      <button
+        type="submit"
+        className="px-5 py-2 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand-dark transition"
+      >
+        Search
+      </button>
     </form>
   );
 }
