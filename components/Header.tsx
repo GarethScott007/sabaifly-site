@@ -2,19 +2,15 @@
 
 import React from "react";
 import Link from "next/link";
-import clsx from "clsx"; // optional, helps merge class names safely
 
 interface HeaderProps {
   className?: string;
 }
 
-export default function Header({ className }: HeaderProps) {
+export default function Header({ className = "" }: HeaderProps) {
   return (
     <header
-      className={clsx(
-        "w-full bg-brand text-white flex items-center justify-between px-6",
-        className
-      )}
+      className={`w-full bg-brand text-white flex items-center justify-between px-6 ${className}`}
     >
       {/* Left Side - Logo */}
       <div className="flex items-center gap-2">
