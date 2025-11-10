@@ -38,7 +38,7 @@ export default function Header({ className = "" }: HeaderProps) {
         </Link>
       </nav>
 
-      {/* Right – Language Buttons */}
+      {/* Right – Single Language Toggle */}
       <div className="flex items-center gap-3">
         <button className="px-3 py-1.5 rounded-full bg-white/20 text-white hover:bg-white/30 transition">
           EN
