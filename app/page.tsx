@@ -9,31 +9,33 @@ export default function Home() {
       <Header className="h-24 shadow-sm" />
 
       {/* Hero Section */}
-      <section className="relative w-full max-w-7xl mx-auto h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-b-3xl">
+      <section className="relative w-full h-[600px] md:h-[500px] lg:h-[600px] overflow-hidden">
+        {/* Background Image */}
         <Image
-          src="/img/hero-sabaifly.jpg"
+          src="/img/hero-home.jpg"
           alt="SabaiFly hero"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-center z-0"
         />
 
-        {/* Overlay gradient for readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+        {/* Gradient Overlay for contrast */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-10" />
 
-        {/* Centered Search Form */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center px-4">
-          <h1 className="text-white text-3xl sm:text-4xl font-semibold mb-6 drop-shadow-md">
+        {/* Hero Content */}
+        <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
+          <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-8">
             Find your next adventure
           </h1>
 
-          <div className="w-full max-w-6xl bg-white/90 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-6">
+          {/* Search Bar */}
+          <div className="w-full max-w-6xl bg-white/95 backdrop-blur-md rounded-3xl shadow-xl p-4 md:p-5 flex flex-col md:flex-row gap-4">
             <SearchForm />
           </div>
         </div>
       </section>
 
-      {/* Optional content below hero */}
+      {/* Mission Section */}
       <section className="w-full max-w-7xl mx-auto px-6 py-12 text-neutral-700">
         <h2 className="text-xl font-semibold mb-4">Our mission</h2>
         <p className="leading-relaxed">
