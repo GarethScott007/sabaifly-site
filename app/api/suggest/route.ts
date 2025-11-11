@@ -13,7 +13,8 @@ export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const q = searchParams.get("q") || "";
-    const token = process.env.TP_TOKEN;
+   const token = process.env["TP_TOKEN"] as string;
+
 
     if (!q.trim()) {
       return NextResponse.json([], { status: 200 });
