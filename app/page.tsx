@@ -1,13 +1,10 @@
 import Image from "next/image";
-import Header from "@/components/Header";
 import SearchForm from "@/components/SearchForm";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center bg-white text-neutral-900 min-h-screen">
-      {/* Header */}
-    
       {/* Hero Section */}
       <section className="relative w-full h-[420px] md:h-[400px] overflow-visible">
         {/* Background Image */}
@@ -19,19 +16,19 @@ export default function Home() {
           className="object-cover object-center z-0"
         />
 
-        {/* Gradient Overlay for readability */}
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent z-10" />
 
         {/* Hero Content */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
-          <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-8 text-center">
+          <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-6 text-center">
             Find your next adventure
           </h1>
 
           {/* Search Bar */}
-         <div className="w-[92%] md:w-[88%] lg:w-[85%] bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-2 md:p-3 translate-y-[-120px]">
-  <SearchForm />
-</div>
+          <div className="w-[92%] md:w-[88%] lg:w-[82%] bg-white/95 backdrop-blur-md rounded-2xl shadow-lg p-2 md:p-3 translate-y-[-150px]">
+            <SearchForm />
+          </div>
         </div>
       </section>
 
