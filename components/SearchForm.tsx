@@ -12,7 +12,7 @@ export default function SearchForm() {
 
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [suggestions, setSuggestions] = useState<any[]>([]);
+  const [suggestions, setSuggestions] = useState<{ name: string; code: string; city_name: string }[]>([]);
   const [activeField, setActiveField] = useState<"from" | "to" | null>(null);
 
   const toRef = useRef<HTMLInputElement>(null);
