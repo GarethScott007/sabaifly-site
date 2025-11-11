@@ -35,6 +35,10 @@ export default async function Results({ searchParams }: { searchParams: any }) {
       <FilterSidebar
         onChange={(filters: FilterState) => console.log("filters:", filters)}
       />
+      {/* Mobile Filter Drawer */}
+    <MobileFilterDrawer
+      onChange={(filters: FilterState) => console.log("mobile filters:", filters)}
+    />
 
       {/* Main Results Section */}
       <section className="flex-1">
