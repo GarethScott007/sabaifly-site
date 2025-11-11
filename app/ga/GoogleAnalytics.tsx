@@ -1,26 +1,27 @@
 "use client";
 
-import Script from "next/script";
+import { useEffect } from "react";
 
-export default function GoogleAnalytics() {
-  const GA_ID = process.env["NEXT_PUBLIC_GA4_ID"];
+export function GoogleAnalytics() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+      if (GA_ID && !window.gtag) {
+        const script = document.createElement("script");
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        script.async = true;
+        document.head.appendChild(script);
 
-  if (!GA_ID) return null;
+        window.dataLayer = window.dataLayer || [];
+        function gtag(...args: unknown[]) {
+          window.dataLayer.push(args);
+        }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", GA_ID);
+      }
+    }
+  }, []);
 
-  return (
-    <>
-      <Script
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-      />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}');
-        `}
-      </Script>
-    </>
-  );
+  return null;
 }
