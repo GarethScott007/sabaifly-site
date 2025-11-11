@@ -2,6 +2,14 @@
 
 import { useEffect } from "react";
 
+// Extend the global window object to declare gtag
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+    dataLayer?: unknown[];
+  }
+}
+
 export function GoogleAnalytics() {
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -13,12 +21,12 @@ export function GoogleAnalytics() {
         document.head.appendChild(script);
 
         window.dataLayer = window.dataLayer || [];
-        function gtag(...args: unknown[]) {
-          window.dataLayer.push(args);
-        }
-        window.gtag = gtag;
-        gtag("js", new Date());
-        gtag("config", GA_ID);
+        window.gtag = (...args) => {
+          window.dataLayer!.push(args);
+        };
+
+        window.gtag("js", new Date());
+        window.gtag("config", GA_ID);
       }
     }
   }, []);
