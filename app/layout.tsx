@@ -50,7 +50,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className="bg-white text-neutral-900 antialiased flex flex-col min-h-screen">
         {/* Global Header (renders once) */}
-        <Header className="h-40 shadow-lg border-b border-brand/20" />
+      <Header className="h-28 shadow-md border-b border-brand/20" />
 
         {/* Conditionally render Google Analytics */}
         {showGA && <GoogleAnalytics />}
