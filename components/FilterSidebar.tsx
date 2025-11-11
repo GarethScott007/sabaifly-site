@@ -1,0 +1,81 @@
+"use client";
+
+import React, { useState } from "react";
+
+export interface FilterState {
+  stops: string[];
+  timeOfDay: string[];
+  baggage: string[];
+}
+
+export default function FilterSidebar({ onChange }: { onChange: (f: FilterState) => void }) {
+  const [filters, setFilters] = useState<FilterState>({
+    stops: [],
+    timeOfDay: [],
+    baggage: [],
+  });
+
+  const toggle = (key: keyof FilterState, value: string) => {
+    setFilters((prev) => {
+      const active = prev[key].includes(value)
+        ? prev[key].filter((v) => v !== value)
+        : [...prev[key], value];
+      const next = { ...prev, [key]: active };
+      onChange(next);
+      return next;
+    });
+  };
+
+  return (
+    <aside className="w-full md:w-1/4 bg-white border rounded-xl p-4 h-fit sticky top-8 hidden md:block">
+      <h3 className="font-semibold mb-3 text-brand">Filters</h3>
+
+      <div className="space-y-4 text-sm">
+        <div>
+          <p className="font-medium mb-1">Stops</p>
+          {["Direct", "1 Stop", "2+ Stops"].map((label) => (
+            <label key={label} className="block cursor-pointer">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={filters.stops.includes(label)}
+                onChange={() => toggle("stops", label)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+
+        <div>
+          <p className="font-medium mb-1">Time of Day (Arrival)</p>
+          {["Morning", "Afternoon", "Evening", "Night"].map((label) => (
+            <label key={label} className="block cursor-pointer">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={filters.timeOfDay.includes(label)}
+                onChange={() => toggle("timeOfDay", label)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+
+        <div>
+          <p className="font-medium mb-1">Baggage</p>
+          {["Cabin Bag", "Checked Bag"].map((label) => (
+            <label key={label} className="block cursor-pointer">
+              <input
+                type="checkbox"
+                className="mr-2"
+                checked={filters.baggage.includes(label)}
+                onChange={() => toggle("baggage", label)}
+              />
+              {label}
+            </label>
+          ))}
+        </div>
+      </div>
+    </aside>
+  );
+}
