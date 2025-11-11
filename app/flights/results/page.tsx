@@ -1,5 +1,10 @@
 import { Suspense } from "react";
+import FilterSidebar, { FilterState } from "@/components/FilterSidebar";
+import SkeletonFlightCard from "@/components/SkeletonFlightCard";
 
+/**
+ * Fetch live flight data from Travelpayouts
+ */
 async function getFlights(params: any) {
   const token = process.env["TP_TOKEN"] as string;
   const url = `https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin=${params.from}&destination=${params.to}&token=${token}`;
@@ -7,36 +12,31 @@ async function getFlights(params: any) {
   return res.json();
 }
 
+/**
+ * SabaiFly Flight Results Page
+ */
 export default async function Results({ searchParams }: { searchParams: any }) {
   const data = await getFlights(searchParams);
   const flights = data.data || [];
 
+  // Sort by price ascending (can easily extend to duration etc.)
   const sorted = [...flights].sort((a, b) => a.price - b.price);
-  const displayDates = Array.from(new Set(sorted.map((f) => f.departure_at.slice(0, 10)))).slice(0, 7);
+
+  // Create top date ribbon (unique days from dataset)
+  const displayDates = Array.from(
+    new Set(sorted.map((f) => f.departure_at.slice(0, 10)))
+  ).slice(0, 7);
 
   return (
     <main className="flex flex-col md:flex-row max-w-7xl mx-auto px-4 md:px-8 py-10 gap-6">
       {/* Sidebar Filters */}
-      <aside className="w-full md:w-1/4 bg-white border rounded-xl p-4 h-fit sticky top-8 hidden md:block">
-        <h3 className="font-semibold mb-3 text-brand">Filters</h3>
+      <FilterSidebar
+        onChange={(filters: FilterState) => console.log("filters:", filters)}
+      />
 
-        <div className="space-y-3 text-sm">
-          <div>
-            <p className="font-medium mb-1">Stops</p>
-            <label className="block"><input type="checkbox" className="mr-2" /> Direct</label>
-            <label className="block"><input type="checkbox" className="mr-2" /> 1 stop</label>
-            <label className="block"><input type="checkbox" className="mr-2" /> 2+ stops</label>
-          </div>
-          <div>
-            <p className="font-medium mb-1">Baggage</p>
-            <label className="block"><input type="checkbox" className="mr-2" /> Cabin bag</label>
-            <label className="block"><input type="checkbox" className="mr-2" /> Checked bag</label>
-          </div>
-        </div>
-      </aside>
-
-      {/* Main Content */}
+      {/* Main Results Section */}
       <section className="flex-1">
+        {/* Page Header */}
         <h1 className="text-2xl font-semibold mb-3">
           Flights from {searchParams.from} to {searchParams.to}
         </h1>
@@ -53,31 +53,45 @@ export default async function Results({ searchParams }: { searchParams: any }) {
           ))}
         </div>
 
-        {/* Flights List */}
-        <Suspense fallback={<p>Loading flights…</p>}>
+        {/* Flight Results List */}
+        <Suspense
+          fallback={
+            <div className="grid gap-4">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <SkeletonFlightCard key={i} />
+              ))}
+            </div>
+          }
+        >
           {sorted.length ? (
             <div className="grid gap-4">
               {sorted.map((f: any) => (
                 <a
                   key={f.link}
-                  href={`https://www.aviasales.com${f.link}?marker=YOUR_MARKER&utm_source=sabaifly`}
+                  href={`https://www.aviasales.com${f.link}?marker=${process.env["MARKER"]}&utm_source=sabaifly`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-white border rounded-xl p-5 flex justify-between items-center hover:shadow-md transition"
                 >
+                  {/* Left side — flight details */}
                   <div>
                     <p className="font-medium text-lg">
                       {f.origin} → {f.destination}
                     </p>
                     <p className="text-sm text-neutral-600">
-                      {f.departure_at.slice(0, 10)} • {f.duration} min • {f.transfers} stops
+                      {f.departure_at.slice(0, 10)} • {f.duration} min •{" "}
+                      {f.transfers} stops
                     </p>
                     <p className="text-sm text-neutral-500">
                       Airline: {f.airline || "Multiple"}
                     </p>
                   </div>
+
+                  {/* Right side — price + CTA */}
                   <div className="text-right">
-                    <p className="text-xl font-semibold text-brand">${f.price}</p>
+                    <p className="text-xl font-semibold text-brand">
+                      ${f.price}
+                    </p>
                     <button className="mt-2 px-4 py-1.5 rounded-full bg-brand text-white text-sm hover:bg-brand-dark">
                       Book →
                     </button>
@@ -86,7 +100,9 @@ export default async function Results({ searchParams }: { searchParams: any }) {
               ))}
             </div>
           ) : (
-            <p className="text-neutral-600">No flights found for these dates.</p>
+            <p className="text-neutral-600">
+              No flights found for these dates.
+            </p>
           )}
         </Suspense>
       </section>
