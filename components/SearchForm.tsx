@@ -17,7 +17,7 @@ export default function SearchForm() {
 
   const toRef = useRef<HTMLInputElement>(null);
 
-  // Debounced autocomplete
+  // Fetch airport suggestions (debounced)
   useEffect(() => {
     const q = activeField === "from" ? from : to;
     if (!q) return;
@@ -25,7 +25,7 @@ export default function SearchForm() {
     const t = setTimeout(async () => {
       const res = await fetch(`/api/suggest?q=${q}`);
       const data = await res.json();
-      setSuggestions(data.slice(0, 200)); // Limit to 200+
+      setSuggestions(data.slice(0, 200));
     }, 300);
 
     return () => clearTimeout(t);
@@ -41,6 +41,13 @@ export default function SearchForm() {
       setActiveField(null);
     }
     setSuggestions([]);
+  };
+
+  const handleTravellerChange = (key: "adults" | "children" | "infants", delta: number) => {
+    setTravellers((prev) => ({
+      ...prev,
+      [key]: Math.max(0, prev[key] + delta),
+    }));
   };
 
   const handleSwap = () => {
@@ -163,8 +170,55 @@ export default function SearchForm() {
         )}
       </div>
 
-      {/* Travellers (same as before) */}
-      {/* ...existing travellers dropdown... */}
+      {/* Travellers Dropdown */}
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setShowTravellers(!showTravellers)}
+          className="px-3 py-2 border rounded-lg text-sm flex items-center gap-1 focus:ring-2 focus:ring-brand outline-none whitespace-nowrap"
+        >
+          {travellers.adults + travellers.children + travellers.infants} Traveller
+          {travellers.adults + travellers.children + travellers.infants > 1 ? "s" : ""}
+        </button>
+
+        {showTravellers && (
+          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-neutral-200 p-4 z-30">
+            {["adults", "children", "infants"].map((key) => (
+              <div key={key} className="flex justify-between items-center mb-2">
+                <span className="capitalize">{key}</span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleTravellerChange(key as "adults" | "children" | "infants", -1)
+                    }
+                    className="w-6 h-6 flex items-center justify-center border rounded hover:bg-brand hover:text-white"
+                  >
+                    -
+                  </button>
+                  <span>{travellers[key as "adults" | "children" | "infants"]}</span>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleTravellerChange(key as "adults" | "children" | "infants", 1)
+                    }
+                    className="w-6 h-6 flex items-center justify-center border rounded hover:bg-brand hover:text-white"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() => setShowTravellers(false)}
+              className="mt-2 w-full bg-brand text-white rounded-md py-1.5 text-sm hover:bg-brand-dark"
+            >
+              Done
+            </button>
+          </div>
+        )}
+      </div>
 
       {/* Search Button */}
       <div className="flex justify-center md:justify-end">
