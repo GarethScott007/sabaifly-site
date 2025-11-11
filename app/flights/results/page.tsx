@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 
 async function getFlights(params: any) {
-  const token = process.env.TP_TOKEN;
+ const token = process.env["TP_TOKEN"] as string;
   const url = `https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin=${params.from}&destination=${params.to}&token=${token}`;
   const res = await fetch(url);
   return res.json();
