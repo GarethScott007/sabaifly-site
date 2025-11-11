@@ -2,7 +2,7 @@ import "./globals.css";
 import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import Header from "@/components/Header";
-import GoogleAnalytics from "@/app/ga/GoogleAnalytics";
+import { GoogleAnalytics } from "@/app/ga/GoogleAnalytics";
 
 export const viewport: Viewport = {
   themeColor: "#693AAE",
