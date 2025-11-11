@@ -48,10 +48,15 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className="bg-white text-neutral-900 antialiased">
-        <Header />
+      <body className="bg-white text-neutral-900 antialiased flex flex-col min-h-screen">
+        {/* Global Header (renders once) */}
+      <Header className="h-28 shadow-md border-b border-brand/20" />
+
+        {/* Conditionally render Google Analytics */}
         {showGA && <GoogleAnalytics />}
-        <main>{children}</main>
+
+        {/* Main content */}
+        <main className="flex-grow">{children}</main>
       </body>
     </html>
   );

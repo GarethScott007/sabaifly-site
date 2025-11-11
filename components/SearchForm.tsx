@@ -1,105 +1,160 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
+import { Shuffle } from "lucide-react"; // icon for swap button
 
 export default function SearchForm() {
-  const formRef = useRef<HTMLFormElement>(null);
+  const [tripType, setTripType] = useState("round");
+  const [travellers, setTravellers] = useState({
+    adults: 1,
+    children: 0,
+    infants: 0,
+  });
+  const [showTravellers, setShowTravellers] = useState(false);
 
-  useEffect(() => {
-    const form = formRef.current;
-    if (!form) return;
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
 
-    // Explicitly type as HTMLButtonElement[]
-    const tripButtons = Array.from(
-      form.querySelectorAll<HTMLButtonElement>("button[data-trip]")
-    );
-    const ret = form.querySelector<HTMLInputElement>("[name='return']");
+  const handleTravellerChange = (key: "adults" | "children" | "infants", delta: number) => {
+    setTravellers((prev) => ({
+      ...prev,
+      [key]: Math.max(0, prev[key] + delta),
+    }));
+  };
 
-    tripButtons.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        // Remove active classes from all buttons
-        tripButtons.forEach((b) =>
-          b.classList.remove("bg-brand", "text-white")
-        );
-
-        // Add active state to clicked button
-        btn.classList.add("bg-brand", "text-white");
-
-        // TypeScript-safe dataset access
-        const tripType = btn.dataset["trip"];
-
-        if (tripType === "oneway") {
-          if (ret) {
-            ret.value = "";
-            ret.disabled = true;
-          }
-        } else if (ret) {
-          ret.disabled = false;
-        }
-      });
-    });
-
-    // Cleanup listeners on unmount
-    return () => {
-      tripButtons.forEach((btn) => {
-        const clone = btn.cloneNode(true) as HTMLButtonElement;
-        btn.replaceWith(clone);
-      });
-    };
-  }, []);
+  const handleSwap = () => {
+    setFrom(to);
+    setTo(from);
+  };
 
   return (
     <form
-      ref={formRef}
-      className="flex flex-col sm:flex-row gap-3 items-center justify-center p-4"
+      className="
+        grid grid-cols-1 md:grid-cols-[auto,1fr,auto,1fr,auto,auto,auto]
+        items-center gap-2 md:gap-3 w-full
+      "
     >
-      {/* Trip type toggle */}
-      <div className="flex gap-2">
+      {/* Trip Type */}
+      <div className="flex gap-2 shrink-0 justify-center md:justify-start">
+        {["round", "oneway"].map((type) => (
+          <button
+            key={type}
+            type="button"
+            onClick={() => setTripType(type)}
+            className={`px-3 py-1.5 rounded-full border text-sm transition ${
+              tripType === type
+                ? "bg-brand text-white border-brand"
+                : "border-brand text-brand hover:bg-brand/10"
+            }`}
+          >
+            {type === "round" ? "Round Trip" : "One Way"}
+          </button>
+        ))}
+      </div>
+
+      {/* From */}
+      <div className="relative w-full">
+        <input
+          type="text"
+          placeholder="From"
+          value={from}
+          onChange={(e) => setFrom(e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+        />
+      </div>
+
+      {/* Swap Button */}
+      <div className="flex justify-center items-center">
         <button
           type="button"
-          data-trip="round"
-          className="px-4 py-2 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
+          onClick={handleSwap}
+          className="p-2 border border-brand rounded-full bg-white hover:bg-brand hover:text-white transition"
+          title="Swap locations"
         >
-          Round Trip
-        </button>
-        <button
-          type="button"
-          data-trip="oneway"
-          className="px-4 py-2 rounded-full border border-brand text-brand hover:bg-brand hover:text-white transition-colors"
-        >
-          One Way
+          <Shuffle size={16} />
         </button>
       </div>
 
-      {/* Inputs */}
-      <div className="flex flex-col sm:flex-row gap-3 items-center w-full max-w-lg">
+      {/* To */}
+      <div className="relative w-full">
         <input
           type="text"
-          name="from"
-          placeholder="From"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
-        <input
-          type="text"
-          name="to"
           placeholder="To"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
         />
+      </div>
+
+      {/* Dates */}
+      <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-center">
         <input
           type="date"
-          name="depart"
-          placeholder="Departure"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
+          className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none w-full"
         />
-        <input
-          type="date"
-          name="return"
-          placeholder="Return"
-          className="flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-brand outline-none"
-        />
+        {tripType === "round" && (
+          <input
+            type="date"
+            className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none w-full"
+          />
+        )}
+      </div>
+
+      {/* Travellers Dropdown */}
+      <div className="relative">
+        <button
+          type="button"
+          onClick={() => setShowTravellers(!showTravellers)}
+          className="px-3 py-2 border rounded-lg text-sm flex items-center gap-1 focus:ring-2 focus:ring-brand outline-none whitespace-nowrap"
+        >
+          {travellers.adults + travellers.children + travellers.infants} Traveller
+          {travellers.adults + travellers.children + travellers.infants > 1 ? "s" : ""}
+        </button>
+
+        {showTravellers && (
+          <div className="absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-neutral-200 p-4 z-30">
+            {["adults", "children", "infants"].map((key) => (
+              <div key={key} className="flex justify-between items-center mb-2">
+                <span className="capitalize">{key}</span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleTravellerChange(key as "adults" | "children" | "infants", -1)
+                    }
+                    className="w-6 h-6 flex items-center justify-center border rounded hover:bg-brand hover:text-white"
+                  >
+                    -
+                  </button>
+                  <span>{travellers[key as "adults" | "children" | "infants"]}</span>
+                  <button
+                    type="button"
+                    onClick={() =>
+                      handleTravellerChange(key as "adults" | "children" | "infants", 1)
+                    }
+                    className="w-6 h-6 flex items-center justify-center border rounded hover:bg-brand hover:text-white"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ))}
+            <button
+              type="button"
+              onClick={() => setShowTravellers(false)}
+              className="mt-2 w-full bg-brand text-white rounded-md py-1.5 text-sm hover:bg-brand-dark"
+            >
+              Done
+            </button>
+          </div>
+        )}
+      </div>
+
+      {/* Search Button */}
+      <div className="flex justify-center md:justify-end">
         <button
           type="submit"
-          className="px-6 py-2 rounded-full bg-brand text-white hover:bg-brand-dark transition-colors"
+          className="px-5 py-2 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand-dark transition w-full md:w-auto"
         >
           Search
         </button>
