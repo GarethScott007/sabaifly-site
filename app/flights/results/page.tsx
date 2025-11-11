@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import FilterSidebar, { FilterState } from "@/components/FilterSidebar";
 import SkeletonFlightCard from "@/components/SkeletonFlightCard";
+import MobileFilterDrawer from "@/components/MobileFilterDrawer";
+
 
 /**
  * Fetch live flight data from Travelpayouts
