@@ -3,11 +3,15 @@ import FilterSidebar, { FilterState } from "@/components/FilterSidebar";
 import SkeletonFlightCard from "@/components/SkeletonFlightCard";
 import MobileFilterDrawer from "@/components/MobileFilterDrawer";
 
+interface SearchParams {
+  from: string;
+  to: string;
+}
 
 /**
  * Fetch live flight data from Travelpayouts
  */
-async function getFlights(params: any) {
+async function getFlights(params: SearchParams) {
   const token = process.env["TP_TOKEN"] as string;
   const url = `https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin=${params.from}&destination=${params.to}&token=${token}`;
   const res = await fetch(url, { next: { revalidate: 300 } });
@@ -17,7 +21,7 @@ async function getFlights(params: any) {
 /**
  * SabaiFly Flight Results Page
  */
-export default async function Results({ searchParams }: { searchParams: any }) {
+export default async function Results({ searchParams }: { searchParams: SearchParams }) {
   const data = await getFlights(searchParams);
   const flights = data.data || [];
 
@@ -32,84 +36,26 @@ export default async function Results({ searchParams }: { searchParams: any }) {
   return (
     <main className="flex flex-col md:flex-row max-w-7xl mx-auto px-4 md:px-8 py-10 gap-6">
       {/* Sidebar Filters */}
-      <FilterSidebar
-        onChange={(filters: FilterState) => console.log("filters:", filters)}
-      />
+      <FilterSidebar onChange={(filters: FilterState) => {}} />
+
       {/* Mobile Filter Drawer */}
-    <MobileFilterDrawer
-      onChange={(filters: FilterState) => console.log("mobile filters:", filters)}
-    />
+      <MobileFilterDrawer onChange={(filters: FilterState) => {}} />
 
-      {/* Main Results Section */}
+      {/* Main Results List */}
       <section className="flex-1">
-        {/* Page Header */}
-        <h1 className="text-2xl font-semibold mb-3">
-          Flights from {searchParams.from} to {searchParams.to}
-        </h1>
-
-        {/* Date Ribbon */}
-        <div className="flex gap-2 overflow-x-auto py-3 mb-6 scrollbar-thin">
-          {displayDates.map((date) => (
-            <button
-              key={date}
-              className="px-4 py-2 rounded-full border text-sm bg-white hover:bg-brand hover:text-white whitespace-nowrap transition"
-            >
-              {date}
-            </button>
+        <Suspense fallback={<SkeletonFlightCard />}>
+          {sorted.map((flight: any) => (
+            <div key={flight.id} className="mb-4">
+              <div className="p-4 border rounded">
+                <div className="font-medium">
+                  {flight.origin} → {flight.destination}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {new Date(flight.departure_at).toLocaleString()} — £{flight.price}
+                </div>
+              </div>
+            </div>
           ))}
-        </div>
-
-        {/* Flight Results List */}
-        <Suspense
-          fallback={
-            <div className="grid gap-4">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <SkeletonFlightCard key={i} />
-              ))}
-            </div>
-          }
-        >
-          {sorted.length ? (
-            <div className="grid gap-4">
-              {sorted.map((f: any) => (
-                <a
-                  key={f.link}
-                  href={`https://www.aviasales.com${f.link}?marker=${process.env["MARKER"]}&utm_source=sabaifly`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-white border rounded-xl p-5 flex justify-between items-center hover:shadow-md transition"
-                >
-                  {/* Left side — flight details */}
-                  <div>
-                    <p className="font-medium text-lg">
-                      {f.origin} → {f.destination}
-                    </p>
-                    <p className="text-sm text-neutral-600">
-                      {f.departure_at.slice(0, 10)} • {f.duration} min •{" "}
-                      {f.transfers} stops
-                    </p>
-                    <p className="text-sm text-neutral-500">
-                      Airline: {f.airline || "Multiple"}
-                    </p>
-                  </div>
-
-                  {/* Right side — price + CTA */}
-                  <div className="text-right">
-                    <p className="text-xl font-semibold text-brand">
-                      ${f.price}
-                    </p>
-                    <button className="mt-2 px-4 py-1.5 rounded-full bg-brand text-white text-sm hover:bg-brand-dark">
-                      Book →
-                    </button>
-                  </div>
-                </a>
-              ))}
-            </div>
-          ) : (
-            <p className="text-neutral-600">
-              No flights found for these dates.
-            </p>
-          )}
         </Suspense>
       </section>
     </main>
