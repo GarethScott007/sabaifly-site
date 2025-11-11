@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Shuffle } from "lucide-react"; // icon for swap button
 
 export default function SearchForm() {
   const [tripType, setTripType] = useState("round");
@@ -11,6 +12,9 @@ export default function SearchForm() {
   });
   const [showTravellers, setShowTravellers] = useState(false);
 
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+
   const handleTravellerChange = (key: "adults" | "children" | "infants", delta: number) => {
     setTravellers((prev) => ({
       ...prev,
@@ -18,10 +22,20 @@ export default function SearchForm() {
     }));
   };
 
+  const handleSwap = () => {
+    setFrom(to);
+    setTo(from);
+  };
+
   return (
-    <form className="flex flex-wrap md:flex-nowrap items-center justify-between gap-2 md:gap-3 w-full">
+    <form
+      className="
+        grid grid-cols-1 md:grid-cols-[auto,1fr,auto,1fr,auto,auto,auto]
+        items-center gap-2 md:gap-3 w-full
+      "
+    >
       {/* Trip Type */}
-      <div className="flex gap-2 shrink-0">
+      <div className="flex gap-2 shrink-0 justify-center md:justify-start">
         {["round", "oneway"].map((type) => (
           <button
             key={type}
@@ -38,36 +52,60 @@ export default function SearchForm() {
         ))}
       </div>
 
-      {/* From / To */}
-      <input
-        type="text"
-        placeholder="From"
-        className="flex-1 min-w-[120px] px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
-      />
-      <input
-        type="text"
-        placeholder="To"
-        className="flex-1 min-w-[120px] px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
-      />
+      {/* From */}
+      <div className="relative w-full">
+        <input
+          type="text"
+          placeholder="From"
+          value={from}
+          onChange={(e) => setFrom(e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+        />
+      </div>
+
+      {/* Swap Button */}
+      <div className="flex justify-center items-center">
+        <button
+          type="button"
+          onClick={handleSwap}
+          className="p-2 border border-brand rounded-full bg-white hover:bg-brand hover:text-white transition"
+          title="Swap locations"
+        >
+          <Shuffle size={16} />
+        </button>
+      </div>
+
+      {/* To */}
+      <div className="relative w-full">
+        <input
+          type="text"
+          placeholder="To"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+          className="w-full px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+        />
+      </div>
 
       {/* Dates */}
-      <input
-        type="date"
-        className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
-      />
-      {tripType === "round" && (
+      <div className="flex items-center gap-2 w-full md:w-auto justify-between md:justify-center">
         <input
           type="date"
-          className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none"
+          className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none w-full"
         />
-      )}
+        {tripType === "round" && (
+          <input
+            type="date"
+            className="px-3 py-2 border rounded-lg text-sm focus:ring-2 focus:ring-brand outline-none w-full"
+          />
+        )}
+      </div>
 
       {/* Travellers Dropdown */}
       <div className="relative">
         <button
           type="button"
           onClick={() => setShowTravellers(!showTravellers)}
-          className="px-3 py-2 border rounded-lg text-sm flex items-center gap-1 focus:ring-2 focus:ring-brand outline-none"
+          className="px-3 py-2 border rounded-lg text-sm flex items-center gap-1 focus:ring-2 focus:ring-brand outline-none whitespace-nowrap"
         >
           {travellers.adults + travellers.children + travellers.infants} Traveller
           {travellers.adults + travellers.children + travellers.infants > 1 ? "s" : ""}
@@ -113,12 +151,14 @@ export default function SearchForm() {
       </div>
 
       {/* Search Button */}
-      <button
-        type="submit"
-        className="px-5 py-2 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand-dark transition"
-      >
-        Search
-      </button>
+      <div className="flex justify-center md:justify-end">
+        <button
+          type="submit"
+          className="px-5 py-2 rounded-full bg-brand text-white text-sm font-medium hover:bg-brand-dark transition w-full md:w-auto"
+        >
+          Search
+        </button>
+      </div>
     </form>
   );
 }
