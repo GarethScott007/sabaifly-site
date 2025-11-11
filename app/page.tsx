@@ -7,8 +7,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center bg-white text-neutral-900 min-h-screen">
       {/* Header */}
-      <Header className="h-40 shadow-lg border-b border-brand/20" />
-
+    
       {/* Hero Section */}
       <section className="relative w-full h-[420px] md:h-[400px] overflow-visible">
         {/* Background Image */}
