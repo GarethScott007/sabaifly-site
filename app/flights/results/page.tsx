@@ -1,20 +1,25 @@
 import { Suspense } from "react";
-import FilterSidebar, { FilterState } from "@/components/FilterSidebar";
+import FlightResults from "@/components/FlightResults";
 import SkeletonFlightCard from "@/components/SkeletonFlightCard";
-import MobileFilterDrawer from "@/components/MobileFilterDrawer";
-
-interface SearchParams {
-  from: string;
-  to: string;
-}
+import { SearchParams, TravelpayoutsFlight, TravelpayoutsApiResponse } from "@/lib/types";
+import { CACHE_TIMES, EXTERNAL_APIS } from "@/lib/constants";
 
 /**
  * Fetch live flight data from Travelpayouts
  */
-async function getFlights(params: SearchParams) {
-  const token = process.env["TP_TOKEN"] as string;
-  const url = `https://api.travelpayouts.com/aviasales/v3/prices_for_dates?origin=${params.from}&destination=${params.to}&token=${token}`;
-  const res = await fetch(url, { next: { revalidate: 300 } });
+async function getFlights(params: SearchParams): Promise<TravelpayoutsApiResponse> {
+  const token = process.env["TP_TOKEN"];
+  if (!token) {
+    throw new Error("TP_TOKEN environment variable not set");
+  }
+
+  const url = `${EXTERNAL_APIS.TRAVELPAYOUTS.BASE_URL}${EXTERNAL_APIS.TRAVELPAYOUTS.PRICES_FOR_DATES}?origin=${params.from}&destination=${params.to}&token=${token}`;
+  const res = await fetch(url, { next: { revalidate: CACHE_TIMES.FLIGHT_PRICES } });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch flights: ${res.status} ${res.statusText}`);
+  }
+
   return res.json();
 }
 
@@ -23,7 +28,7 @@ async function getFlights(params: SearchParams) {
  */
 export default async function Results({ searchParams }: { searchParams: SearchParams }) {
   const data = await getFlights(searchParams);
-  const flights = data.data || [];
+  const flights: TravelpayoutsFlight[] = data.data || [];
 
   // Sort by price ascending (can easily extend to duration etc.)
   const sorted = [...flights].sort((a, b) => a.price - b.price);
@@ -31,33 +36,11 @@ export default async function Results({ searchParams }: { searchParams: SearchPa
   // Create top date ribbon (unique days from dataset)
   const displayDates = Array.from(
     new Set(sorted.map((f) => f.departure_at.slice(0, 10)))
-  ).slice(0, 7);
+  ).slice(0, 7) as string[];
 
   return (
-    <main className="flex flex-col md:flex-row max-w-7xl mx-auto px-4 md:px-8 py-10 gap-6">
-      {/* Sidebar Filters */}
-      <FilterSidebar onChange={(filters: FilterState) => {}} />
-
-      {/* Mobile Filter Drawer */}
-      <MobileFilterDrawer onChange={(filters: FilterState) => {}} />
-
-      {/* Main Results List */}
-      <section className="flex-1">
-        <Suspense fallback={<SkeletonFlightCard />}>
-          {sorted.map((flight: any) => (
-            <div key={flight.id} className="mb-4">
-              <div className="p-4 border rounded">
-                <div className="font-medium">
-                  {flight.origin} → {flight.destination}
-                </div>
-                <div className="text-sm text-gray-500">
-                  {new Date(flight.departure_at).toLocaleString()} — £{flight.price}
-                </div>
-              </div>
-            </div>
-          ))}
-        </Suspense>
-      </section>
-    </main>
+    <Suspense fallback={<SkeletonFlightCard />}>
+      <FlightResults flights={sorted} displayDates={displayDates} />
+    </Suspense>
   );
 }
