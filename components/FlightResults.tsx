@@ -26,8 +26,9 @@ export default function FlightResults({ flights, displayDates, searchParams }: F
     return `${day}/${month}/${year}`;
   };
 
+  const formattedDepartDate = formatDateForKiwi(departDate);
   const returnParam = returnDate ? `&return=${formatDateForKiwi(returnDate)}` : '';
-  const kiwiSearchUrl = `https://www.kiwi.com/deep?affilid=670577&from=${searchParams.from}&to=${searchParams.to}&departure=${formatDateForKiwi(departDate)}${returnParam}&currency=GBP`;
+  const kiwiSearchUrl = `https://www.kiwi.com/deep?affilid=670577&from=${searchParams.from}&to=${searchParams.to}&departure=${formattedDepartDate}${returnParam}&currency=GBP`;
 
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
