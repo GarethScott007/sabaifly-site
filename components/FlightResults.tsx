@@ -188,7 +188,7 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
                   </div>
 
                   <a
-                    href={`https://www.travelpayouts.com/flights/${flight.origin.toLowerCase()}${flight.destination.toLowerCase()}${flight.departure_at.slice(0, 10).replace(/-/g, '')}?marker=${affiliateMarker}`}
+                    href={flight.link || `https://www.travelpayouts.com/flights/${flight.origin.toLowerCase()}${flight.destination.toLowerCase()}${flight.departure_at.slice(0, 10).replace(/-/g, '')}?marker=${affiliateMarker}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-6 py-2 bg-brand text-white rounded-full hover:bg-brand-dark transition text-sm font-medium"
