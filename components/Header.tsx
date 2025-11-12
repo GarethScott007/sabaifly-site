@@ -37,32 +37,35 @@ export default function Header({ className = "", locale }: HeaderProps) {
         </Link>
       </div>
 
-      {/* Center – Navigation */}
-      <nav className="hidden md:flex items-center gap-6 lg:gap-10 text-sm lg:text-base font-medium text-white">
-        <Link href="/" className="hover:underline underline-offset-4 transition">
+      {/* Center – Navigation - NOW VISIBLE ON ALL DEVICES */}
+      <nav className="flex items-center gap-1.5 sm:gap-2 md:gap-3 lg:gap-4 text-[10px] sm:text-xs md:text-sm lg:text-base font-medium flex-1 justify-center max-w-2xl mx-2">
+        <Link
+          href="/"
+          className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
+        >
           {t("header.home")}
         </Link>
         <Link
           href="/flights"
-          className="hover:underline underline-offset-4 transition"
+          className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.flights")}
         </Link>
         <Link
           href="/hotels"
-          className="hover:underline underline-offset-4 transition"
+          className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.hotels")}
         </Link>
         <Link
           href="/about"
-          className="hover:underline underline-offset-4 transition"
+          className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.about")}
         </Link>
         <Link
           href="/privacy"
-          className="hover:underline underline-offset-4 transition"
+          className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.privacy")}
         </Link>
