@@ -1,4 +1,5 @@
-import type { Metadata } from "next";
+import "../globals.css";
+import type { Metadata, Viewport } from "next";
 import { headers } from "next/headers";
 import { getTranslations, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
@@ -10,6 +11,12 @@ import {
   OrganizationSchema,
   WebSiteSchema,
 } from "@/components/StructuredData";
+
+export const viewport: Viewport = {
+  themeColor: "#693AAE",
+  width: "device-width",
+  initialScale: 1,
+};
 
 // Generate metadata for each locale
 export async function generateMetadata({
