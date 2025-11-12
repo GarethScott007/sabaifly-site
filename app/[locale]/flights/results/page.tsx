@@ -15,10 +15,16 @@ async function getFlights(params: SearchParams): Promise<TravelpayoutsApiRespons
   const departureDate = params.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
 
   const url = `${baseUrl}/api/live?origin=${params.from}&destination=${params.to}&departure_date=${departureDate}&currency=${currency}`;
+
+  console.log('Fetching flights with URL:', url);
+  console.log('Search params:', params);
+
   const res = await fetch(url, { next: { revalidate: CACHE_TIMES.FLIGHT_PRICES } });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch flights: ${res.status} ${res.statusText}`);
+    const errorData = await res.json().catch(() => ({}));
+    console.error('Flight API error:', errorData);
+    throw new Error(`Failed to fetch flights: ${res.status} ${res.statusText} - ${JSON.stringify(errorData)}`);
   }
 
   const data = await res.json();
