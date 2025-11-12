@@ -105,5 +105,18 @@
     "siteDescription": "Recherche de vols rapide et claire. Les partenaires nous paient lorsque vous réservez. Nous n'ajoutons jamais de frais à votre prix de billet.",
     "homeTitle": "SabaiFly — Recherche de vols sereine",
     "homeDescription": "Trouvez des vols rapidement. Résultats clairs. Réservez avec des partenaires de confiance. Pas de frais supplémentaires."
+  },
+  "cities": {
+    "LHR": "Londres",
+    "BKK": "Bangkok",
+    "JFK": "New York",
+    "SIN": "Singapour",
+    "HND": "Tokyo",
+    "SYD": "Sydney",
+    "DEL": "Delhi",
+    "HKT": "Phuket",
+    "DXB": "Dubaï",
+    "KUL": "Kuala Lumpur",
+    "BOM": "Mumbai"
   }
 }

@@ -105,5 +105,18 @@
     "siteDescription": "Schnelle, übersichtliche Flugsuche. Partner zahlen uns, wenn Sie buchen. Wir fügen Ihrem Ticketpreis niemals Gebühren hinzu.",
     "homeTitle": "SabaiFly — Entspannte Flugsuche",
     "homeDescription": "Flüge schnell finden. Klare Ergebnisse. Mit vertrauenswürdigen Partnern buchen. Keine zusätzlichen Gebühren."
+  },
+  "cities": {
+    "LHR": "London",
+    "BKK": "Bangkok",
+    "JFK": "New York",
+    "SIN": "Singapur",
+    "HND": "Tokio",
+    "SYD": "Sydney",
+    "DEL": "Delhi",
+    "HKT": "Phuket",
+    "DXB": "Dubai",
+    "KUL": "Kuala Lumpur",
+    "BOM": "Mumbai"
   }
 }

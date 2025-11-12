@@ -98,12 +98,31 @@
       "advertising": "Targeting/Advertising Cookies"
     },
     "manage": "How to Manage Cookies",
-    "contact": "Contact Us"
+    "contact": "Contact Us",
+    "banner": {
+      "message": "We use cookies to improve your experience and analyze site usage. By continuing, you accept our use of cookies.",
+      "accept": "Accept All",
+      "decline": "Decline",
+      "learnMore": "Learn more"
+    }
   },
   "meta": {
     "siteTitle": "SabaiFly",
     "siteDescription": "Fast, clean flight search. Partners pay us when you book. We never add fees to your ticket price.",
     "homeTitle": "SabaiFly — Calm flight search",
     "homeDescription": "Find flights fast. Clean results. Book with trusted partners. No added fees."
+  },
+  "cities": {
+    "LHR": "London",
+    "BKK": "Bangkok",
+    "JFK": "New York",
+    "SIN": "Singapore",
+    "HND": "Tokyo",
+    "SYD": "Sydney",
+    "DEL": "Delhi",
+    "HKT": "Phuket",
+    "DXB": "Dubai",
+    "KUL": "Kuala Lumpur",
+    "BOM": "Mumbai"
   }
 }

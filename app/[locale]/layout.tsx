@@ -5,6 +5,7 @@ import { getTranslations, getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import Header from "@/components/Header";
+import CookieConsent from "@/components/CookieConsent";
 import { GoogleAnalytics } from "@/app/ga/GoogleAnalytics";
 import { routing } from "@/i18n/routing";
 import {
@@ -134,6 +135,9 @@ export default async function LocaleLayout({
 
           {/* Main content with top padding to account for fixed header */}
           <main className="pt-16">{children}</main>
+
+          {/* Cookie Consent Banner */}
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

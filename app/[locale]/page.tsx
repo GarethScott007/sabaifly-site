@@ -50,23 +50,23 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
-            { from: "LHR", to: "BKK", label: "London → Bangkok" },
-            { from: "LHR", to: "JFK", label: "London → New York" },
-            { from: "LHR", to: "SIN", label: "London → Singapore" },
-            { from: "LHR", to: "HND", label: "London → Tokyo" },
-            { from: "LHR", to: "SYD", label: "London → Sydney" },
-            { from: "LHR", to: "DEL", label: "London → Delhi" },
-            { from: "LHR", to: "HKT", label: "London → Phuket" },
-            { from: "LHR", to: "DXB", label: "London → Dubai" },
-            { from: "LHR", to: "KUL", label: "London → Kuala Lumpur" },
-            { from: "LHR", to: "BOM", label: "London → Mumbai" },
-          ].map(({ from, to, label }) => (
+            { from: "LHR", to: "BKK" },
+            { from: "LHR", to: "JFK" },
+            { from: "LHR", to: "SIN" },
+            { from: "LHR", to: "HND" },
+            { from: "LHR", to: "SYD" },
+            { from: "LHR", to: "DEL" },
+            { from: "LHR", to: "HKT" },
+            { from: "LHR", to: "DXB" },
+            { from: "LHR", to: "KUL" },
+            { from: "LHR", to: "BOM" },
+          ].map(({ from, to }) => (
             <Link
               key={`${from}-${to}`}
               href={`/destinations/${from.toLowerCase()}-to-${to.toLowerCase()}`}
               className="bg-brand text-white font-medium py-3 px-2 rounded-lg text-center hover:bg-brand-dark transition-all shadow-sm text-sm"
             >
-              {from} → {to}
+              {t(`cities.${from}`)} → {t(`cities.${to}`)}
             </Link>
           ))}
         </div>
