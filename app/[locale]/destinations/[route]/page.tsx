@@ -96,15 +96,232 @@ const DESTINATIONS = {
       "Singapore is a perfect stopover for Australia/New Zealand trips",
     ],
   },
-  // Add more destinations as needed
+  "lhr-to-hnd": {
+    from: "LHR",
+    to: "HND",
+    fromCity: "London",
+    toCity: "Tokyo",
+    country: "Japan",
+    bestTime: "March-May (cherry blossoms) or September-November (autumn colors)",
+    festivals: [
+      "Cherry Blossom Season - Late March to early April",
+      "Golden Week - Late April to early May",
+      "Sumida River Fireworks - July",
+      "Tokyo Marathon - March",
+    ],
+    avgTemp: "Summer: 25-30°C, Winter: 5-12°C",
+    flightTime: "~12 hours 30 minutes",
+    timezone: "GMT+9 (8-9 hours ahead of London)",
+    currency: "Japanese Yen (JPY)",
+    highlights: [
+      "Shibuya Crossing and Harajuku fashion",
+      "Senso-ji Temple in Asakusa",
+      "Tokyo Skytree and teamLab Borderless",
+      "Tsukiji Outer Market for sushi",
+      "Mount Fuji day trips",
+    ],
+    tips: [
+      "Visa-free for UK passport holders (up to 90 days)",
+      "Book 2-3 months ahead for cherry blossom season",
+      "Avoid Golden Week (very crowded and expensive)",
+      "Get a JR Pass if planning to visit other cities",
+    ],
+  },
+  "lhr-to-syd": {
+    from: "LHR",
+    to: "SYD",
+    fromCity: "London",
+    toCity: "Sydney",
+    country: "Australia",
+    bestTime: "September to November (spring) or March to May (autumn)",
+    festivals: [
+      "Sydney Festival - January",
+      "Vivid Sydney (light festival) - May-June",
+      "Sydney Gay and Lesbian Mardi Gras - February-March",
+      "New Year's Eve Fireworks - December 31",
+    ],
+    avgTemp: "Summer: 18-26°C, Winter: 8-17°C",
+    flightTime: "~22 hours (with stopover)",
+    timezone: "GMT+10/+11 (9-10 hours ahead of London)",
+    currency: "Australian Dollar (AUD)",
+    highlights: [
+      "Sydney Opera House and Harbour Bridge",
+      "Bondi Beach and coastal walks",
+      "The Rocks historic district",
+      "Taronga Zoo with harbour views",
+      "Blue Mountains day trips",
+    ],
+    tips: [
+      "Electronic visa (eVisitor) required - free and instant",
+      "Book 3-6 months ahead for best long-haul prices",
+      "Summer (Dec-Feb) is peak season and most expensive",
+      "Consider stopover in Singapore or Dubai to break journey",
+    ],
+  },
+  "lhr-to-dxb": {
+    from: "LHR",
+    to: "DXB",
+    fromCity: "London",
+    toCity: "Dubai",
+    country: "United Arab Emirates",
+    bestTime: "November to March (pleasant weather, 20-30°C)",
+    festivals: [
+      "Dubai Shopping Festival - January-February",
+      "Dubai Food Festival - February-March",
+      "Dubai World Cup (horse racing) - March",
+      "Ramadan celebrations - Varies by lunar calendar",
+    ],
+    avgTemp: "Summer: 35-45°C, Winter: 20-30°C",
+    flightTime: "~7 hours",
+    timezone: "GMT+4 (3-4 hours ahead of London)",
+    currency: "UAE Dirham (AED)",
+    highlights: [
+      "Burj Khalifa and Dubai Mall",
+      "Palm Jumeirah and Atlantis resort",
+      "Dubai Marina and JBR beach",
+      "Gold and Spice Souks in Old Dubai",
+      "Desert safari and sand dunes",
+    ],
+    tips: [
+      "Visa on arrival for UK passport holders",
+      "Avoid summer (May-September) - extremely hot",
+      "Shopping Festival offers great deals",
+      "Modest dress required in traditional areas",
+    ],
+  },
+  "lhr-to-del": {
+    from: "LHR",
+    to: "DEL",
+    fromCity: "London",
+    toCity: "Delhi",
+    country: "India",
+    bestTime: "October to March (cool and dry season)",
+    festivals: [
+      "Diwali (Festival of Lights) - October/November",
+      "Holi (Festival of Colors) - March",
+      "Republic Day Parade - January 26",
+      "Dussehra celebrations - September/October",
+    ],
+    avgTemp: "Summer: 30-45°C, Winter: 7-20°C",
+    flightTime: "~8 hours 30 minutes",
+    timezone: "GMT+5:30 (4:30-5:30 hours ahead of London)",
+    currency: "Indian Rupee (INR)",
+    highlights: [
+      "Red Fort and Jama Masjid",
+      "India Gate and Rajpath",
+      "Qutub Minar UNESCO site",
+      "Chandni Chowk street food",
+      "Day trips to Taj Mahal in Agra",
+    ],
+    tips: [
+      "E-visa required - apply online before travel",
+      "Avoid summer (April-June) - very hot",
+      "Book 2-3 months ahead for festival seasons",
+      "Consider health precautions and travel insurance",
+    ],
+  },
+  "lhr-to-hkt": {
+    from: "LHR",
+    to: "HKT",
+    fromCity: "London",
+    toCity: "Phuket",
+    country: "Thailand",
+    bestTime: "November to February (dry season, perfect beach weather)",
+    festivals: [
+      "Phuket Vegetarian Festival - September/October",
+      "Loy Krathong - November (full moon)",
+      "Songkran (Thai New Year) - April 13-15",
+      "Phuket Old Town Festival - February",
+    ],
+    avgTemp: "27-32°C year-round (tropical climate)",
+    flightTime: "~12 hours (with connection)",
+    timezone: "GMT+7 (6-7 hours ahead of London)",
+    currency: "Thai Baht (THB)",
+    highlights: [
+      "Patong Beach and nightlife",
+      "Phi Phi Islands day trips",
+      "Big Buddha and Wat Chalong",
+      "Old Phuket Town Sino-Portuguese architecture",
+      "Island hopping and snorkeling",
+    ],
+    tips: [
+      "Avoid monsoon season (May-October) for beach holidays",
+      "Book 3-4 months ahead for high season (Nov-Feb)",
+      "Shoulder season (March-April) offers good deals",
+      "Great base for exploring Phang Nga Bay and Krabi",
+    ],
+  },
+  "lhr-to-kul": {
+    from: "LHR",
+    to: "KUL",
+    fromCity: "London",
+    toCity: "Kuala Lumpur",
+    country: "Malaysia",
+    bestTime: "May to July or December to February (drier months)",
+    festivals: [
+      "Chinese New Year - January/February",
+      "Hari Raya (Eid) - Varies by lunar calendar",
+      "Thaipusam Hindu festival - January/February",
+      "Malaysia Day celebrations - September 16",
+    ],
+    avgTemp: "27-32°C year-round (tropical climate)",
+    flightTime: "~13 hours",
+    timezone: "GMT+8 (7-8 hours ahead of London)",
+    currency: "Malaysian Ringgit (MYR)",
+    highlights: [
+      "Petronas Twin Towers and KLCC Park",
+      "Batu Caves Hindu temples",
+      "Street food in Jalan Alor",
+      "Bukit Bintang shopping district",
+      "Day trips to Genting Highlands",
+    ],
+    tips: [
+      "No visa required for UK passport holders (up to 90 days)",
+      "Book 2-3 months ahead for best prices",
+      "Avoid monsoon season (November-March) on east coast",
+      "Perfect stopover for Australia or Southeast Asia trips",
+    ],
+  },
+  "lhr-to-bom": {
+    from: "LHR",
+    to: "BOM",
+    fromCity: "London",
+    toCity: "Mumbai",
+    country: "India",
+    bestTime: "November to February (cool and pleasant season)",
+    festivals: [
+      "Ganesh Chaturthi - August/September",
+      "Diwali (Festival of Lights) - October/November",
+      "Holi (Festival of Colors) - March",
+      "Mumbai Festival - January",
+    ],
+    avgTemp: "Summer: 27-35°C, Winter: 17-30°C",
+    flightTime: "~9 hours",
+    timezone: "GMT+5:30 (4:30-5:30 hours ahead of London)",
+    currency: "Indian Rupee (INR)",
+    highlights: [
+      "Gateway of India and Taj Mahal Palace Hotel",
+      "Marine Drive promenade",
+      "Elephanta Caves UNESCO site",
+      "Dharavi area and Dhobi Ghat",
+      "Bollywood studio tours",
+    ],
+    tips: [
+      "E-visa required - apply online before travel",
+      "Avoid monsoon season (June-September) - heavy rains",
+      "Book 2-3 months ahead for festival seasons",
+      "Mumbai is India's financial hub - great food and nightlife",
+    ],
+  },
 } as const;
 
 type RouteParams = {
-  params: { route: string };
+  params: Promise<{ route: string; locale: string }>;
 };
 
 export async function generateMetadata({ params }: RouteParams): Promise<Metadata> {
-  const destination = DESTINATIONS[params.route as keyof typeof DESTINATIONS];
+  const { route } = await params;
+  const destination = DESTINATIONS[route as keyof typeof DESTINATIONS];
 
   if (!destination) {
     return { title: "Destination Not Found" };
@@ -120,8 +337,9 @@ export async function generateMetadata({ params }: RouteParams): Promise<Metadat
   };
 }
 
-export default function DestinationPage({ params }: RouteParams) {
-  const destination = DESTINATIONS[params.route as keyof typeof DESTINATIONS];
+export default async function DestinationPage({ params }: RouteParams) {
+  const { route } = await params;
+  const destination = DESTINATIONS[route as keyof typeof DESTINATIONS];
 
   if (!destination) {
     notFound();
