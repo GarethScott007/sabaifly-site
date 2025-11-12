@@ -14,7 +14,11 @@ async function getFlights(params: SearchParams): Promise<TravelpayoutsApiRespons
   }
 
   const currency = process.env["CURRENCY"] || "USD";
-  const url = `${EXTERNAL_APIS.TRAVELPAYOUTS.BASE_URL}${EXTERNAL_APIS.TRAVELPAYOUTS.PRICES_FOR_DATES}?origin=${params.from}&destination=${params.to}&currency=${currency}&token=${token}`;
+
+  // Use provided date or default to tomorrow
+  const departureDate = params.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
+
+  const url = `${EXTERNAL_APIS.TRAVELPAYOUTS.BASE_URL}${EXTERNAL_APIS.TRAVELPAYOUTS.PRICES_FOR_DATES}?origin=${params.from}&destination=${params.to}&departure_at=${departureDate}&currency=${currency}&token=${token}`;
   const res = await fetch(url, { next: { revalidate: CACHE_TIMES.FLIGHT_PRICES } });
 
   if (!res.ok) {
