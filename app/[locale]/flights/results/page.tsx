@@ -40,8 +40,9 @@ async function getFlights(params: SearchParams): Promise<TravelpayoutsApiRespons
 /**
  * SabaiFly Flight Results Page
  */
-export default async function Results({ searchParams }: { searchParams: SearchParams }) {
-  const data = await getFlights(searchParams);
+export default async function Results({ searchParams }: { searchParams: Promise<SearchParams> }) {
+  const params = await searchParams;
+  const data = await getFlights(params);
   const flights: TravelpayoutsFlight[] = data.data || [];
 
   // Sort by price ascending (can easily extend to duration etc.)
