@@ -92,6 +92,12 @@ export async function GET(request: Request) {
 
     const data = await response.json();
 
+    // Debug: Log the raw API response
+    console.log('Travelpayouts API response:', JSON.stringify(data, null, 2));
+    if (data.data && data.data.length > 0) {
+      console.log('First flight object:', JSON.stringify(data.data[0], null, 2));
+    }
+
     // Return the data
     return NextResponse.json({
       success: true,

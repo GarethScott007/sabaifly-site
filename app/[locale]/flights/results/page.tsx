@@ -5,29 +5,48 @@ import { SearchParams, TravelpayoutsFlight, TravelpayoutsApiResponse } from "@/l
 import { CACHE_TIMES, EXTERNAL_APIS } from "@/lib/constants";
 
 /**
- * Fetch live flight data from Travelpayouts
+ * Fetch live flight data via our internal API
  */
 async function getFlights(params: SearchParams): Promise<TravelpayoutsApiResponse> {
-  const token = process.env["TP_TOKEN"];
-  if (!token) {
-    throw new Error("TP_TOKEN environment variable not set");
+  const currency = process.env["CURRENCY"] || "USD";
+  const baseUrl = process.env["NEXT_PUBLIC_BASE_URL"] || "https://www.sabaifly.com";
+
+  // Use provided date or default to tomorrow
+  const departureDate = params.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
+
+  // Build URL with return date if provided
+  let url = `${baseUrl}/api/live?origin=${params.from}&destination=${params.to}&departure_date=${departureDate}&currency=${currency}`;
+  if (params.returnDate) {
+    url += `&return_date=${params.returnDate}`;
   }
 
-  const url = `${EXTERNAL_APIS.TRAVELPAYOUTS.BASE_URL}${EXTERNAL_APIS.TRAVELPAYOUTS.PRICES_FOR_DATES}?origin=${params.from}&destination=${params.to}&token=${token}`;
+  console.log('Fetching flights with URL:', url);
+  console.log('Search params:', params);
+
   const res = await fetch(url, { next: { revalidate: CACHE_TIMES.FLIGHT_PRICES } });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch flights: ${res.status} ${res.statusText}`);
+    const errorData = await res.json().catch(() => ({}));
+    console.error('Flight API error:', errorData);
+    throw new Error(`Failed to fetch flights: ${res.status} ${res.statusText} - ${JSON.stringify(errorData)}`);
   }
 
-  return res.json();
+  const data = await res.json();
+
+  // Transform the response to match the expected format
+  return {
+    success: data.success,
+    data: data.flights || [],
+    currency: data.currency,
+  };
 }
 
 /**
  * SabaiFly Flight Results Page
  */
-export default async function Results({ searchParams }: { searchParams: SearchParams }) {
-  const data = await getFlights(searchParams);
+export default async function Results({ searchParams }: { searchParams: Promise<SearchParams> }) {
+  const params = await searchParams;
+  const data = await getFlights(params);
   const flights: TravelpayoutsFlight[] = data.data || [];
 
   // Sort by price ascending (can easily extend to duration etc.)
@@ -40,7 +59,7 @@ export default async function Results({ searchParams }: { searchParams: SearchPa
 
   return (
     <Suspense fallback={<SkeletonFlightCard />}>
-      <FlightResults flights={sorted} displayDates={displayDates} />
+      <FlightResults flights={sorted} displayDates={displayDates} searchParams={params} />
     </Suspense>
   );
 }
