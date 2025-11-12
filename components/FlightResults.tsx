@@ -13,7 +13,7 @@ interface FlightResultsProps {
 
 export default function FlightResults({ flights, displayDates }: FlightResultsProps) {
   // Get the affiliate marker from environment variables
-  const affiliateMarker = process.env.NEXT_PUBLIC_TP_MARKER || '';
+  const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '';
 
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
