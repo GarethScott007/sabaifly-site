@@ -94,6 +94,24 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
 
       {/* Main Results List */}
       <section className="flex-1">
+        {/* Kiwi.com Alternative Flight Search */}
+        {flights.length < 5 && (
+          <div className="mb-6 p-4 bg-blue-50 border-2 border-blue-200 rounded-lg">
+            <h3 className="text-blue-900 font-semibold mb-2">Want more flight options?</h3>
+            <p className="text-blue-700 text-sm mb-3">
+              Search hundreds of airlines and travel sites on Kiwi.com for the best deals
+            </p>
+            <a
+              href={`https://tp.media/click?shmarker=${affiliateMarker}&promo_id=3413&source_type=link&type=click&campaign_id=111&trs=470518`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition font-medium text-sm"
+            >
+              Search on Kiwi.com →
+            </a>
+          </div>
+        )}
+
         {/* Additional Services Banner */}
         <div className="mb-6 p-4 bg-gradient-to-r from-brand to-brand-light rounded-lg shadow-md">
           <h3 className="text-white font-semibold mb-3 text-center">Complete Your Trip</h3>
