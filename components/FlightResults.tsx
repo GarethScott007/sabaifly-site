@@ -13,13 +13,7 @@ interface FlightResultsProps {
 
 export default function FlightResults({ flights, displayDates }: FlightResultsProps) {
   // Get the affiliate marker from environment variables
-  const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '';
-
-  // Debug: Log affiliate marker
-  console.log('Affiliate marker:', affiliateMarker);
-  if (flights.length > 0) {
-    console.log('Sample flight data:', flights[0]);
-  }
+  const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '670577';
 
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
@@ -100,6 +94,36 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
 
       {/* Main Results List */}
       <section className="flex-1">
+        {/* Additional Services Banner */}
+        <div className="mb-6 p-4 bg-gradient-to-r from-brand to-brand-light rounded-lg shadow-md">
+          <h3 className="text-white font-semibold mb-3 text-center">Complete Your Trip</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <a
+              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=5104&u=https%3A%2F%2Fwww.booking.com&campaign_id=200`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
+            >
+              🏨 Hotels
+            </a>
+            <a
+              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=647&u=https%3A%2F%2Fkiwitaxi.com&campaign_id=1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
+            >
+              🚕 Airport Taxi
+            </a>
+            <a
+              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=5996&u=https%3A%2F%2Fgetrentacar.com&campaign_id=222`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
+            >
+              🚗 Car Rental
+            </a>
+          </div>
+        </div>
         {/* Results count */}
         <div className="mb-4 text-sm text-gray-600">
           {filteredFlights.length === flights.length ? (
@@ -196,8 +220,8 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
                   <a
                     href={
                       flight.link
-                        ? (flight.link.startsWith('/') ? `https://www.travelpayouts.com${flight.link}` : flight.link)
-                        : `https://www.travelpayouts.com/flights/${flight.origin.toLowerCase()}${flight.destination.toLowerCase()}${flight.departure_at.slice(0, 10).replace(/-/g, '')}?marker=${affiliateMarker}`
+                        ? `https://www.aviasales.com${flight.link.split('?')[0]}?marker=${affiliateMarker}`
+                        : `https://www.aviasales.com/search/${flight.origin_airport || flight.origin}${flight.departure_at.slice(5, 10).replace('-', '')}${flight.destination_airport || flight.destination}1?marker=${affiliateMarker}`
                     }
                     target="_blank"
                     rel="noopener noreferrer"
