@@ -9,7 +9,6 @@ import { routing } from "@/i18n/routing";
 import {
   OrganizationSchema,
   WebSiteSchema,
-  GeoTargetingMeta,
 } from "@/components/StructuredData";
 
 // Generate metadata for each locale
@@ -114,9 +113,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-      <head>
-        <GeoTargetingMeta locale={locale} />
-      </head>
       <body className="bg-white text-neutral-900 antialiased min-h-screen">
         <NextIntlClientProvider messages={messages}>
           {/* Structured Data for AI Search Engines */}
