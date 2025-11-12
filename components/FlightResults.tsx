@@ -15,6 +15,12 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
   // Get the affiliate marker from environment variables
   const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '';
 
+  // Debug: Log affiliate marker
+  console.log('Affiliate marker:', affiliateMarker);
+  if (flights.length > 0) {
+    console.log('Sample flight data:', flights[0]);
+  }
+
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
     timeOfDay: [],
