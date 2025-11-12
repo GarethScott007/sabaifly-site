@@ -221,7 +221,7 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
                     href={
                       flight.link
                         ? `https://www.aviasales.com${flight.link.split('?')[0]}?marker=${affiliateMarker}`
-                        : `https://www.aviasales.com/search/${flight.origin_airport || flight.origin}${flight.departure_at.slice(5, 10).replace('-', '')}${flight.destination_airport || flight.destination}1?marker=${affiliateMarker}`
+                        : `https://www.aviasales.com/search/${flight["origin_airport"] || flight.origin}${flight.departure_at.slice(5, 10).replace('-', '')}${flight["destination_airport"] || flight.destination}1?marker=${affiliateMarker}`
                     }
                     target="_blank"
                     rel="noopener noreferrer"
