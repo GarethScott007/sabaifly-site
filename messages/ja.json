@@ -1,0 +1,109 @@
+{
+  "header": {
+    "home": "ホーム",
+    "flights": "フライト",
+    "hotels": "ホテル",
+    "about": "会社概要",
+    "privacy": "プライバシー",
+    "cookies": "Cookie"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "es": "Español",
+    "ar": "العربية",
+    "th": "ไทย",
+    "select": "言語を選択"
+  },
+  "home": {
+    "heroTitle": "次の冒険を見つけよう",
+    "missionTitle": "私たちの使命",
+    "missionText1": "高速検索。クリーンな結果。信頼できるパートナーによる予約処理。複数のソースからのフライトと運賃を表示し、隠れた手数料なしで常に最良の選択肢を提供します。お客様は常に航空会社または旅行パートナーに直接お支払いいただきます。",
+    "missionText2": "スマートフィルターや月間価格カレンダーを使用して、運賃を素早く比較できます。Kiwi、Aviasales、Travelpayoutsなどのパートナーと安心して予約してください。",
+    "popularRoutesTitle": "人気のルート"
+  },
+  "search": {
+    "from": "出発地",
+    "to": "目的地",
+    "depart": "出発日",
+    "return": "帰着日",
+    "oneWay": "片道",
+    "roundTrip": "往復",
+    "adults": "大人",
+    "children": "子供",
+    "infants": "幼児",
+    "search": "検索",
+    "loading": "検索中...",
+    "selectAirport": "空港を選択...",
+    "noResults": "空港が見つかりません"
+  },
+  "filters": {
+    "stops": "経由地",
+    "direct": "直行便",
+    "oneStop": "1回乗継",
+    "twoPlusStops": "2回以上乗継",
+    "timeOfDay": "時間帯",
+    "morning": "午前",
+    "afternoon": "午後",
+    "evening": "夜",
+    "baggage": "手荷物",
+    "carryOnOnly": "機内持込のみ",
+    "checkedBag": "預け荷物"
+  },
+  "flights": {
+    "noFlights": "フライトが見つかりません",
+    "tryDifferent": "検索条件を調整してください",
+    "transfers": "回乗継",
+    "direct": "直行便",
+    "viewDeal": "詳細を見る",
+    "perPerson": "一人あたり"
+  },
+  "destinations": {
+    "flightsFrom": "{from}から{to}へのフライト",
+    "findCheapFlights": "{fromCity}から{toCity}への格安航空券を検索",
+    "bestTimeTitle": "ベストシーズン",
+    "festivalsTitle": "フェスティバル＆イベント",
+    "highlightsTitle": "人気観光スポット",
+    "tipsTitle": "旅行のヒント",
+    "flightInfoTitle": "フライト情報",
+    "searchFlightsButton": "フライトを検索 {from} → {to}"
+  },
+  "privacy": {
+    "title": "プライバシーポリシー",
+    "lastUpdated": "最終更新",
+    "intro": "SabaiFlyでは、お客様のプライバシー保護に取り組んでいます...",
+    "sections": {
+      "collection": "収集する情報",
+      "usage": "情報の使用方法",
+      "sharing": "情報の共有",
+      "rights": "お客様の権利",
+      "cookies": "Cookie",
+      "children": "子供のプライバシー",
+      "contact": "お問い合わせ"
+    }
+  },
+  "cookies": {
+    "title": "Cookieポリシー",
+    "intro": "このCookieポリシーは、SabaiFlyがCookieをどのように使用するかを説明します...",
+    "whatAreCookies": "Cookieとは？",
+    "howWeUse": "Cookieの使用方法",
+    "types": {
+      "necessary": "必須Cookie",
+      "analytics": "分析・パフォーマンスCookie",
+      "functional": "機能Cookie",
+      "advertising": "ターゲティング/広告Cookie"
+    },
+    "manage": "Cookieの管理方法",
+    "contact": "お問い合わせ"
+  },
+  "meta": {
+    "siteTitle": "SabaiFly",
+    "siteDescription": "高速でシンプルな航空券検索。パートナーがお客様の予約時に支払います。チケット価格に手数料を追加することはありません。",
+    "homeTitle": "SabaiFly — 快適な航空券検索",
+    "homeDescription": "素早くフライトを検索。クリーンな結果。信頼できるパートナーで予約。追加料金なし。"
+  }
+}
