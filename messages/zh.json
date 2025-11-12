@@ -1,0 +1,109 @@
+{
+  "header": {
+    "home": "首页",
+    "flights": "航班",
+    "hotels": "酒店",
+    "about": "关于",
+    "privacy": "隐私",
+    "cookies": "Cookie政策"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "es": "Español",
+    "ar": "العربية",
+    "th": "ไทย",
+    "select": "选择语言"
+  },
+  "home": {
+    "heroTitle": "发现您的下一次冒险",
+    "missionTitle": "我们的使命",
+    "missionText1": "快速搜索。清晰结果。由值得信赖的合作伙伴处理预订。我们向您展示来自多个来源的航班和票价，因此您总能获得最佳选择，没有隐藏费用。您始终直接向航空公司或旅行合作伙伴付款。",
+    "missionText2": "使用智能过滤器或月度价格日历快速比较票价。与Kiwi、Aviasales和Travelpayouts等合作伙伴放心预订。",
+    "popularRoutesTitle": "热门航线"
+  },
+  "search": {
+    "from": "出发地",
+    "to": "目的地",
+    "depart": "出发日期",
+    "return": "返回日期",
+    "oneWay": "单程",
+    "roundTrip": "往返",
+    "adults": "成人",
+    "children": "儿童",
+    "infants": "婴儿",
+    "search": "搜索",
+    "loading": "搜索中...",
+    "selectAirport": "选择机场...",
+    "noResults": "未找到机场"
+  },
+  "filters": {
+    "stops": "中转",
+    "direct": "直飞",
+    "oneStop": "1次中转",
+    "twoPlusStops": "2次以上中转",
+    "timeOfDay": "时段",
+    "morning": "上午",
+    "afternoon": "下午",
+    "evening": "晚上",
+    "baggage": "行李",
+    "carryOnOnly": "仅手提行李",
+    "checkedBag": "托运行李"
+  },
+  "flights": {
+    "noFlights": "未找到航班",
+    "tryDifferent": "请尝试调整搜索条件",
+    "transfers": "次中转",
+    "direct": "直飞",
+    "viewDeal": "查看优惠",
+    "perPerson": "每人"
+  },
+  "destinations": {
+    "flightsFrom": "从{from}到{to}的航班",
+    "findCheapFlights": "查找从{fromCity}到{toCity}的便宜航班",
+    "bestTimeTitle": "最佳旅游时间",
+    "festivalsTitle": "节日活动",
+    "highlightsTitle": "热门景点",
+    "tipsTitle": "旅行贴士",
+    "flightInfoTitle": "航班信息",
+    "searchFlightsButton": "搜索航班 {from} → {to}"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "lastUpdated": "最后更新",
+    "intro": "在SabaiFly，我们致力于保护您的隐私...",
+    "sections": {
+      "collection": "我们收集的信息",
+      "usage": "我们如何使用您的信息",
+      "sharing": "信息共享",
+      "rights": "您的权利",
+      "cookies": "Cookie",
+      "children": "儿童隐私",
+      "contact": "联系我们"
+    }
+  },
+  "cookies": {
+    "title": "Cookie政策",
+    "intro": "此Cookie政策说明SabaiFly如何使用Cookie...",
+    "whatAreCookies": "什么是Cookie？",
+    "howWeUse": "我们如何使用Cookie",
+    "types": {
+      "necessary": "必要Cookie",
+      "analytics": "分析和性能Cookie",
+      "functional": "功能Cookie",
+      "advertising": "定向/广告Cookie"
+    },
+    "manage": "如何管理Cookie",
+    "contact": "联系我们"
+  },
+  "meta": {
+    "siteTitle": "SabaiFly",
+    "siteDescription": "快速、简洁的航班搜索。合作伙伴在您预订时向我们付费。我们从不向您的机票价格添加费用。",
+    "homeTitle": "SabaiFly — 轻松的航班搜索",
+    "homeDescription": "快速查找航班。清晰结果。与值得信赖的合作伙伴预订。无额外费用。"
+  }
+}

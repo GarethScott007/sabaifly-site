@@ -1,0 +1,109 @@
+{
+  "header": {
+    "home": "Startseite",
+    "flights": "Flüge",
+    "hotels": "Hotels",
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "cookies": "Cookies"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "es": "Español",
+    "ar": "العربية",
+    "th": "ไทย",
+    "select": "Sprache wählen"
+  },
+  "home": {
+    "heroTitle": "Finden Sie Ihr nächstes Abenteuer",
+    "missionTitle": "Unsere Mission",
+    "missionText1": "Schnelle Suche. Klare Ergebnisse. Buchung durch vertrauenswürdige Partner. Wir zeigen Ihnen Flüge und Preise aus mehreren Quellen, damit Sie immer die besten Optionen ohne versteckte Gebühren erhalten. Sie zahlen immer direkt an die Fluggesellschaft oder den Reisepartner.",
+    "missionText2": "Nutzen Sie intelligente Filter oder monatliche Preiskalender, um Tarife schnell zu vergleichen. Buchen Sie vertrauensvoll mit Partnern wie Kiwi, Aviasales und Travelpayouts.",
+    "popularRoutesTitle": "Beliebte Routen"
+  },
+  "search": {
+    "from": "Von",
+    "to": "Nach",
+    "depart": "Hinflug",
+    "return": "Rückflug",
+    "oneWay": "Einfach",
+    "roundTrip": "Hin- und Rückflug",
+    "adults": "Erwachsene",
+    "children": "Kinder",
+    "infants": "Kleinkinder",
+    "search": "Suchen",
+    "loading": "Suche läuft...",
+    "selectAirport": "Flughafen wählen...",
+    "noResults": "Keine Flughäfen gefunden"
+  },
+  "filters": {
+    "stops": "Zwischenstopps",
+    "direct": "Direktflug",
+    "oneStop": "1 Zwischenstopp",
+    "twoPlusStops": "2+ Zwischenstopps",
+    "timeOfDay": "Tageszeit",
+    "morning": "Morgen",
+    "afternoon": "Nachmittag",
+    "evening": "Abend",
+    "baggage": "Gepäck",
+    "carryOnOnly": "Nur Handgepäck",
+    "checkedBag": "Aufgabegepäck"
+  },
+  "flights": {
+    "noFlights": "Keine Flüge gefunden",
+    "tryDifferent": "Versuchen Sie, Ihre Suchkriterien anzupassen",
+    "transfers": "Zwischenstopps",
+    "direct": "Direktflug",
+    "viewDeal": "Angebot ansehen",
+    "perPerson": "pro Person"
+  },
+  "destinations": {
+    "flightsFrom": "Flüge von {from} nach {to}",
+    "findCheapFlights": "Günstige Flüge von {fromCity} nach {toCity} finden",
+    "bestTimeTitle": "Beste Reisezeit",
+    "festivalsTitle": "Festivals & Veranstaltungen",
+    "highlightsTitle": "Top-Sehenswürdigkeiten",
+    "tipsTitle": "Reisetipps",
+    "flightInfoTitle": "Fluginformationen",
+    "searchFlightsButton": "Flüge suchen {from} → {to}"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "intro": "Bei SabaiFly verpflichten wir uns, Ihre Privatsphäre zu schützen...",
+    "sections": {
+      "collection": "Informationen, die wir sammeln",
+      "usage": "Wie wir Ihre Informationen verwenden",
+      "sharing": "Informationsweitergabe",
+      "rights": "Ihre Rechte",
+      "cookies": "Cookies",
+      "children": "Datenschutz für Kinder",
+      "contact": "Kontakt"
+    }
+  },
+  "cookies": {
+    "title": "Cookie-Richtlinie",
+    "intro": "Diese Cookie-Richtlinie erklärt, wie SabaiFly Cookies verwendet...",
+    "whatAreCookies": "Was sind Cookies?",
+    "howWeUse": "Wie wir Cookies verwenden",
+    "types": {
+      "necessary": "Notwendige Cookies",
+      "analytics": "Analyse- & Leistungs-Cookies",
+      "functional": "Funktionale Cookies",
+      "advertising": "Targeting-/Werbe-Cookies"
+    },
+    "manage": "Cookies verwalten",
+    "contact": "Kontakt"
+  },
+  "meta": {
+    "siteTitle": "SabaiFly",
+    "siteDescription": "Schnelle, übersichtliche Flugsuche. Partner zahlen uns, wenn Sie buchen. Wir fügen Ihrem Ticketpreis niemals Gebühren hinzu.",
+    "homeTitle": "SabaiFly — Entspannte Flugsuche",
+    "homeDescription": "Flüge schnell finden. Klare Ergebnisse. Mit vertrauenswürdigen Partnern buchen. Keine zusätzlichen Gebühren."
+  }
+}

@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import SearchForm from "@/components/SearchForm";
-import Link from "next/link";
 
 export default function Home() {
+  const t = useTranslations();
+
   return (
     <main className="flex flex-col items-center bg-white text-neutral-900 min-h-screen">
       {/* Hero Section */}
@@ -22,7 +25,7 @@ export default function Home() {
         {/* Hero Content */}
         <div className="absolute inset-0 z-20 flex flex-col items-center justify-center px-4">
           <h1 className="text-white text-4xl md:text-5xl font-semibold drop-shadow-lg mb-6 text-center">
-            Find your next adventure
+            {t("home.heroTitle")}
           </h1>
 
           {/* Search Bar */}
@@ -34,23 +37,17 @@ export default function Home() {
 
       {/* Mission Section */}
       <section className="w-full max-w-7xl mx-auto px-6 py-12 text-neutral-700">
-        <h2 className="text-2xl font-semibold mb-4">Our mission</h2>
-        <p className="leading-relaxed text-lg">
-          Fast search. Clean results. Booking handled by trusted partners. We
-          show you flights and fares from multiple sources, so you always get
-          the best options without hidden fees. You always pay the airline or
-          travel partner directly.
-        </p>
+        <h2 className="text-2xl font-semibold mb-4">{t("home.missionTitle")}</h2>
+        <p className="leading-relaxed text-lg">{t("home.missionText1")}</p>
 
-        <p className="mt-4 leading-relaxed text-lg">
-          Use smart filters or monthly price calendars to compare fares quickly.
-          Book confidently with partners like Kiwi, Aviasales, and Travelpayouts.
-        </p>
+        <p className="mt-4 leading-relaxed text-lg">{t("home.missionText2")}</p>
       </section>
 
       {/* Popular Routes */}
       <section className="w-full max-w-7xl mx-auto px-6 pb-16">
-        <h2 className="text-2xl font-semibold mb-6">Popular routes</h2>
+        <h2 className="text-2xl font-semibold mb-6">
+          {t("home.popularRoutesTitle")}
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
             { from: "LHR", to: "BKK", label: "London → Bangkok" },

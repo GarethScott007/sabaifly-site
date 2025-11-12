@@ -1,13 +1,27 @@
 "use client";
 
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
+import { useTranslations } from "next-intl";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { routing } from "@/i18n/routing";
+import { ChevronDown } from "lucide-react";
 
 interface HeaderProps {
   className?: string;
+  locale: string;
 }
 
-export default function Header({ className = "" }: HeaderProps) {
+export default function Header({ className = "", locale }: HeaderProps) {
+  const t = useTranslations();
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLanguageChange = (newLocale: string) => {
+    setIsLangMenuOpen(false);
+    router.replace(pathname, { locale: newLocale });
+  };
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 w-full h-16 bg-brand flex items-center justify-between px-6 md:px-10 shadow-md ${className}`}
@@ -26,37 +40,94 @@ export default function Header({ className = "" }: HeaderProps) {
       {/* Center – Navigation */}
       <nav className="hidden md:flex items-center gap-6 lg:gap-10 text-sm lg:text-base font-medium text-white">
         <Link href="/" className="hover:underline underline-offset-4 transition">
-          Home
+          {t("header.home")}
         </Link>
-        <Link href="/flights" className="hover:underline underline-offset-4 transition">
-          Flights
+        <Link
+          href="/flights"
+          className="hover:underline underline-offset-4 transition"
+        >
+          {t("header.flights")}
         </Link>
-        <Link href="/hotels" className="hover:underline underline-offset-4 transition">
-          Hotels
+        <Link
+          href="/hotels"
+          className="hover:underline underline-offset-4 transition"
+        >
+          {t("header.hotels")}
         </Link>
-        <Link href="/about" className="hover:underline underline-offset-4 transition">
-          About
+        <Link
+          href="/about"
+          className="hover:underline underline-offset-4 transition"
+        >
+          {t("header.about")}
         </Link>
-        <Link href="/privacy" className="hover:underline underline-offset-4 transition">
-          Privacy
+        <Link
+          href="/privacy"
+          className="hover:underline underline-offset-4 transition"
+        >
+          {t("header.privacy")}
         </Link>
       </nav>
 
-      {/* Right – Language Buttons (More Visible) */}
-      <div className="flex items-center gap-2 md:gap-3">
+      {/* Right – Language Dropdown */}
+      <div className="relative">
         <button
-          className="px-3 py-1.5 rounded-full bg-white text-brand font-semibold hover:bg-white/90 transition text-sm"
-          aria-label="Switch to English"
+          onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+          className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-brand font-semibold hover:bg-white/90 transition text-sm shadow-md"
+          aria-label={t("languages.select")}
         >
-          EN
+          <span>{t(`languages.${locale}`)}</span>
+          <ChevronDown
+            className={`w-4 h-4 transition-transform ${isLangMenuOpen ? "rotate-180" : ""}`}
+          />
         </button>
-        <button
-          className="px-3 py-1.5 rounded-full bg-white/20 text-white font-semibold hover:bg-white/30 transition border border-white/30 text-sm"
-          aria-label="Switch to Thai"
-        >
-          TH
-        </button>
+
+        {/* Dropdown Menu */}
+        {isLangMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <div
+              className="fixed inset-0 z-40"
+              onClick={() => setIsLangMenuOpen(false)}
+            />
+
+            {/* Menu */}
+            <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-xl z-50 py-2 max-h-96 overflow-y-auto">
+              {routing.locales.map((loc) => (
+                <button
+                  key={loc}
+                  onClick={() => handleLanguageChange(loc)}
+                  className={`w-full text-left px-4 py-2.5 hover:bg-brand/10 transition-colors text-sm ${
+                    locale === loc
+                      ? "bg-brand/20 font-semibold text-brand"
+                      : "text-neutral-700"
+                  }`}
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-lg">{getLanguageFlag(loc)}</span>
+                    <span>{t(`languages.${loc}`)}</span>
+                  </span>
+                </button>
+              ))}
+            </div>
+          </>
+        )}
       </div>
     </header>
   );
+}
+
+// Helper function to get flag emojis for languages
+function getLanguageFlag(locale: string): string {
+  const flags: Record<string, string> = {
+    en: "🇬🇧",
+    zh: "🇨🇳",
+    ja: "🇯🇵",
+    ko: "🇰🇷",
+    de: "🇩🇪",
+    fr: "🇫🇷",
+    es: "🇪🇸",
+    ar: "🇸🇦",
+    th: "🇹🇭",
+  };
+  return flags[locale] || "🌐";
 }
