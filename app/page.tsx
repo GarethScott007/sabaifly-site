@@ -51,23 +51,23 @@ export default function Home() {
       {/* Popular Routes */}
       <section className="w-full max-w-7xl mx-auto px-6 pb-16">
         <h2 className="text-2xl font-semibold mb-6">Popular routes</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {[
-            ["LON", "BKK"],
-            ["LON", "NYC"],
-            ["LON", "SIN"],
-            ["LON", "TYO"],
-            ["LON", "SYD"],
-            ["LON", "DEL"],
-            ["LON", "HKT"],
-            ["LON", "DXB"],
-            ["LON", "KUL"],
-            ["LON", "BOM"],
-          ].map(([from, to]) => (
+            { from: "LHR", to: "BKK", label: "London → Bangkok" },
+            { from: "LHR", to: "JFK", label: "London → New York" },
+            { from: "LHR", to: "SIN", label: "London → Singapore" },
+            { from: "LHR", to: "HND", label: "London → Tokyo" },
+            { from: "LHR", to: "SYD", label: "London → Sydney" },
+            { from: "LHR", to: "DEL", label: "London → Delhi" },
+            { from: "LHR", to: "HKT", label: "London → Phuket" },
+            { from: "LHR", to: "DXB", label: "London → Dubai" },
+            { from: "LHR", to: "KUL", label: "London → Kuala Lumpur" },
+            { from: "LHR", to: "BOM", label: "London → Mumbai" },
+          ].map(({ from, to, label }) => (
             <Link
               key={`${from}-${to}`}
-              href={`/status/${from}-${to}`}
-              className="bg-brand text-white font-medium py-3 rounded-full text-center hover:bg-brand-dark transition-all shadow-sm"
+              href={`/destinations/${from.toLowerCase()}-to-${to.toLowerCase()}`}
+              className="bg-brand text-white font-medium py-3 px-2 rounded-lg text-center hover:bg-brand-dark transition-all shadow-sm text-sm"
             >
               {from} → {to}
             </Link>
