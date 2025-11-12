@@ -1,25 +1,55 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 
-// Server-side autocomplete via Travelpayouts (set TP_TOKEN / TP_MARKET in env)
-export async function GET(req: NextRequest) {
-  const q = (req.nextUrl.searchParams.get("query") || "").trim();
-  if (!q || q.length < 2) return NextResponse.json({ items: [] }, { status: 200 });
+/**
+ * Travelpayouts Autocomplete API Proxy
+ * -------------------------------------
+ * Protects your API token and allows client-side autocomplete
+ * requests through /api/suggest?q=<term>
+ *
+ * Docs: https://www.travelpayouts.com/tools/api
+ */
 
-  const token = process.env.TP_TOKEN;
-  const market = (process.env.TP_MARKET || "en").toLowerCase();
-  if (!token) return NextResponse.json({ items: [] }, { status: 200 });
+export async function GET(request: Request) {
+  try {
+    const { searchParams } = new URL(request.url);
+    const q = searchParams.get("q") || "";
+   const token = process.env["TP_TOKEN"] as string;
 
-  const api = new URL("https://autocomplete.travelpayouts.com/jravia?v=3");
-  api.set("locale", market); api.set("q", q);
 
-  const r = await fetch(api);
-  if (!r.ok) return NextResponse.json({ items: [] }, { status: 200 });
+    if (!q.trim()) {
+      return NextResponse.json([], { status: 200 });
+    }
 
-  const data = (await r.json()) as any[];
-  const items = (Array.isArray(data) ? data : [])
-    .map((x) => ({ code: String(x.code || "").toUpperCase().slice(0, 4), name: String(x.name || "").slice(0, 120) }))
-    .filter((x) => /^[A-Z]{2,4}$/.test(x.code))
-    .slice(0, 50);
+    const url = `https://autocomplete.travelpayouts.com/places2?locale=en&types[]=airport&term=${encodeURIComponent(
+      q
+    )}`;
 
-  return NextResponse.json({ items }, { status: 200, headers: { "cache-control": "public, max-age=300" } });
+    const response = await fetch(url, {
+      headers: {
+        "X-Access-Token": token ?? "",
+      },
+      next: { revalidate: 60 }, // optional caching (1 minute)
+    });
+
+    if (!response.ok) {
+      console.error("Travelpayouts API error:", response.statusText);
+      return NextResponse.json(
+        { error: "Failed to fetch autocomplete data" },
+        { status: response.status }
+      );
+    }
+
+    const data = await response.json();
+
+    // Limit to 200 suggestions for performance
+    const limited = Array.isArray(data) ? data.slice(0, 200) : [];
+
+    return NextResponse.json(limited);
+  } catch (error) {
+    console.error("Autocomplete route error:", error);
+    return NextResponse.json(
+      { error: "Internal server error" },
+      { status: 500 }
+    );
+  }
 }

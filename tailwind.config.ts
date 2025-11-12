@@ -1,22 +1,22 @@
 import type { Config } from "tailwindcss";
 
-export default {
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}"
+  ],
   theme: {
     extend: {
       colors: {
-        brand: "#693AAE",
-        bg: "#EBD9FF",
-        card: "#FDFDFF",
-        text: "#10121A",
-        muted: "#6B6F76",
-        br: "#E1D2FF"
-      },
-      borderRadius: { hero: "24px", card: "16px" },
-      maxWidth: { rail: "1280px" }
+        brand: {
+          DEFAULT: "#693AAE", // your existing accent color
+          light: "#8B5CF6",
+          dark: "#4C1D95"
+        }
+      }
     }
   },
-  corePlugins: {},
   plugins: []
-} satisfies Config;
+};
 
+export default config;

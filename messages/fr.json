@@ -1,0 +1,109 @@
+{
+  "header": {
+    "home": "Accueil",
+    "flights": "Vols",
+    "hotels": "Hôtels",
+    "about": "À propos",
+    "privacy": "Confidentialité",
+    "cookies": "Cookies"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "es": "Español",
+    "ar": "العربية",
+    "th": "ไทย",
+    "select": "Sélectionner la langue"
+  },
+  "home": {
+    "heroTitle": "Trouvez votre prochaine aventure",
+    "missionTitle": "Notre mission",
+    "missionText1": "Recherche rapide. Résultats clairs. Réservation gérée par des partenaires de confiance. Nous vous montrons les vols et les tarifs de plusieurs sources, afin que vous obteniez toujours les meilleures options sans frais cachés. Vous payez toujours directement la compagnie aérienne ou le partenaire de voyage.",
+    "missionText2": "Utilisez des filtres intelligents ou des calendriers de prix mensuels pour comparer rapidement les tarifs. Réservez en toute confiance avec des partenaires comme Kiwi, Aviasales et Travelpayouts.",
+    "popularRoutesTitle": "Routes populaires"
+  },
+  "search": {
+    "from": "De",
+    "to": "À",
+    "depart": "Départ",
+    "return": "Retour",
+    "oneWay": "Aller simple",
+    "roundTrip": "Aller-retour",
+    "adults": "Adultes",
+    "children": "Enfants",
+    "infants": "Bébés",
+    "search": "Rechercher",
+    "loading": "Recherche en cours...",
+    "selectAirport": "Sélectionner un aéroport...",
+    "noResults": "Aucun aéroport trouvé"
+  },
+  "filters": {
+    "stops": "Escales",
+    "direct": "Direct",
+    "oneStop": "1 escale",
+    "twoPlusStops": "2+ escales",
+    "timeOfDay": "Heure de la journée",
+    "morning": "Matin",
+    "afternoon": "Après-midi",
+    "evening": "Soir",
+    "baggage": "Bagages",
+    "carryOnOnly": "Bagage à main uniquement",
+    "checkedBag": "Bagage en soute"
+  },
+  "flights": {
+    "noFlights": "Aucun vol trouvé",
+    "tryDifferent": "Essayez d'ajuster vos critères de recherche",
+    "transfers": "escales",
+    "direct": "Direct",
+    "viewDeal": "Voir l'offre",
+    "perPerson": "par personne"
+  },
+  "destinations": {
+    "flightsFrom": "Vols de {from} à {to}",
+    "findCheapFlights": "Trouvez des vols pas chers de {fromCity} à {toCity}",
+    "bestTimeTitle": "Meilleure période pour visiter",
+    "festivalsTitle": "Festivals et événements",
+    "highlightsTitle": "Principales attractions",
+    "tipsTitle": "Conseils de voyage",
+    "flightInfoTitle": "Informations sur les vols",
+    "searchFlightsButton": "Rechercher des vols {from} → {to}"
+  },
+  "privacy": {
+    "title": "Politique de confidentialité",
+    "lastUpdated": "Dernière mise à jour",
+    "intro": "Chez SabaiFly, nous nous engageons à protéger votre vie privée...",
+    "sections": {
+      "collection": "Informations que nous collectons",
+      "usage": "Comment nous utilisons vos informations",
+      "sharing": "Partage d'informations",
+      "rights": "Vos droits",
+      "cookies": "Cookies",
+      "children": "Confidentialité des enfants",
+      "contact": "Nous contacter"
+    }
+  },
+  "cookies": {
+    "title": "Politique en matière de cookies",
+    "intro": "Cette politique en matière de cookies explique comment SabaiFly utilise les cookies...",
+    "whatAreCookies": "Que sont les cookies?",
+    "howWeUse": "Comment nous utilisons les cookies",
+    "types": {
+      "necessary": "Cookies strictement nécessaires",
+      "analytics": "Cookies d'analyse et de performance",
+      "functional": "Cookies fonctionnels",
+      "advertising": "Cookies de ciblage/publicité"
+    },
+    "manage": "Comment gérer les cookies",
+    "contact": "Nous contacter"
+  },
+  "meta": {
+    "siteTitle": "SabaiFly",
+    "siteDescription": "Recherche de vols rapide et claire. Les partenaires nous paient lorsque vous réservez. Nous n'ajoutons jamais de frais à votre prix de billet.",
+    "homeTitle": "SabaiFly — Recherche de vols sereine",
+    "homeDescription": "Trouvez des vols rapidement. Résultats clairs. Réservez avec des partenaires de confiance. Pas de frais supplémentaires."
+  }
+}

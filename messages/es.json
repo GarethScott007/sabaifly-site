@@ -1,0 +1,109 @@
+{
+  "header": {
+    "home": "Inicio",
+    "flights": "Vuelos",
+    "hotels": "Hoteles",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "cookies": "Cookies"
+  },
+  "languages": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語",
+    "ko": "한국어",
+    "de": "Deutsch",
+    "fr": "Français",
+    "es": "Español",
+    "ar": "العربية",
+    "th": "ไทย",
+    "select": "Seleccionar idioma"
+  },
+  "home": {
+    "heroTitle": "Encuentra tu próxima aventura",
+    "missionTitle": "Nuestra misión",
+    "missionText1": "Búsqueda rápida. Resultados claros. Reserva gestionada por socios de confianza. Te mostramos vuelos y tarifas de múltiples fuentes, para que siempre obtengas las mejores opciones sin tarifas ocultas. Siempre pagas directamente a la aerolínea o al socio de viaje.",
+    "missionText2": "Usa filtros inteligentes o calendarios de precios mensuales para comparar tarifas rápidamente. Reserva con confianza con socios como Kiwi, Aviasales y Travelpayouts.",
+    "popularRoutesTitle": "Rutas populares"
+  },
+  "search": {
+    "from": "Desde",
+    "to": "Hasta",
+    "depart": "Salida",
+    "return": "Regreso",
+    "oneWay": "Solo ida",
+    "roundTrip": "Ida y vuelta",
+    "adults": "Adultos",
+    "children": "Niños",
+    "infants": "Bebés",
+    "search": "Buscar",
+    "loading": "Buscando...",
+    "selectAirport": "Seleccionar aeropuerto...",
+    "noResults": "No se encontraron aeropuertos"
+  },
+  "filters": {
+    "stops": "Escalas",
+    "direct": "Directo",
+    "oneStop": "1 escala",
+    "twoPlusStops": "2+ escalas",
+    "timeOfDay": "Hora del día",
+    "morning": "Mañana",
+    "afternoon": "Tarde",
+    "evening": "Noche",
+    "baggage": "Equipaje",
+    "carryOnOnly": "Solo equipaje de mano",
+    "checkedBag": "Equipaje facturado"
+  },
+  "flights": {
+    "noFlights": "No se encontraron vuelos",
+    "tryDifferent": "Intenta ajustar tus criterios de búsqueda",
+    "transfers": "escalas",
+    "direct": "Directo",
+    "viewDeal": "Ver oferta",
+    "perPerson": "por persona"
+  },
+  "destinations": {
+    "flightsFrom": "Vuelos de {from} a {to}",
+    "findCheapFlights": "Encuentra vuelos baratos de {fromCity} a {toCity}",
+    "bestTimeTitle": "Mejor época para visitar",
+    "festivalsTitle": "Festivales y eventos",
+    "highlightsTitle": "Principales atracciones",
+    "tipsTitle": "Consejos de viaje",
+    "flightInfoTitle": "Información de vuelos",
+    "searchFlightsButton": "Buscar vuelos {from} → {to}"
+  },
+  "privacy": {
+    "title": "Política de privacidad",
+    "lastUpdated": "Última actualización",
+    "intro": "En SabaiFly, estamos comprometidos a proteger su privacidad...",
+    "sections": {
+      "collection": "Información que recopilamos",
+      "usage": "Cómo usamos su información",
+      "sharing": "Compartir información",
+      "rights": "Sus derechos",
+      "cookies": "Cookies",
+      "children": "Privacidad de los niños",
+      "contact": "Contacto"
+    }
+  },
+  "cookies": {
+    "title": "Política de cookies",
+    "intro": "Esta Política de Cookies explica cómo SabaiFly usa cookies...",
+    "whatAreCookies": "¿Qué son las cookies?",
+    "howWeUse": "Cómo usamos las cookies",
+    "types": {
+      "necessary": "Cookies estrictamente necesarias",
+      "analytics": "Cookies de análisis y rendimiento",
+      "functional": "Cookies funcionales",
+      "advertising": "Cookies de segmentación/publicidad"
+    },
+    "manage": "Cómo gestionar las cookies",
+    "contact": "Contacto"
+  },
+  "meta": {
+    "siteTitle": "SabaiFly",
+    "siteDescription": "Búsqueda de vuelos rápida y clara. Los socios nos pagan cuando reservas. Nunca agregamos tarifas a tu precio de billete.",
+    "homeTitle": "SabaiFly — Búsqueda de vuelos tranquila",
+    "homeDescription": "Encuentra vuelos rápido. Resultados claros. Reserva con socios de confianza. Sin tarifas adicionales."
+  }
+}
