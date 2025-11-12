@@ -38,31 +38,34 @@ export default function Header({ className = "", locale }: HeaderProps) {
       </div>
 
       {/* Center – Navigation */}
-      <nav className="hidden md:flex items-center gap-6 lg:gap-10 text-sm lg:text-base font-medium text-white">
-        <Link href="/" className="hover:underline underline-offset-4 transition">
+      <nav className="hidden md:flex items-center gap-3 lg:gap-4 text-sm lg:text-base font-medium">
+        <Link
+          href="/"
+          className="px-3 py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30"
+        >
           {t("header.home")}
         </Link>
         <Link
           href="/flights"
-          className="hover:underline underline-offset-4 transition"
+          className="px-3 py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30"
         >
           {t("header.flights")}
         </Link>
         <Link
           href="/hotels"
-          className="hover:underline underline-offset-4 transition"
+          className="px-3 py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30"
         >
           {t("header.hotels")}
         </Link>
         <Link
           href="/about"
-          className="hover:underline underline-offset-4 transition"
+          className="px-3 py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30"
         >
           {t("header.about")}
         </Link>
         <Link
           href="/privacy"
-          className="hover:underline underline-offset-4 transition"
+          className="px-3 py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30"
         >
           {t("header.privacy")}
         </Link>
