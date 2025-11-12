@@ -17,7 +17,7 @@ export default function FlightResults({ flights, displayDates, searchParams }: F
   const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '670577';
 
   // Build Kiwi.com deep link with search parameters
-  const departDate = searchParams.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
+  const departDate: string = searchParams.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
   const returnDate = searchParams.returnDate;
 
   // Kiwi.com uses format: dateFrom=DD/MM/YYYY&dateTo=DD/MM/YYYY
