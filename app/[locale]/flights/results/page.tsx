@@ -14,7 +14,11 @@ async function getFlights(params: SearchParams): Promise<TravelpayoutsApiRespons
   // Use provided date or default to tomorrow
   const departureDate = params.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
 
-  const url = `${baseUrl}/api/live?origin=${params.from}&destination=${params.to}&departure_date=${departureDate}&currency=${currency}`;
+  // Build URL with return date if provided
+  let url = `${baseUrl}/api/live?origin=${params.from}&destination=${params.to}&departure_date=${departureDate}&currency=${currency}`;
+  if (params.returnDate) {
+    url += `&return_date=${params.returnDate}`;
+  }
 
   console.log('Fetching flights with URL:', url);
   console.log('Search params:', params);
