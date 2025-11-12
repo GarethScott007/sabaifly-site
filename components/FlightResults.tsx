@@ -4,16 +4,29 @@ import { useState, useMemo } from "react";
 import FilterSidebar, { FilterState } from "@/components/FilterSidebar";
 import MobileFilterDrawer from "@/components/MobileFilterDrawer";
 import { TIME_RANGES, AFFILIATE_LINKS } from "@/lib/constants";
-import { TravelpayoutsFlight } from "@/lib/types";
+import { TravelpayoutsFlight, SearchParams } from "@/lib/types";
 
 interface FlightResultsProps {
   flights: TravelpayoutsFlight[];
   displayDates: string[];
+  searchParams: SearchParams;
 }
 
-export default function FlightResults({ flights, displayDates }: FlightResultsProps) {
+export default function FlightResults({ flights, displayDates, searchParams }: FlightResultsProps) {
   // Get the affiliate marker from environment variables
   const affiliateMarker = process.env["NEXT_PUBLIC_TP_MARKER"] || '670577';
+
+  // Build Kiwi.com deep link with search parameters
+  const departDate = searchParams.departDate || new Date(Date.now() + 86400000).toISOString().split('T')[0];
+  const returnDate = searchParams.returnDate;
+
+  // Kiwi.com uses format: dateFrom=DD/MM/YYYY&dateTo=DD/MM/YYYY
+  const formatDateForKiwi = (date: string) => {
+    const [year, month, day] = date.split('-');
+    return `${day}/${month}/${year}`;
+  };
+
+  const kiwiSearchUrl = `https://www.kiwi.com/deep?affilid=670577&from=${searchParams.from}&to=${searchParams.to}&departure=${formatDateForKiwi(departDate)}${returnDate ? `&return=${formatDateForKiwi(returnDate)}` : ''}&currency=GBP`;
 
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
@@ -102,7 +115,7 @@ export default function FlightResults({ flights, displayDates }: FlightResultsPr
               Search hundreds of airlines and travel sites on Kiwi.com for the best deals
             </p>
             <a
-              href={`https://tp.media/click?shmarker=${affiliateMarker}&promo_id=3413&source_type=link&type=click&campaign_id=111&trs=470518`}
+              href={kiwiSearchUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition font-medium text-sm"

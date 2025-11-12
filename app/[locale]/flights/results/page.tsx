@@ -59,7 +59,7 @@ export default async function Results({ searchParams }: { searchParams: Promise<
 
   return (
     <Suspense fallback={<SkeletonFlightCard />}>
-      <FlightResults flights={sorted} displayDates={displayDates} />
+      <FlightResults flights={sorted} displayDates={displayDates} searchParams={params} />
     </Suspense>
   );
 }
