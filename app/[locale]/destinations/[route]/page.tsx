@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import VisaEmbassyInfo from "@/components/VisaEmbassyInfo";
 
 // Travel information database
 const DESTINATIONS = {
@@ -356,6 +357,9 @@ export default async function DestinationPage({ params }: RouteParams) {
           Complete travel guide for your flight from {destination.from} to {destination.to}
         </p>
       </div>
+
+      {/* Visa & Embassy Information */}
+      <VisaEmbassyInfo fromAirport={destination.from} toAirport={destination.to} />
 
       {/* Search Flights CTA */}
       <div className="bg-brand/10 border-2 border-brand rounded-lg p-6 mb-8">

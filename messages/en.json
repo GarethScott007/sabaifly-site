@@ -100,6 +100,27 @@
       "diverted": "Diverted"
     }
   },
+  "visaInfo": {
+    "title": "Visa & Embassy Information",
+    "subtitle": "Essential travel documentation and support services",
+    "requirements": "Visa Requirements for UK Citizens",
+    "status": "Status",
+    "visaFree": "Visa Not Required",
+    "visaRequired": "Visa Required",
+    "type": "Type",
+    "duration": "Maximum Stay",
+    "officialInfo": "Official Visa Information →",
+    "entryRequirements": "Entry Requirements",
+    "passportValidity": "Passport Validity Required",
+    "fullRequirements": "View Full Entry Requirements →",
+    "embassyInUK": "{country} Embassy in the UK",
+    "ukEmbassyIn": "British Embassy in {country}",
+    "visitWebsite": "Visit Official Website",
+    "travelAdvisory": "UK Government Travel Advisory",
+    "travelAdvisoryText": "Check the latest travel advice, safety information, and entry requirements for {country}",
+    "viewAdvisory": "View Travel Advisory",
+    "disclaimer": "Information is provided for general guidance only. Always verify current requirements with official sources before traveling."
+  },
   "privacy": {
     "title": "Privacy Policy",
     "lastUpdated": "Last updated",
