@@ -103,7 +103,9 @@
   "visaInfo": {
     "title": "Visa & Embassy Information",
     "subtitle": "Essential travel documentation and support services",
+    "forTravelers": "For travelers from {from} to {to}",
     "requirements": "Visa Requirements for UK Citizens",
+    "requirementsFor": "Visa Requirements for {country} Citizens",
     "status": "Status",
     "visaFree": "Visa Not Required",
     "visaRequired": "Visa Required",
@@ -115,11 +117,15 @@
     "fullRequirements": "View Full Entry Requirements →",
     "embassyInUK": "{country} Embassy in the UK",
     "ukEmbassyIn": "British Embassy in {country}",
+    "yourEmbassyIn": "{from} Embassy in {to}",
+    "theirEmbassyIn": "{from} Embassy in {to}",
     "visitWebsite": "Visit Official Website",
-    "travelAdvisory": "UK Government Travel Advisory",
+    "travelAdvisory": "Travel Advisory",
     "travelAdvisoryText": "Check the latest travel advice, safety information, and entry requirements for {country}",
     "viewAdvisory": "View Travel Advisory",
-    "disclaimer": "Information is provided for general guidance only. Always verify current requirements with official sources before traveling."
+    "disclaimer": "Information is provided for general guidance only. Always verify current requirements with official sources before traveling.",
+    "dataUnavailable": "Visa Information Currently Unavailable",
+    "checkOfficialSources": "Please check with official government sources for visa requirements and embassy information for this destination."
   },
   "privacy": {
     "title": "Privacy Policy",
