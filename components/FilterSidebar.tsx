@@ -8,7 +8,12 @@ export interface FilterState {
   baggage: string[];
 }
 
-export default function FilterSidebar({ onChange }: { onChange: (f: FilterState) => void }) {
+interface FilterSidebarProps {
+  onChange: (f: FilterState) => void;
+  showAdditionalServices?: boolean;
+}
+
+export default function FilterSidebar({ onChange, showAdditionalServices = true }: FilterSidebarProps) {
   const [filters, setFilters] = useState<FilterState>({
     stops: [],
     timeOfDay: [],
@@ -76,6 +81,42 @@ export default function FilterSidebar({ onChange }: { onChange: (f: FilterState)
           ))}
         </div>
       </div>
+
+      {/* Complete Your Trip Section */}
+      {showAdditionalServices && (
+        <div className="mt-6 pt-6 border-t border-gray-200">
+          <h4 className="font-semibold mb-3 text-brand text-sm">Complete Your Trip</h4>
+          <div className="space-y-2">
+            <a
+              href={`https://tp.media/r?marker=${process.env["NEXT_PUBLIC_TP_MARKER"] || "670577"}&trs=470518&p=5104&u=https%3A%2F%2Fwww.booking.com&campaign_id=200`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2.5 bg-gradient-to-r from-brand/10 to-brand-light/10 hover:from-brand/20 hover:to-brand-light/20 rounded-lg transition text-brand font-medium text-sm border border-brand/20"
+            >
+              <span className="text-lg">🏨</span>
+              <span>Hotels</span>
+            </a>
+            <a
+              href={`https://tp.media/r?marker=${process.env["NEXT_PUBLIC_TP_MARKER"] || "670577"}&trs=470518&p=647&u=https%3A%2F%2Fkiwitaxi.com&campaign_id=1`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2.5 bg-gradient-to-r from-brand/10 to-brand-light/10 hover:from-brand/20 hover:to-brand-light/20 rounded-lg transition text-brand font-medium text-sm border border-brand/20"
+            >
+              <span className="text-lg">🚕</span>
+              <span>Airport Taxi</span>
+            </a>
+            <a
+              href={`https://tp.media/r?marker=${process.env["NEXT_PUBLIC_TP_MARKER"] || "670577"}&trs=470518&p=5996&u=https%3A%2F%2Fgetrentacar.com&campaign_id=222`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2.5 bg-gradient-to-r from-brand/10 to-brand-light/10 hover:from-brand/20 hover:to-brand-light/20 rounded-lg transition text-brand font-medium text-sm border border-brand/20"
+            >
+              <span className="text-lg">🚗</span>
+              <span>Car Rental</span>
+            </a>
+          </div>
+        </div>
+      )}
     </aside>
   );
 }

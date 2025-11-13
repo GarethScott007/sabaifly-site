@@ -127,36 +127,6 @@ export default function FlightResults({ flights, displayDates, searchParams }: F
           </div>
         )}
 
-        {/* Additional Services Banner */}
-        <div className="mb-6 p-4 bg-gradient-to-r from-brand to-brand-light rounded-lg shadow-md">
-          <h3 className="text-white font-semibold mb-3 text-center">Complete Your Trip</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-            <a
-              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=5104&u=https%3A%2F%2Fwww.booking.com&campaign_id=200`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
-            >
-              🏨 Hotels
-            </a>
-            <a
-              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=647&u=https%3A%2F%2Fkiwitaxi.com&campaign_id=1`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
-            >
-              🚕 Airport Taxi
-            </a>
-            <a
-              href={`https://tp.media/r?marker=${affiliateMarker}&trs=470518&p=5996&u=https%3A%2F%2Fgetrentacar.com&campaign_id=222`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 px-4 py-3 bg-white rounded-lg hover:shadow-lg transition text-brand font-medium text-sm"
-            >
-              🚗 Car Rental
-            </a>
-          </div>
-        </div>
         {/* Results count */}
         <div className="mb-4 text-sm text-gray-600">
           {filteredFlights.length === flights.length ? (

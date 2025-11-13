@@ -1,9 +1,9 @@
 {
   "header": {
     "home": "Home",
-    "flights": "Flights",
+    "flights": "Search Flights",
     "hotels": "Hotels",
-    "about": "About",
+    "liveFlights": "Live Flights",
     "privacy": "Privacy",
     "cookies": "Cookies"
   },
@@ -71,6 +71,34 @@
     "tipsTitle": "Travel Tips",
     "flightInfoTitle": "Flight Information",
     "searchFlightsButton": "Search Flights {from} → {to}"
+  },
+  "liveFlights": {
+    "title": "Live Flight Tracker",
+    "subtitle": "Track any flight in real-time",
+    "searchPlaceholder": "Enter flight number (e.g., BA123, EK203)",
+    "searchButton": "Track Flight",
+    "flightNumber": "Flight Number",
+    "status": "Status",
+    "airline": "Airline",
+    "aircraft": "Aircraft",
+    "departure": "Departure",
+    "arrival": "Arrival",
+    "scheduled": "Scheduled",
+    "estimated": "Estimated",
+    "actual": "Actual",
+    "loading": "Tracking flight...",
+    "notFound": "Flight not found. Please check the flight number and try again.",
+    "error": "Unable to fetch flight data. Please try again later.",
+    "enterFlightNumber": "Enter a flight number to track its live status",
+    "popularFlights": "Popular Routes to Track",
+    "statuses": {
+      "scheduled": "Scheduled",
+      "active": "In Flight",
+      "landed": "Landed",
+      "cancelled": "Cancelled",
+      "incident": "Incident",
+      "diverted": "Diverted"
+    }
   },
   "privacy": {
     "title": "Privacy Policy",

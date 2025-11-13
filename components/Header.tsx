@@ -46,22 +46,24 @@ export default function Header({ className = "", locale }: HeaderProps) {
           {t("header.home")}
         </Link>
         <Link
-          href="/flights"
+          href="/"
           className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.flights")}
         </Link>
-        <Link
-          href="/hotels"
+        <a
+          href={`https://tp.media/r?marker=${process.env["NEXT_PUBLIC_TP_MARKER"] || "670577"}&trs=470518&p=5104&u=https%3A%2F%2Fwww.booking.com&campaign_id=200`}
+          target="_blank"
+          rel="noopener noreferrer"
           className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
           {t("header.hotels")}
-        </Link>
+        </a>
         <Link
-          href="/about"
+          href="/live-flights"
           className="px-1.5 sm:px-2 md:px-3 py-1 md:py-1.5 rounded-md text-white bg-white/10 hover:bg-white/20 transition-all border border-white/30 whitespace-nowrap"
         >
-          {t("header.about")}
+          {t("header.liveFlights")}
         </Link>
         <Link
           href="/privacy"
