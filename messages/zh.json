@@ -118,5 +118,13 @@
     "DXB": "迪拜",
     "KUL": "吉隆坡",
     "BOM": "孟买"
+  },
+  "visaInfo": {
+    "forTravelers": "为来自{from}前往{to}的旅行者",
+    "requirementsFor": "{country}公民的签证要求",
+    "yourEmbassyIn": "{from}在{to}的大使馆",
+    "theirEmbassyIn": "{from}在{to}的大使馆",
+    "dataUnavailable": "签证信息目前不可用",
+    "checkOfficialSources": "请查阅官方政府部门了解该目的地的签证要求和大使馆信息。"
   }
 }

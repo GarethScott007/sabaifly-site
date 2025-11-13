@@ -118,5 +118,13 @@
     "DXB": "دبي",
     "KUL": "كوالالمبور",
     "BOM": "مومباي"
+  },
+  "visaInfo": {
+    "forTravelers": "للمسافرين من {from} إلى {to}",
+    "requirementsFor": "متطلبات التأشيرة لمواطني {country}",
+    "yourEmbassyIn": "السفارة {from} في {to}",
+    "theirEmbassyIn": "السفارة {from} في {to}",
+    "dataUnavailable": "معلومات التأشيرة غير متاحة حالياً",
+    "checkOfficialSources": "يرجى الاستفسار من مصادر حكومية رسمية للحصول على معلومات متطلبات التأشيرة ومعلومات السفارات لهذا الوجهة."
   }
 }

@@ -118,5 +118,13 @@
     "DXB": "Dubai",
     "KUL": "Kuala Lumpur",
     "BOM": "Mumbai"
+  },
+  "visaInfo": {
+    "forTravelers": "Für Reisende von {from} nach {to}",
+    "requirementsFor": "Visabestimmungen für {country} Bürger",
+    "yourEmbassyIn": "Botschaft von {from} in {to}",
+    "theirEmbassyIn": "Botschaft von {from} in {to}",
+    "dataUnavailable": "Visainformationen derzeit nicht verfügbar",
+    "checkOfficialSources": "Bitte wenden Sie sich an die zuständigen Behörden, um Informationen zu Visabestimmungen und Botschaften für dieses Reiseziel zu erhalten."
   }
 }

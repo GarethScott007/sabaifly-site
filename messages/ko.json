@@ -118,5 +118,13 @@
     "DXB": "두바이",
     "KUL": "쿠알라룸푸르",
     "BOM": "뭄바이"
+  },
+  "visaInfo": {
+    "forTravelers": "{from}에서 {to}로 가는 여행자들을 위해",
+    "requirementsFor": "{country} 시민을 위한 비자 요건",
+    "yourEmbassyIn": "{to}의 {from} 대사관",
+    "theirEmbassyIn": "{to}의 {from} 대사관",
+    "dataUnavailable": "비자 정보를 현재 사용할 수 없습니다",
+    "checkOfficialSources": "이 목적지의 비자 요건 및 대사관 정보는 공식 정부 기관에 확인하시기 바랍니다."
   }
 }

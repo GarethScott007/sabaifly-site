@@ -118,5 +118,13 @@
     "DXB": "ドバイ",
     "KUL": "クアラルンプール",
     "BOM": "ムンバイ"
+  },
+  "visaInfo": {
+    "forTravelers": "{from}から{to}への旅行者向け",
+    "requirementsFor": "{country}市民のビザ要件",
+    "yourEmbassyIn": "{from}の{to}における大使館",
+    "theirEmbassyIn": "{from}の{to}における大使館",
+    "dataUnavailable": "ビザ情報は現在利用できません",
+    "checkOfficialSources": "この目的地のビザ要件と大使館情報については、公式な政府機関にご確認ください。"
   }
 }
