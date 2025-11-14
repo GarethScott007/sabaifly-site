@@ -81,7 +81,7 @@ export default function FlightSearchCTA({
             </div>
           </div>
           <button
-            onClick={() => handleClick("Kiwi.com", bookingOptions[0].url)}
+            onClick={() => handleClick("Kiwi.com", bookingOptions[0]?.url || "#")}
             className="bg-white text-brand px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all shadow-md whitespace-nowrap"
           >
             Search Flights →

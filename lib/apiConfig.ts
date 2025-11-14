@@ -21,8 +21,8 @@ export const API_CONFIG = {
   // ✅ Travelpayouts (ACTIVE - You have this!)
   travelpayouts: {
     enabled: true,
-    token: process.env.TP_TOKEN || "1f932d3bd3f14daec9c428256567e8e6",
-    marker: process.env.TP_MARKER || "670577",
+    token: process.env["TP_TOKEN"] || "1f932d3bd3f14daec9c428256567e8e6",
+    marker: process.env["TP_MARKER"] || "670577",
     monetization: "affiliate", // You earn 1-5% commission
     cost: "$0/month",
     setupTime: "Done ✅",
@@ -31,7 +31,7 @@ export const API_CONFIG = {
   // ⏳ Kiwi.com (Easy to add - just sign up)
   kiwi: {
     enabled: false, // Set to true when you get API key
-    affiliateId: process.env.KIWI_AFFILIATE_ID || "sabaifly", // Get this from Kiwi
+    affiliateId: process.env["KIWI_AFFILIATE_ID"] || "sabaifly", // Get this from Kiwi
     monetization: "affiliate", // You earn 2-5% commission
     cost: "$0/month",
     setupTime: "1 hour (just sign up)",
@@ -40,7 +40,7 @@ export const API_CONFIG = {
   // ⏳ Skyscanner (Need approval)
   skyscanner: {
     enabled: false, // Set to true when approved
-    partnerId: process.env.SKYSCANNER_PARTNER_ID || "",
+    partnerId: process.env["SKYSCANNER_PARTNER_ID"] || "",
     monetization: "affiliate", // You earn 1-3% commission
     cost: "$0/month",
     setupTime: "1-2 days (application approval)",
@@ -49,7 +49,7 @@ export const API_CONFIG = {
   // 🚀 Duffel (RECOMMENDED - Best option!)
   duffel: {
     enabled: false, // Set to true when you're ready
-    apiKey: process.env.DUFFEL_API_KEY || "",
+    apiKey: process.env["DUFFEL_API_KEY"] || "",
     monetization: "markup", // You add $10-50 per booking, keep 100%!
     cost: "$0.50-1.50 per COMPLETED booking (only if user books!)",
     setupTime: "3-5 days (easy integration)",
@@ -59,8 +59,8 @@ export const API_CONFIG = {
   // 💰 Amadeus (Enterprise - not worth it yet)
   amadeus: {
     enabled: false,
-    apiKey: process.env.AMADEUS_API_KEY || "",
-    apiSecret: process.env.AMADEUS_API_SECRET || "",
+    apiKey: process.env["AMADEUS_API_KEY"] || "",
+    apiSecret: process.env["AMADEUS_API_SECRET"] || "",
     monetization: "markup", // You add markup to prices
     cost: "$1000 deposit + $0.01 per API call",
     setupTime: "1-2 weeks",

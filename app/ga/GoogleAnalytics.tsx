@@ -13,10 +13,10 @@ declare global {
 export function GoogleAnalytics() {
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const GA_ID = process.env["NEXT_PUBLIC_GA_ID"];
-      if (GA_ID && !window.gtag) {
+      const GA4_ID = process.env["NEXT_PUBLIC_GA4_ID"];
+      if (GA4_ID && !window.gtag) {
         const script = document.createElement("script");
-        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA4_ID}`;
         script.async = true;
         document.head.appendChild(script);
 
@@ -26,7 +26,9 @@ export function GoogleAnalytics() {
         };
 
         window.gtag("js", new Date());
-        window.gtag("config", GA_ID);
+        window.gtag("config", GA4_ID, {
+          page_path: window.location.pathname,
+        });
       }
     }
   }, []);

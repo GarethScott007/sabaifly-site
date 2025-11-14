@@ -155,7 +155,7 @@ function isAsianRoute(from: string, to: string): boolean {
 }
 
 function isLongHaulRoute(from: string, to: string): boolean {
-  const intercontinentalPairs = [
+  const intercontinentalPairs: [string, string][] = [
     ["LON", "BKK"], ["NYC", "TYO"], ["LAX", "SIN"], ["DXB", "JFK"],
   ];
 
