@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import VisaEmbassyInfoGlobal from "@/components/VisaEmbassyInfoGlobal";
+import FlightSearchCTA from "@/components/FlightSearchCTA";
 
 // Travel information database
 const DESTINATIONS = {
@@ -347,7 +348,7 @@ export default async function DestinationPage({ params }: RouteParams) {
   }
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-12">
+    <main className="max-w-7xl mx-auto px-6 py-12">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -358,23 +359,19 @@ export default async function DestinationPage({ params }: RouteParams) {
         </p>
       </div>
 
+      {/* TOP SEARCH CTA - Multiple options! */}
+      <div className="mb-8">
+        <FlightSearchCTA
+          from={destination.from}
+          to={destination.to}
+          variant="full"
+          showPriceIndicator={true}
+          estimatedPrice="$599"
+        />
+      </div>
+
       {/* Visa & Embassy Information */}
       <VisaEmbassyInfoGlobal toAirport={destination.to} />
-
-      {/* Search Flights CTA */}
-      <div className="bg-brand/10 border-2 border-brand rounded-lg p-6 mb-8">
-        <h2 className="text-2xl font-semibold text-brand mb-3">Find Flights</h2>
-        <p className="text-gray-700 mb-4">
-          Ready to book? Search for the best deals on flights from {destination.fromCity} to{" "}
-          {destination.toCity}.
-        </p>
-        <Link
-          href={`/flights/results?from=${destination.from}&to=${destination.to}`}
-          className="inline-block bg-brand text-white px-8 py-3 rounded-full font-semibold hover:bg-brand-dark transition"
-        >
-          Search Flights →
-        </Link>
-      </div>
 
       {/* Flight Information */}
       <section className="mb-8">
@@ -446,21 +443,15 @@ export default async function DestinationPage({ params }: RouteParams) {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <div className="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-3">
-          Ready to explore {destination.toCity}?
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Compare prices from multiple airlines and book your {destination.fromCity} to{" "}
-          {destination.toCity} flight today.
-        </p>
-        <Link
-          href={`/flights/results?from=${destination.from}&to=${destination.to}`}
-          className="inline-block bg-brand text-white px-10 py-4 rounded-full font-semibold hover:bg-brand-dark transition text-lg"
-        >
-          Find Cheapest Flights
-        </Link>
+      {/* BOTTOM SEARCH CTA - Multiple options! */}
+      <div className="mt-12">
+        <FlightSearchCTA
+          from={destination.from}
+          to={destination.to}
+          variant="full"
+          showPriceIndicator={true}
+          estimatedPrice="$599"
+        />
       </div>
     </main>
   );
