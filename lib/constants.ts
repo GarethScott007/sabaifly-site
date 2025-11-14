@@ -177,6 +177,7 @@ export const POPULAR_ROUTES = [
 // Environment variables (with type safety)
 export const ENV = {
   TP_TOKEN: process.env["TP_TOKEN"],
+  TP_MARKER: process.env["TP_MARKER"] || "670577",
   TP_MARKET: process.env["TP_MARKET"] || "en",
   GA4_ID: process.env["GA4_ID"],
   PRODUCTION_DOMAIN: "www.sabaifly.com",
