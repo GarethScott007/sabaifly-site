@@ -70,7 +70,1920 @@
     "highlightsTitle": "Principales atracciones",
     "tipsTitle": "Consejos para ahorrar dinero en viajes",
     "flightInfoTitle": "Información de vuelos",
-    "searchFlightsButton": "Buscar vuelos {from} → {to}"
+    "searchFlightsButton": "Buscar vuelos {from} → {to}",
+    "lon-to-bkk": {
+      "bestTime": "November to febrero (cool and dry season)",
+      "festivals": [
+        "Songkran (Thai New Year) - abril 13-15",
+        "Loy Krathong - November (full moon)",
+        "Chinese New Year - enero/febrero"
+      ],
+      "highlights": [
+        "Grand Palace and Wat Phra Kaew",
+        "Floating markets and street food",
+        "Chatuchak Weekend Market",
+        "Rooftop bars and nightlife",
+        "Day trips to Ayutthaya"
+      ],
+      "tips": [
+        "visa exempt for UK passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead for mejor flight prices",
+        "Evitar rainy season (mayo-October) for better weather",
+        "Bangkok is a major hub for connecting to Thai islands"
+      ]
+    },
+    "lon-to-nyc": {
+      "bestTime": "abril-junio and September-November (spring/fall)",
+      "festivals": [
+        "New Year's Eve in Times Square - December 31",
+        "Thanksgiving Day Parade - November",
+        "St. Patrick's Day Parade - marzo 17",
+        "Fourth of July Fireworks - July 4"
+      ],
+      "highlights": [
+        "Statue of Liberty and Ellis Island",
+        "Central Park and Metropolitan Museum",
+        "Brooklyn Bridge and DUMBO",
+        "Broadway shows and Times Square",
+        "9/11 Memorial and One World Observatory"
+      ],
+      "tips": [
+        "ESTA visa waiver required (apply online)",
+        "Cheapest flights: enero-marzo (Evitar holidays)",
+        "Most expensive: summer and Christmas period",
+        "Consider Newark (EWR) for potentially cheaper fares"
+      ]
+    },
+    "lon-to-sin": {
+      "bestTime": "febrero to abril (less rain, Chinese New Year)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Deepavali (Festival of Lights) - October/November",
+        "Singapore Food Festival - July",
+        "Great Singapore Sale - junio-July"
+      ],
+      "highlights": [
+        "Marina Bay Sands and Gardens by the Bay",
+        "Sentosa Island beaches and attractions",
+        "Hawker centers for authentic local food",
+        "Chinatown, Little India, Arab Street",
+        "Universal Studios and Night Safari"
+      ],
+      "tips": [
+        "visa exempt for UK passport holders (up to 90 days)",
+        "Reservar 3-4 months ahead for mejor prices",
+        "Evitar monsoon season (November-enero) for less rain",
+        "Perfect stopover for Australia/New Zealand trips"
+      ]
+    },
+    "lon-to-dxb": {
+      "bestTime": "November to marzo (pleasant weather, 20-30°C)",
+      "festivals": [
+        "Dubai Shopping Festival - enero-febrero",
+        "Dubai Food Festival - febrero-marzo",
+        "Dubai World Cup (horse racing) - marzo",
+        "Ramadan celebrations - Varies by lunar calendar"
+      ],
+      "highlights": [
+        "Burj Khalifa and Dubai Mall",
+        "Palm Jumeirah and Atlantis resort",
+        "Dubai Marina and JBR beach",
+        "Gold and Spice Souks in Old Dubai",
+        "Desert safari and sand dunes"
+      ],
+      "tips": [
+        "visa on arrival for UK passport holders",
+        "Evitar summer (mayo-September) - extremely hot",
+        "Shopping Festival offers great deals",
+        "Modest dress required in traditional areas"
+      ]
+    },
+    "lon-to-syd": {
+      "bestTime": "September to November (spring) or marzo to mayo (autumn)",
+      "festivals": [
+        "Sydney Festival - enero",
+        "Vivid Sydney (light festival) - mayo-junio",
+        "Sydney Gay and Lesbian Mardi Gras - febrero-marzo",
+        "New Year's Eve Fireworks - December 31"
+      ],
+      "highlights": [
+        "Sydney Opera House and Harbour Bridge",
+        "Bondi Beach and coastal walks",
+        "The Rocks historic district",
+        "Taronga Zoo with harbour views",
+        "Blue Mountains day trips"
+      ],
+      "tips": [
+        "Electronic visa (eVisitor) required - free and instant",
+        "Reservar 3-6 months ahead for mejor long-haul prices",
+        "Summer (Dec-Feb) is peak season and most expensive",
+        "Consider stopover in Singapore or Dubai"
+      ]
+    },
+    "lon-to-lax": {
+      "bestTime": "marzo-mayo or September-November (spring/fall)",
+      "festivals": [
+        "Rose Parade - enero 1",
+        "Coachella Music Festival - abril",
+        "Fourth of July celebrations - July 4",
+        "LA Film Festival - September"
+      ],
+      "highlights": [
+        "Hollywood Walk of Fame and TCL Chinese Theatre",
+        "Santa Monica Pier and Venice Beach",
+        "Griffith Observatory and Hollywood Sign",
+        "Universal Studios and Disneyland",
+        "Getty Center and LACMA museums"
+      ],
+      "tips": [
+        "ESTA visa waiver required (apply online)",
+        "Cheapest flights: enero-marzo (winter)",
+        "Car rental recommended - LA is spread out",
+        "Consider nearby Orange County or Burbank airports"
+      ]
+    },
+    "lon-to-tyo": {
+      "bestTime": "marzo-mayo (cherry blossoms) or September-November (autumn)",
+      "festivals": [
+        "Cherry Blossom Season - Late marzo to early abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida River Fireworks - July",
+        "Tokyo Marathon - marzo"
+      ],
+      "highlights": [
+        "Shibuya Crossing and Harajuku fashion",
+        "Senso-ji Temple in Asakusa",
+        "Tokyo Skytree and teamLab Borderless",
+        "Tsukiji Outer Market for sushi",
+        "Mount Fuji day trips"
+      ],
+      "tips": [
+        "visa exempt for UK passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for cherry blossom season",
+        "Evitar Golden Week (very crowded and expensive)",
+        "Get a JR Pass if planning to visit other cities"
+      ]
+    },
+    "lon-to-hkg": {
+      "bestTime": "October to December (autumn - comfortable weather)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Hong Kong Arts Festival - febrero-marzo",
+        "Dragon Boat Festival - junio"
+      ],
+      "highlights": [
+        "Victoria Peak and Peak Tram",
+        "Star Ferry and Symphony of Lights",
+        "Temple Street Night Market",
+        "Lantau Island and Big Buddha",
+        "Dim sum in traditional tea houses"
+      ],
+      "tips": [
+        "visa exempt for UK passport holders (up to 180 days)",
+        "Reservar 2-3 months ahead for mejor prices",
+        "Evitar typhoon season (July-September)",
+        "Octopus card essential for public transport"
+      ]
+    },
+    "bkk-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Notting Hill Carnival - August",
+        "Wimbledon Tennis Championships - junio-July",
+        "Lord Mayor's Show - November",
+        "Edinburgh Fringe Festival - August"
+      ],
+      "highlights": [
+        "Tower of London and Tower Bridge",
+        "British Museum and National Gallery",
+        "Buckingham Palace and Big Ben",
+        "West End theatre shows",
+        "Camden Market and Covent Garden"
+      ],
+      "tips": [
+        "visa required for Thai passport holders (apply in advance)",
+        "Reservar 2-3 months ahead for summer season",
+        "London is expensive - budget accordingly",
+        "Oyster card saves money on transport"
+      ]
+    },
+    "sin-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Notting Hill Carnival - August",
+        "Chelsea Flower Show - mayo",
+        "London Fashion Week - febrero and September",
+        "Bonfire Night - November 5"
+      ],
+      "highlights": [
+        "Tower of London and Crown Jewels",
+        "British Museum and Tate Modern",
+        "Hyde Park and Kensington Gardens",
+        "Borough Market and street food",
+        "Day trips to Stonehenge and Bath"
+      ],
+      "tips": [
+        "visa required for Singapore passport holders",
+        "Reservar flights 3-4 months ahead",
+        "Pack layers - weather is unpredictable",
+        "Free museums make London budget-friendly"
+      ]
+    },
+    "tyo-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Trooping the Colour - junio",
+        "Wimbledon Championships - junio-July",
+        "Pride in London - junio",
+        "New Year's Eve fireworks - December 31"
+      ],
+      "highlights": [
+        "Westminster Abbey and Parliament",
+        "London Eye and South Bank",
+        "Harrods and Oxford Street shopping",
+        "Hampton Court Palace",
+        "Harry Potter Warner Bros Studio Tour"
+      ],
+      "tips": [
+        "visa required for Japanese passport holders",
+        "Reservar 3-4 months ahead for peak season",
+        "Tipping culture different from Japan",
+        "Contactless payment widely accepted"
+      ]
+    },
+    "nyc-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Wimbledon Tennis - junio-July",
+        "Notting Hill Carnival - August",
+        "London Marathon - abril",
+        "Thames Festival - September"
+      ],
+      "highlights": [
+        "Tower of London and Tower Bridge",
+        "British Museum and National Gallery",
+        "West End theatre district",
+        "Camden Market and Portobello Road",
+        "Royal parks and palaces"
+      ],
+      "tips": [
+        "ESTA not needed - UK visa required for longer stays",
+        "Reservar 2-3 months ahead for mejor prices",
+        "Red-eye flights common - arrive morning UK time",
+        "London expensive compared to NYC"
+      ]
+    },
+    "nyc-to-par": {
+      "bestTime": "abril-junio or September-October (spring/fall)",
+      "festivals": [
+        "Bastille Day - July 14",
+        "Paris Fashion Week - febrero and September",
+        "Nuit Blanche - October",
+        "Fête de la Musique - junio 21"
+      ],
+      "highlights": [
+        "Eiffel Tower and Champ de Mars",
+        "Louvre Museum and Mona Lisa",
+        "Notre-Dame Cathedral and Sainte-Chapelle",
+        "Montmartre and Sacré-Cœur",
+        "Versailles Palace day trips"
+      ],
+      "tips": [
+        "Schengen visa mayo be required (check passport)",
+        "Reservar 2-3 months ahead for mejor fares",
+        "Learn basic French phrases - appreciated by locals",
+        "Paris Museum Pass saves money and time"
+      ]
+    },
+    "nyc-to-tyo": {
+      "bestTime": "marzo-mayo (cherry blossoms) or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Tokyo Olympics venues and attractions",
+        "Sumida River Fireworks - July"
+      ],
+      "highlights": [
+        "Shibuya Crossing and Harajuku",
+        "Senso-ji Temple in Asakusa",
+        "Tsukiji Outer Market",
+        "Tokyo Skytree and teamLab",
+        "Mount Fuji excursions"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 3-4 months ahead for cherry blossom season",
+        "Jet lag is significant - plan accordingly",
+        "JR Pass recommended for multiple cities"
+      ]
+    },
+    "sfo-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Wimbledon Tennis - junio-July",
+        "Notting Hill Carnival - August",
+        "Chelsea Flower Show - mayo",
+        "London Film Festival - October"
+      ],
+      "highlights": [
+        "Tower of London and Crown Jewels",
+        "British Museum and Tate Modern",
+        "Buckingham Palace and Hyde Park",
+        "West End shows and Covent Garden",
+        "Camden and Portobello markets"
+      ],
+      "tips": [
+        "ESTA not needed for UK travel",
+        "Reservar 3-4 months ahead for summer",
+        "Overnight flights arrive morning London time",
+        "Oyster card essential for tube/bus"
+      ]
+    },
+    "sfo-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida River Fireworks - July",
+        "Tokyo Game Show - September"
+      ],
+      "highlights": [
+        "Shibuya and Shinjuku districts",
+        "Senso-ji Temple and Asakusa",
+        "Tokyo Skytree and Odaiba",
+        "Meiji Shrine and Yoyogi Park",
+        "Day trips to Nikko or Kamakura"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for cherry blossoms",
+        "Direct flights Evitar jet lag complications",
+        "Pocket WiFi rental recommended"
+      ]
+    },
+    "sfo-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Singapore Grand Prix - September",
+        "Great Singapore Sale - junio-July"
+      ],
+      "highlights": [
+        "Marina Bay Sands and Gardens by the Bay",
+        "Sentosa Island and beaches",
+        "Hawker centers for food",
+        "Singapore Zoo and Night Safari",
+        "Chinatown and Little India"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 3-4 months ahead",
+        "Very long flight - consider stopover",
+        "English widely spoken"
+      ]
+    },
+    "lax-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Tokyo Marathon - marzo",
+        "New Year celebrations - enero 1-3"
+      ],
+      "highlights": [
+        "Shibuya Crossing and Harajuku",
+        "Senso-ji Temple in Asakusa",
+        "Tokyo Skytree and Roppongi",
+        "Tsukiji Outer Market",
+        "DisneySea and Disneyland Tokyo"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for peak seasons",
+        "Many direct flights available",
+        "JR Pass saves money on trains"
+      ]
+    },
+    "lax-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran (Thai New Year) - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace and Wat Phra Kaew",
+        "Floating markets",
+        "Chatuchak Weekend Market",
+        "Rooftop bars and nightlife",
+        "Day trips to Ayutthaya"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 30 days)",
+        "Reservar 3-4 months ahead",
+        "Very long flight - consider stopover in Asia",
+        "Bangkok great hub for Thai islands"
+      ]
+    },
+    "lax-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero-marzo"
+      ],
+      "highlights": [
+        "Victoria Peak and Peak Tram",
+        "Star Ferry and harbor views",
+        "Temple Street Night Market",
+        "Lantau Island and Big Buddha",
+        "Dim sum restaurants"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Many direct flights available",
+        "Octopus card for easy transport"
+      ]
+    },
+    "lax-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Singapore Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Sentosa Island",
+        "Hawker centers",
+        "Universal Studios Singapore"
+      ],
+      "tips": [
+        "visa exempt for US passport holders (up to 90 days)",
+        "Reservar 3-4 months ahead",
+        "Consider stopover to break long journey",
+        "Very clean and safe city"
+      ]
+    },
+    "tyo-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace and temples",
+        "Street food and markets",
+        "Rooftop bars",
+        "Chao Phraya River cruises",
+        "Shopping malls and markets"
+      ],
+      "tips": [
+        "visa exempt for Japanese passport holders (up to 30 days)",
+        "Reservar 1-2 months ahead",
+        "Bangkok is much warmer than Tokyo",
+        "Great value for money"
+      ]
+    },
+    "tyo-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Orchard Road shopping"
+      ],
+      "tips": [
+        "visa exempt for Japanese passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "English widely spoken",
+        "Very clean and organized"
+      ]
+    },
+    "tyo-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero-marzo"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Temple Street Night Market",
+        "Lantau Island",
+        "Dim sum restaurants"
+      ],
+      "tips": [
+        "visa exempt for Japanese passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "Short flight - popular weekend trip",
+        "Similar culture but different vibe"
+      ]
+    },
+    "tyo-to-sel": {
+      "bestTime": "marzo-mayo (spring) or September-November (autumn)",
+      "festivals": [
+        "Cherry Blossom Season - abril",
+        "Buddha's Birthday - mayo",
+        "Seoul Lantern Festival - November",
+        "Lunar New Year - enero/febrero"
+      ],
+      "highlights": [
+        "Gyeongbokgung Palace",
+        "Myeongdong shopping",
+        "Bukchon Hanok Village",
+        "N Seoul Tower",
+        "Korean BBQ and street food"
+      ],
+      "tips": [
+        "visa exempt for Japanese passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Very short flight - popular weekend destination",
+        "K-pop and K-beauty shopping paradise"
+      ]
+    },
+    "bkk-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida River Fireworks - July",
+        "Tokyo Marathon - marzo"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Tsukiji Market",
+        "Mount Fuji trips"
+      ],
+      "tips": [
+        "visa exempt for Thai passport holders (up to 15 days)",
+        "Reservar 2-3 months ahead for cherry blossoms",
+        "Tokyo much cooler than Bangkok",
+        "Popular shopping destination"
+      ]
+    },
+    "sin-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Tokyo Game Show - September",
+        "New Year celebrations - enero 1-3"
+      ],
+      "highlights": [
+        "Shibuya Crossing",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "TeamLab Borderless",
+        "Akihabara electronics"
+      ],
+      "tips": [
+        "visa exempt for Singapore passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Tokyo much cooler - pack accordingly",
+        "JR Pass useful for multi-city trips"
+      ]
+    },
+    "sha-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Rooftop bars",
+        "Shopping malls"
+      ],
+      "tips": [
+        "visa on arrival for Chinese passport holders",
+        "Reservar 1-2 months ahead",
+        "Popular vacation destination for Chinese",
+        "Great value shopping"
+      ]
+    },
+    "sha-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Mid-Autumn Festival - September/October"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Chinatown",
+        "Sentosa Island",
+        "Hawker centers"
+      ],
+      "tips": [
+        "visa required for Chinese passport holders",
+        "Reservar 1-2 months ahead",
+        "Mandarin Chinese widely spoken",
+        "Very clean and organized"
+      ]
+    },
+    "sha-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida Fireworks - July",
+        "Tokyo Game Show - September"
+      ],
+      "highlights": [
+        "Shibuya and Shinjuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Akihabara",
+        "DisneySea"
+      ],
+      "tips": [
+        "visa required for Chinese passport holders",
+        "Reservar 1-2 months ahead",
+        "Very short flight",
+        "Popular shopping destination"
+      ]
+    },
+    "sha-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero-marzo"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Temple Street Night Market",
+        "Lantau Island",
+        "Dim sum"
+      ],
+      "tips": [
+        "Entry permit required for mainland Chinese",
+        "Reservar 1 month ahead",
+        "Very short flight",
+        "Shopping paradise"
+      ]
+    },
+    "bkk-to-sha": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Shanghai International Film Festival - junio",
+        "Dragon Boat Festival - junio"
+      ],
+      "highlights": [
+        "The Bund waterfront",
+        "Yu Garden and Old Town",
+        "Shanghai Tower",
+        "Nanjing Road shopping",
+        "Jade Buddha Temple"
+      ],
+      "tips": [
+        "visa required for Thai passport holders",
+        "Reservar 1-2 months ahead",
+        "Shanghai modern and cosmopolitan",
+        "Learn basic Mandarin phrases helpful"
+      ]
+    },
+    "sel-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Thai massage and spas",
+        "Street food",
+        "Night markets"
+      ],
+      "tips": [
+        "visa exempt for Korean passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "Bangkok much warmer than Seoul",
+        "Very affordable destination"
+      ]
+    },
+    "sel-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Universal Studios",
+        "Hawker centers",
+        "Sentosa beaches"
+      ],
+      "tips": [
+        "visa exempt for Korean passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "English widely spoken",
+        "Very clean and safe"
+      ]
+    },
+    "sel-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida Fireworks - July",
+        "Tokyo Marathon - marzo"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Akihabara",
+        "TeamLab museums"
+      ],
+      "tips": [
+        "visa exempt for Korean passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Very short flight - weekend trips common",
+        "Similar but different culture"
+      ]
+    },
+    "sel-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero-marzo"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Temple Street Night Market",
+        "Lantau Island",
+        "Dim sum"
+      ],
+      "tips": [
+        "visa exempt for Korean passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Short flight",
+        "Great shopping destination"
+      ]
+    },
+    "bkk-to-sel": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - abril",
+        "Buddha's Birthday - mayo",
+        "Seoul Lantern Festival - November",
+        "Lunar New Year - enero/febrero"
+      ],
+      "highlights": [
+        "Gyeongbokgung Palace",
+        "Myeongdong shopping",
+        "Bukchon Hanok Village",
+        "N Seoul Tower",
+        "Korean BBQ"
+      ],
+      "tips": [
+        "visa exempt for Thai passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "Seoul much colder in winter",
+        "K-pop and K-beauty popular"
+      ]
+    },
+    "hkg-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Thai massage",
+        "Night markets"
+      ],
+      "tips": [
+        "visa exempt for Hong Kong SAR passport holders (up to 30 days)",
+        "Reservar 1 month ahead",
+        "Very short flight - weekend trips popular",
+        "Great value for money"
+      ]
+    },
+    "hkg-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Shopping on Orchard Road"
+      ],
+      "tips": [
+        "visa exempt for Hong Kong SAR passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Similar culture and language",
+        "Both very clean and organized cities"
+      ]
+    },
+    "hkg-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida Fireworks - July",
+        "Tokyo Game Show - September"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Akihabara electronics",
+        "DisneySea"
+      ],
+      "tips": [
+        "visa exempt for Hong Kong SAR passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "Popular shopping destination",
+        "Tokyo much cooler - pack layers"
+      ]
+    },
+    "hkg-to-sel": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - abril",
+        "Buddha's Birthday - mayo",
+        "Seoul Lantern Festival - November",
+        "Lunar New Year - enero/febrero"
+      ],
+      "highlights": [
+        "Gyeongbokgung Palace",
+        "Myeongdong shopping",
+        "Bukchon Hanok Village",
+        "Korean BBQ",
+        "K-pop and K-beauty"
+      ],
+      "tips": [
+        "visa exempt for Hong Kong SAR passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Seoul much colder in winter",
+        "Very short flight"
+      ]
+    },
+    "bkk-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero-marzo"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Temple Street Night Market",
+        "Lantau Island Big Buddha",
+        "Dim sum"
+      ],
+      "tips": [
+        "visa exempt for Thai passport holders (up to 14 days)",
+        "Reservar 1 month ahead",
+        "Very short flight",
+        "Great shopping destination"
+      ]
+    },
+    "sin-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food paradise",
+        "Rooftop bars",
+        "Thai massage"
+      ],
+      "tips": [
+        "visa exempt for Singapore passport holders (up to 30 days)",
+        "Reservar 1 month ahead",
+        "Very short flight - weekend trips common",
+        "Great value compared to Singapore"
+      ]
+    },
+    "sin-to-syd": {
+      "bestTime": "September to November or marzo to mayo",
+      "festivals": [
+        "Sydney Festival - enero",
+        "Vivid Sydney - mayo-junio",
+        "Sydney Gay and Lesbian Mardi Gras - febrero-marzo",
+        "New Year's Eve Fireworks - December 31"
+      ],
+      "highlights": [
+        "Sydney Opera House",
+        "Harbour Bridge",
+        "Bondi Beach",
+        "The Rocks",
+        "Taronga Zoo"
+      ],
+      "tips": [
+        "Electronic visa required for Singapore passport holders",
+        "Reservar 2-3 months ahead",
+        "Sydney seasons opposite to Singapore",
+        "Direct flights available"
+      ]
+    },
+    "sin-to-hkg": {
+      "bestTime": "October to December",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Wine & Dine Festival - October"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Temple Street Night Market",
+        "Lantau Island",
+        "Dim sum"
+      ],
+      "tips": [
+        "visa exempt for Singapore passport holders (up to 90 days)",
+        "Reservar 1 month ahead",
+        "Similar tropical cities but different vibe",
+        "Short flight"
+      ]
+    },
+    "bkk-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Universal Studios",
+        "Sentosa Island"
+      ],
+      "tips": [
+        "visa exempt for Thai passport holders (up to 30 days)",
+        "Reservar 1 month ahead",
+        "Very short flight",
+        "More expensive than Bangkok"
+      ]
+    },
+    "dxb-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Rooftop bars",
+        "Thai massage and spas"
+      ],
+      "tips": [
+        "visa on arrival for UAE passport holders",
+        "Reservar 1-2 months ahead",
+        "Bangkok much more humid than Dubai",
+        "Great value for shopping"
+      ]
+    },
+    "dxb-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Orchard Road shopping"
+      ],
+      "tips": [
+        "visa exempt for UAE passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Both modern cities with different cultures",
+        "English widely spoken"
+      ]
+    },
+    "dxb-to-lon": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Wimbledon Tennis - junio-July",
+        "Notting Hill Carnival - August",
+        "Chelsea Flower Show - mayo",
+        "New Year's Eve Fireworks - December 31"
+      ],
+      "highlights": [
+        "Tower of London",
+        "British Museum",
+        "Buckingham Palace",
+        "West End shows",
+        "Borough Market"
+      ],
+      "tips": [
+        "visa required for UAE passport holders",
+        "Reservar 2-3 months ahead",
+        "London much cooler than Dubai",
+        "Pack layers for unpredictable weather"
+      ]
+    },
+    "dxb-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida Fireworks - July",
+        "Tokyo Game Show - September"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Mount Fuji trips",
+        "TeamLab museums"
+      ],
+      "tips": [
+        "visa required for UAE passport holders",
+        "Reservar 2-3 months ahead",
+        "Long flight - consider stopover",
+        "Tokyo very different culture from Dubai"
+      ]
+    },
+    "bkk-to-dxb": {
+      "bestTime": "November to marzo",
+      "festivals": [
+        "Dubai Shopping Festival - enero-febrero",
+        "Dubai Food Festival - febrero-marzo",
+        "Dubai World Cup - marzo",
+        "Ramadan celebrations - Varies"
+      ],
+      "highlights": [
+        "Burj Khalifa",
+        "Dubai Mall",
+        "Palm Jumeirah",
+        "Gold and Spice Souks",
+        "Desert safari"
+      ],
+      "tips": [
+        "visa on arrival for Thai passport holders",
+        "Reservar 1-2 months ahead",
+        "Evitar Dubai summer - extremely hot",
+        "Shopping Festival great for deals"
+      ]
+    },
+    "sin-to-dxb": {
+      "bestTime": "November to marzo",
+      "festivals": [
+        "Dubai Shopping Festival - enero-febrero",
+        "Dubai Food Festival - febrero-marzo",
+        "Dubai World Cup - marzo",
+        "Ramadan - Varies by lunar calendar"
+      ],
+      "highlights": [
+        "Burj Khalifa",
+        "Dubai Mall",
+        "Palm Jumeirah",
+        "Gold Souk",
+        "Desert safari"
+      ],
+      "tips": [
+        "visa on arrival for Singapore passport holders",
+        "Reservar 2-3 months ahead",
+        "Dubai much drier than Singapore",
+        "Evitar summer months"
+      ]
+    },
+    "fra-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Night markets",
+        "Thai massage"
+      ],
+      "tips": [
+        "visa exempt for German passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead",
+        "Direct flights available from Frankfurt",
+        "Great value destination"
+      ]
+    },
+    "fra-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "Deepavali - October/November"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Universal Studios",
+        "Sentosa Island"
+      ],
+      "tips": [
+        "visa exempt for German passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Direct flights available",
+        "English widely spoken"
+      ]
+    },
+    "fra-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida Fireworks - July",
+        "Tokyo Marathon - marzo"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Mount Fuji",
+        "TeamLab Borderless"
+      ],
+      "tips": [
+        "visa exempt for German passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for cherry blossoms",
+        "Direct flights available",
+        "JR Pass useful for multi-city trips"
+      ]
+    },
+    "fra-to-dxb": {
+      "bestTime": "November to marzo",
+      "festivals": [
+        "Dubai Shopping Festival - enero-febrero",
+        "Dubai Food Festival - febrero-marzo",
+        "Dubai World Cup - marzo",
+        "Ramadan - Varies"
+      ],
+      "highlights": [
+        "Burj Khalifa",
+        "Dubai Mall",
+        "Palm Jumeirah",
+        "Gold Souk",
+        "Desert safari"
+      ],
+      "tips": [
+        "visa on arrival for German passport holders",
+        "Reservar 1-2 months ahead",
+        "Evitar summer - extremely hot",
+        "Shopping Festival offers great deals"
+      ]
+    },
+    "bkk-to-fra": {
+      "bestTime": "mayo to September (summer)",
+      "festivals": [
+        "Christmas Markets - December",
+        "Oktoberfest in nearby Munich - September",
+        "Frankfurt Reservar Fair - October",
+        "Museum Embankment Festival - August"
+      ],
+      "highlights": [
+        "Römerberg old town square",
+        "Frankfurt Cathedral",
+        "Main Tower observation deck",
+        "Palmengarten botanical garden",
+        "Day trips to Rhine Valley"
+      ],
+      "tips": [
+        "Schengen visa required for Thai passport holders",
+        "Reservar 2-3 months ahead",
+        "Frankfurt much cooler than Bangkok",
+        "Central location for exploring Europe"
+      ]
+    },
+    "par-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Rooftop bars",
+        "Thai cooking classes"
+      ],
+      "tips": [
+        "visa exempt for French passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead",
+        "Direct flights available",
+        "Very affordable compared to Paris"
+      ]
+    },
+    "par-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Little India and Chinatown"
+      ],
+      "tips": [
+        "visa exempt for French passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Direct flights available",
+        "English and French spoken in some areas"
+      ]
+    },
+    "par-to-tyo": {
+      "bestTime": "marzo-mayo or September-November",
+      "festivals": [
+        "Cherry Blossom Season - marzo-abril",
+        "Golden Week - Late abril to early mayo",
+        "Tokyo Game Show - September",
+        "Sumida Fireworks - July"
+      ],
+      "highlights": [
+        "Shibuya and Harajuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Akihabara",
+        "Mount Fuji day trips"
+      ],
+      "tips": [
+        "visa exempt for French passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for cherry blossoms",
+        "Direct flights available",
+        "Both fashion capitals"
+      ]
+    },
+    "par-to-dxb": {
+      "bestTime": "November to marzo",
+      "festivals": [
+        "Dubai Shopping Festival - enero-febrero",
+        "Dubai Food Festival - febrero-marzo",
+        "Dubai World Cup - marzo",
+        "Ramadan - Varies"
+      ],
+      "highlights": [
+        "Burj Khalifa",
+        "Dubai Mall",
+        "Palm Jumeirah",
+        "Gold Souk",
+        "Desert safari"
+      ],
+      "tips": [
+        "visa on arrival for French passport holders",
+        "Reservar 1-2 months ahead",
+        "Evitar summer months",
+        "French spoken in some hotels"
+      ]
+    },
+    "bkk-to-par": {
+      "bestTime": "abril-junio or September-October",
+      "festivals": [
+        "Bastille Day - July 14",
+        "Paris Fashion Week - febrero and September",
+        "Nuit Blanche - October",
+        "Fête de la Musique - junio 21"
+      ],
+      "highlights": [
+        "Eiffel Tower",
+        "Louvre Museum",
+        "Notre-Dame Cathedral",
+        "Montmartre",
+        "Versailles Palace"
+      ],
+      "tips": [
+        "Schengen visa required for Thai passport holders",
+        "Reservar 3-4 months ahead",
+        "Paris much cooler than Bangkok",
+        "Learn basic French helpful"
+      ]
+    },
+    "mad-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Night markets",
+        "Thai massage"
+      ],
+      "tips": [
+        "visa exempt for Spanish passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead",
+        "Usually requires connection",
+        "Great value destination"
+      ]
+    },
+    "bcn-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Full Moon Party nearby - Monthly"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Rooftop bars",
+        "Island-hopping base"
+      ],
+      "tips": [
+        "visa exempt for Spanish passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead",
+        "Usually requires connection",
+        "Much more affordable than Barcelona"
+      ]
+    },
+    "bkk-to-mad": {
+      "bestTime": "marzo-mayo or September-October",
+      "festivals": [
+        "San Isidro Festival - mayo 15",
+        "Madrid Pride - Late junio/early July",
+        "Autumn Festival - October-November",
+        "Christmas Markets - December"
+      ],
+      "highlights": [
+        "Prado Museum and Reina Sofia",
+        "Royal Palace of Madrid",
+        "Retiro Park",
+        "Gran Via shopping",
+        "Tapas bars in La Latina"
+      ],
+      "tips": [
+        "Schengen visa required for Thai passport holders",
+        "Reservar 3-4 months ahead",
+        "Madrid much cooler and drier than Bangkok",
+        "Gateway to explore Spain"
+      ]
+    },
+    "syd-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Night markets",
+        "Thai massage and spas"
+      ],
+      "tips": [
+        "visa exempt for Australian passport holders (up to 30 days)",
+        "Reservar 1-2 months ahead",
+        "Direct flights available",
+        "Very affordable compared to Sydney"
+      ]
+    },
+    "syd-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Formula 1 Grand Prix - September",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Universal Studios"
+      ],
+      "tips": [
+        "visa exempt for Australian passport holders (up to 90 days)",
+        "Reservar 1-2 months ahead",
+        "Direct flights available",
+        "Popular stopover to Europe"
+      ]
+    },
+    "syd-to-lon": {
+      "bestTime": "mayo to September (UK summer)",
+      "festivals": [
+        "Wimbledon Tennis - junio-July",
+        "Notting Hill Carnival - August",
+        "Edinburgh Fringe - August",
+        "New Year's Eve - December 31"
+      ],
+      "highlights": [
+        "Tower of London",
+        "British Museum",
+        "Buckingham Palace",
+        "West End shows",
+        "Borough Market"
+      ],
+      "tips": [
+        "visa required for Australian passport holders",
+        "Reservar 3-6 months ahead",
+        "Long flight - consider stopover",
+        "Seasons are opposite"
+      ]
+    },
+    "bkk-to-syd": {
+      "bestTime": "September to November or marzo to mayo",
+      "festivals": [
+        "Sydney Festival - enero",
+        "Vivid Sydney - mayo-junio",
+        "Sydney Mardi Gras - febrero-marzo",
+        "New Year's Eve Fireworks - December 31"
+      ],
+      "highlights": [
+        "Sydney Opera House",
+        "Harbour Bridge",
+        "Bondi Beach",
+        "The Rocks",
+        "Blue Mountains"
+      ],
+      "tips": [
+        "Electronic visa required for Thai passport holders",
+        "Reservar 2-3 months ahead",
+        "Sydney seasons opposite to Bangkok",
+        "More expensive than Bangkok"
+      ]
+    },
+    "del-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Shopping malls",
+        "Night markets"
+      ],
+      "tips": [
+        "visa on arrival for Indian passport holders",
+        "Reservar 1-2 months ahead",
+        "Short flight - popular destination",
+        "Good value for money"
+      ]
+    },
+    "del-to-sin": {
+      "bestTime": "febrero to abril",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Deepavali - October/November",
+        "Singapore Food Festival - July",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Little India",
+        "Hawker centers",
+        "Sentosa Island"
+      ],
+      "tips": [
+        "visa required for Indian passport holders",
+        "Reservar 2-3 months ahead",
+        "Direct flights available",
+        "English widely spoken"
+      ]
+    },
+    "bom-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Rooftop bars",
+        "Shopping"
+      ],
+      "tips": [
+        "visa on arrival for Indian passport holders",
+        "Reservar 1-2 months ahead",
+        "Popular weekend destination",
+        "Great shopping value"
+      ]
+    },
+    "bkk-to-del": {
+      "bestTime": "October to marzo",
+      "festivals": [
+        "Diwali - October/November",
+        "Holi - marzo",
+        "Republic Day - enero 26",
+        "Dussehra - September/October"
+      ],
+      "highlights": [
+        "Red Fort",
+        "India Gate",
+        "Qutub Minar",
+        "Chandni Chowk",
+        "Taj Mahal day trips"
+      ],
+      "tips": [
+        "E-visa available for Thai passport holders",
+        "Reservar 1-2 months ahead",
+        "Delhi much cooler in winter",
+        "Rich history and culture"
+      ]
+    },
+    "kul-to-bkk": {
+      "bestTime": "November to febrero",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Night markets",
+        "Rooftop bars"
+      ],
+      "tips": [
+        "visa exempt for Malaysian passport holders (up to 30 days)",
+        "Reservar 1 month ahead",
+        "Very short flight - weekend trips popular",
+        "Similar tropical climate"
+      ]
+    },
+    "bkk-to-kul": {
+      "bestTime": "mayo to July or December to febrero",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Hari Raya - Varies",
+        "Thaipusam - enero/febrero",
+        "Malaysia Day - September 16"
+      ],
+      "highlights": [
+        "Petronas Twin Towers",
+        "Batu Caves",
+        "Jalan Alor street food",
+        "Bukit Bintang shopping",
+        "Day trips to Genting"
+      ],
+      "tips": [
+        "visa exempt for Thai passport holders (up to 30 days)",
+        "Reservar 1 month ahead",
+        "Very short flight",
+        "Good value for shopping"
+      ]
+    },
+    "syd-to-hkg": {
+      "bestTime": "October to December (autumn, comfortable weather)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Arts Festival - febrero/marzo"
+      ],
+      "highlights": [
+        "Victoria Peak and Peak Tram",
+        "Star Ferry and Victoria Harbour",
+        "Temple Street Night Market",
+        "Lantau Island and Big Buddha",
+        "Dim sum restaurants"
+      ],
+      "tips": [
+        "visa-free for Australian passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead for mejor prices",
+        "October has perfect weather",
+        "Great shopping destination"
+      ]
+    },
+    "syd-to-tyo": {
+      "bestTime": "marzo-mayo (cherry blossoms) or September-November (autumn)",
+      "festivals": [
+        "Cherry Blossom Season - Late marzo to early abril",
+        "Golden Week - Late abril to early mayo",
+        "Sumida River Fireworks - July",
+        "Autumn Leaves - November"
+      ],
+      "highlights": [
+        "Shibuya Crossing and Harajuku",
+        "Senso-ji Temple in Asakusa",
+        "Tsukiji Outer Market",
+        "Tokyo Skytree and Tokyo Tower",
+        "Day trips to Mt. Fuji"
+      ],
+      "tips": [
+        "visa-free for Australian passport holders (up to 90 days)",
+        "Reservar 3-4 months ahead, especially for cherry blossom season",
+        "JR Pass great value for exploring Japan",
+        "English signage common in Tokyo"
+      ]
+    },
+    "mel-to-sin": {
+      "bestTime": "febrero to abril (less rain, Chinese New Year)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Great Singapore Sale - junio-July",
+        "Mid-Autumn Festival - September/October"
+      ],
+      "highlights": [
+        "Marina Bay Sands and Gardens by the Bay",
+        "Sentosa Island",
+        "Hawker centers for local food",
+        "Universal Studios Singapore",
+        "Chinatown and Little India"
+      ],
+      "tips": [
+        "visa-free for Australian passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Perfect stopover for Europe trips",
+        "Very clean and safe city"
+      ]
+    },
+    "mel-to-bkk": {
+      "bestTime": "November to febrero (cool and dry season)",
+      "festivals": [
+        "Songkran (Thai New Year) - abril 13-15",
+        "Loy Krathong - November (full moon)",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace and Wat Phra Kaew",
+        "Floating markets",
+        "Street food heaven",
+        "Rooftop bars",
+        "Day trips to Ayutthaya"
+      ],
+      "tips": [
+        "visa exempt for Australian passport holders (up to 30 days)",
+        "Reservar 2-3 months ahead",
+        "Very affordable compared to Australia",
+        "Great shopping value"
+      ]
+    },
+    "mel-to-hkg": {
+      "bestTime": "October to December (autumn)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Mid-Autumn Festival - September/October",
+        "Dragon Boat Festival - junio",
+        "Hong Kong Wine & Dine Festival - October/November"
+      ],
+      "highlights": [
+        "Victoria Peak",
+        "Star Ferry",
+        "Dim sum restaurants",
+        "Temple Street Night Market",
+        "Lantau Island"
+      ],
+      "tips": [
+        "visa-free for Australian passport holders (up to 90 days)",
+        "Reservar 2-3 months ahead",
+        "Excellent public transport",
+        "Shopping paradise"
+      ]
+    },
+    "sgn-to-bkk": {
+      "bestTime": "November to febrero (dry season)",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "Vegetarian Festival - September/October"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Floating markets",
+        "Street food",
+        "Chatuchak Market",
+        "Rooftop bars"
+      ],
+      "tips": [
+        "visa on arrival for Vietnamese passport holders",
+        "Very short flight - weekend trips popular",
+        "Reservar 1 month ahead",
+        "Similar climate and culture"
+      ]
+    },
+    "sgn-to-sin": {
+      "bestTime": "December to abril (dry season)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "Deepavali - October/November",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Hawker centers",
+        "Sentosa Island",
+        "Universal Studios"
+      ],
+      "tips": [
+        "visa required for Vietnamese passport holders",
+        "Reservar 1-2 months ahead",
+        "Short flight - good for shopping trips",
+        "Much more expensive than Vietnam"
+      ]
+    },
+    "han-to-bkk": {
+      "bestTime": "November to febrero (cool and dry)",
+      "festivals": [
+        "Songkran - abril 13-15",
+        "Loy Krathong - November",
+        "Chinese New Year - enero/febrero",
+        "King's Birthday - July 28"
+      ],
+      "highlights": [
+        "Grand Palace",
+        "Wat Pho (Reclining Buddha)",
+        "Street food markets",
+        "Shopping malls",
+        "Nightlife"
+      ],
+      "tips": [
+        "visa on arrival for Vietnamese passport holders",
+        "Reservar 1 month ahead",
+        "Very short flight",
+        "Great for shopping"
+      ]
+    },
+    "pek-to-sin": {
+      "bestTime": "febrero to abril (after Chinese New Year)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Food Festival - July",
+        "National Day - August 9",
+        "Mid-Autumn Festival - September/October"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Chinatown",
+        "Hawker centers",
+        "Universal Studios"
+      ],
+      "tips": [
+        "visa-free transit for up to 96 hours",
+        "Reservar 2-3 months ahead",
+        "Direct flights available",
+        "Popular Southeast Asia gateway"
+      ]
+    },
+    "pek-to-tyo": {
+      "bestTime": "marzo-mayo (spring) or October-November (autumn)",
+      "festivals": [
+        "Cherry Blossom Season - marzo/abril",
+        "Golden Week - Late abril/early mayo",
+        "Autumn Leaves - November",
+        "New Year - enero 1-3"
+      ],
+      "highlights": [
+        "Shibuya and Shinjuku",
+        "Senso-ji Temple",
+        "Tokyo Skytree",
+        "Tsukiji Market",
+        "Mt. Fuji day trips"
+      ],
+      "tips": [
+        "visa required for Chinese passport holders",
+        "Reservar 3-4 months ahead for peak seasons",
+        "Short flight - very popular route",
+        "Shopping paradise"
+      ]
+    },
+    "dps-to-sin": {
+      "bestTime": "abril to October (dry season in Bali)",
+      "festivals": [
+        "Chinese New Year - enero/febrero",
+        "Singapore Grand Prix - September",
+        "Deepavali - October/November",
+        "National Day - August 9"
+      ],
+      "highlights": [
+        "Marina Bay Sands",
+        "Gardens by the Bay",
+        "Sentosa Island",
+        "Hawker centers",
+        "Shopping on Orchard Road"
+      ],
+      "tips": [
+        "visa-free for Indonesian passport holders (up to 30 days)",
+        "Reservar 1-2 months ahead",
+        "Popular shopping trip from Bali",
+        "Much more expensive than Bali"
+      ]
+    },
+    "dps-to-syd": {
+      "bestTime": "abril to October (Bali dry season)",
+      "festivals": [
+        "Sydney Festival - enero",
+        "Vivid Sydney - mayo/junio",
+        "New Year's Eve Fireworks - December 31",
+        "Mardi Gras - febrero/marzo"
+      ],
+      "highlights": [
+        "Sydney Opera House and Harbour Bridge",
+        "Bondi Beach",
+        "The Rocks historic area",
+        "Darling Harbour",
+        "Blue Mountains day trips"
+      ],
+      "tips": [
+        "visa required for Indonesian passport holders",
+        "Reservar 2-3 months ahead",
+        "Very popular route - many direct flights",
+        "Great escape from tropical heat"
+      ]
+    }
   },
   "privacy": {
     "title": "Política de privacidad",
