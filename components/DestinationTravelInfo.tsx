@@ -30,7 +30,7 @@ export default function DestinationTravelInfo({
   const t = useTranslations();
 
   // Try to get translated content, fall back to English data
-  const getTranslation = (key: string, fallback: string | string[]): string | string[] => {
+  const getTranslation = (key: string, fallback: string | readonly string[]): string | readonly string[] => {
     try {
       const translationKey = `destinations.${route}.${key}`;
       // Check if translation exists
