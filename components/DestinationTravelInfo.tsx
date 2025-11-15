@@ -4,13 +4,13 @@ import { useTranslations } from "next-intl";
 
 interface TravelInfo {
   bestTime: string;
-  festivals: string[];
+  festivals: readonly string[];
   avgTemp: string;
   flightTime: string;
   timezone: string;
   currency: string;
-  highlights: string[];
-  tips: string[];
+  highlights: readonly string[];
+  tips: readonly string[];
 }
 
 interface DestinationTravelInfoProps {
