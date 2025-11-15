@@ -66,9 +66,9 @@
     "flightsFrom": "从{from}到{to}的航班",
     "findCheapFlights": "查找从{fromCity}到{toCity}的便宜航班",
     "bestTimeTitle": "最佳旅游时间",
-    "festivalsTitle": "节日活动",
+    "festivalsTitle": "主要节日和活动",
     "highlightsTitle": "热门景点",
-    "tipsTitle": "旅行贴士",
+    "tipsTitle": "省钱旅行贴士",
     "flightInfoTitle": "航班信息",
     "searchFlightsButton": "搜索航班 {from} → {to}"
   },

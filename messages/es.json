@@ -66,9 +66,9 @@
     "flightsFrom": "Vuelos de {from} a {to}",
     "findCheapFlights": "Encuentra vuelos baratos de {fromCity} a {toCity}",
     "bestTimeTitle": "Mejor época para visitar",
-    "festivalsTitle": "Festivales y eventos",
+    "festivalsTitle": "Principales festivales y eventos",
     "highlightsTitle": "Principales atracciones",
-    "tipsTitle": "Consejos de viaje",
+    "tipsTitle": "Consejos para ahorrar dinero en viajes",
     "flightInfoTitle": "Información de vuelos",
     "searchFlightsButton": "Buscar vuelos {from} → {to}"
   },

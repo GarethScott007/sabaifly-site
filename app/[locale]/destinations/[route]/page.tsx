@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import VisaEmbassyInfoGlobal from "@/components/VisaEmbassyInfoGlobal";
+import DestinationTravelInfo from "@/components/DestinationTravelInfo";
 import FlightSearchCTA from "@/components/FlightSearchCTA";
 
 // Travel information database - ALL INFORMATION FACTUAL AND VERIFIABLE
@@ -2808,52 +2809,20 @@ export default async function DestinationPage({ params }: RouteParams) {
         </div>
       </section>
 
-      {/* Best Time to Visit */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Best Time to Visit</h2>
-        <p className="text-gray-700 text-lg">{destination.bestTime}</p>
-      </section>
-
-      {/* Festivals & Events */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Major Festivals & Events</h2>
-        <ul className="space-y-3">
-          {destination.festivals.map((festival, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-brand mr-3 text-xl">•</span>
-              <span className="text-gray-700">{festival}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Top Attractions */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Top Attractions</h2>
-        <ul className="space-y-3">
-          {destination.highlights.map((highlight, index) => (
-            <li key={index} className="flex items-start">
-              <span className="text-brand mr-3 text-xl">✓</span>
-              <span className="text-gray-700">{highlight}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {/* Travel Tips */}
-      <section className="mb-8">
-        <h2 className="text-2xl font-semibold text-gray-900 mb-4">Money-Saving Travel Tips</h2>
-        <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded">
-          <ul className="space-y-3">
-            {destination.tips.map((tip, index) => (
-              <li key={index} className="flex items-start">
-                <span className="text-green-600 mr-3 text-xl">💡</span>
-                <span className="text-gray-700">{tip}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {/* Travel Information - Translated based on user language */}
+      <DestinationTravelInfo
+        route={route}
+        travelData={{
+          bestTime: destination.bestTime,
+          festivals: destination.festivals,
+          avgTemp: destination.avgTemp,
+          flightTime: destination.flightTime,
+          timezone: destination.timezone,
+          currency: destination.currency,
+          highlights: destination.highlights,
+          tips: destination.tips,
+        }}
+      />
 
       {/* BOTTOM SEARCH CTA - Multiple booking options */}
       <div className="mt-12">

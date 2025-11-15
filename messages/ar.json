@@ -66,9 +66,9 @@
     "flightsFrom": "رحلات من {from} إلى {to}",
     "findCheapFlights": "ابحث عن رحلات رخيصة من {fromCity} إلى {toCity}",
     "bestTimeTitle": "أفضل وقت للزيارة",
-    "festivalsTitle": "المهرجانات والفعاليات",
+    "festivalsTitle": "المهرجانات والفعاليات الرئيسية",
     "highlightsTitle": "أهم المعالم",
-    "tipsTitle": "نصائح السفر",
+    "tipsTitle": "نصائح توفير أموال السفر",
     "flightInfoTitle": "معلومات الرحلة",
     "searchFlightsButton": "ابحث عن رحلات {from} ← {to}"
   },

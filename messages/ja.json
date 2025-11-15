@@ -66,9 +66,9 @@
     "flightsFrom": "{from}から{to}へのフライト",
     "findCheapFlights": "{fromCity}から{toCity}への格安航空券を検索",
     "bestTimeTitle": "ベストシーズン",
-    "festivalsTitle": "フェスティバル＆イベント",
+    "festivalsTitle": "主なフェスティバル＆イベント",
     "highlightsTitle": "人気観光スポット",
-    "tipsTitle": "旅行のヒント",
+    "tipsTitle": "お金を節約する旅行のヒント",
     "flightInfoTitle": "フライト情報",
     "searchFlightsButton": "フライトを検索 {from} → {to}"
   },

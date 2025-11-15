@@ -66,9 +66,9 @@
     "flightsFrom": "เที่ยวบินจาก {from} ไป {to}",
     "findCheapFlights": "ค้นหาเที่ยวบินราคาถูกจาก {fromCity} ไป {toCity}",
     "bestTimeTitle": "ช่วงเวลาที่ดีที่สุดในการเยี่ยมชม",
-    "festivalsTitle": "เทศกาลและกิจกรรม",
+    "festivalsTitle": "เทศกาลและกิจกรรมหลัก",
     "highlightsTitle": "สถานที่ท่องเที่ยวยอดนิยม",
-    "tipsTitle": "เคล็ดลับการเดินทาง",
+    "tipsTitle": "เคล็ดลับการเดินทางเพื่อประหยัด",
     "flightInfoTitle": "ข้อมูลเที่ยวบิน",
     "searchFlightsButton": "ค้นหาเที่ยวบิน {from} → {to}"
   },

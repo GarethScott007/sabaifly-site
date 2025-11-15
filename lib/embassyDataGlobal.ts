@@ -71,7 +71,7 @@ export const EMBASSY_LOCATIONS: Record<string, EmbassyLocation> = {
   },
   "TH_CN": {
     name: "Royal Thai Embassy, Beijing",
-    url: "http://www.thaiembbeij.org/",
+    url: "https://www.th.emb-china.go.th/en/",
     address: "40 Guanghua Road, Chaoyang District, Beijing 100600",
   },
   "TH_KR": {
@@ -635,7 +635,7 @@ export const VISA_REQUIREMENTS: Record<string, Omit<VisaRequirement, "fromCountr
     duration: "6 months",
     officialUrl: "https://www.gov.uk/check-uk-visa",
     passportValidity: "Valid for duration of stay",
-    entryRequirementsUrl: "https://thaiembassyuk.org.uk/visa/",
+    entryRequirementsUrl: "https://thaiembassyuk.org.uk/",
     travelAdvisoryUrl: "https://thaiembassyuk.org.uk/",
   },
   "TH_SG": {

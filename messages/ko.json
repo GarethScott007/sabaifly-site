@@ -66,9 +66,9 @@
     "flightsFrom": "{from}에서 {to}로 가는 항공편",
     "findCheapFlights": "{fromCity}에서 {toCity}로 가는 저렴한 항공권 찾기",
     "bestTimeTitle": "최적의 방문 시기",
-    "festivalsTitle": "축제 및 이벤트",
+    "festivalsTitle": "주요 축제 및 이벤트",
     "highlightsTitle": "주요 관광지",
-    "tipsTitle": "여행 팁",
+    "tipsTitle": "돈을 절약하는 여행 팁",
     "flightInfoTitle": "항공편 정보",
     "searchFlightsButton": "항공편 검색 {from} → {to}"
   },
