@@ -1,6 +1,6 @@
 # SabaiFly Routes Testing Guide
 
-## Total Routes: 75
+## Total Routes: 87
 
 ### Testing Checklist
 
@@ -103,6 +103,26 @@
 - [ ] sel-to-hkg - Seoul → Hong Kong
 - [ ] sha-to-bkk - Shanghai → Bangkok
 
+#### NEW: Australia Extended Routes (5)
+- [ ] syd-to-hkg - Sydney → Hong Kong
+- [ ] syd-to-tyo - Sydney → Tokyo
+- [ ] mel-to-sin - Melbourne → Singapore
+- [ ] mel-to-bkk - Melbourne → Bangkok
+- [ ] mel-to-hkg - Melbourne → Hong Kong
+
+#### NEW: Vietnam Routes (3)
+- [ ] sgn-to-bkk - Ho Chi Minh City → Bangkok
+- [ ] sgn-to-sin - Ho Chi Minh City → Singapore
+- [ ] han-to-bkk - Hanoi → Bangkok
+
+#### NEW: China Routes (2)
+- [ ] pek-to-sin - Beijing → Singapore
+- [ ] pek-to-tyo - Beijing → Tokyo
+
+#### NEW: Bali Routes (2)
+- [ ] dps-to-sin - Bali → Singapore
+- [ ] dps-to-syd - Bali → Sydney
+
 ---
 
 ## What to Test on Each Page
@@ -152,7 +172,7 @@ Visit: http://localhost:3000/en/destinations/[route-slug]
 npm run build
 ```
 
-This will generate all 75 × 2 languages = **150+ static pages**
+This will generate all 87 × 2 languages = **174+ static pages**
 
 ---
 
